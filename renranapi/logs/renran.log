@@ -1,0 +1,5 @@
+INFO 2020-02-27 13:08:16,191 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-02-27 13:09:52,174 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-02-27 13:10:04,444 autoreload 203 /home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/operations.py changed, reloading.
+INFO 2020-02-27 13:10:05,779 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-02-27 13:10:11,261 autoreload 578 Watching for file changes with StatReloader
