@@ -27,3 +27,15 @@ INFO 2020-02-28 08:33:33,464 autoreload 203 /home/moluo/Desktop/renran/renranapi
 INFO 2020-02-28 08:33:34,619 autoreload 578 Watching for file changes with StatReloader
 INFO 2020-02-28 08:37:04,919 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
 INFO 2020-02-28 08:37:05,906 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-02-28 09:28:21,828 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2020-02-28 09:28:25,273 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-02-28 09:29:20,349 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/models.py changed, reloading.
+INFO 2020-02-28 09:29:22,326 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-02-28 09:30:17,987 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/models.py changed, reloading.
+INFO 2020-02-28 09:30:19,200 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-02-28 09:31:31,403 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/models.py changed, reloading.
+INFO 2020-02-28 09:31:32,954 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-02-28 09:32:41,247 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/models.py changed, reloading.
+INFO 2020-02-28 09:32:42,687 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-02-28 09:33:37,918 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2020-02-28 09:33:39,098 autoreload 578 Watching for file changes with StatReloader

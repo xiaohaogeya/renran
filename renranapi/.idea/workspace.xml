@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13cf5324-2cbd-4e11-a0cf-821492e8f572" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../renran_pc/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renran_pc/src/components/common/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/common/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/common/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../renran_pc/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../renran_pc/src/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/renranapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/renranapi.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/renran.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/renran.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renranapi/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/settings/dev.py" afterDir="false" />
@@ -15,6 +17,20 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
@@ -32,6 +48,7 @@
   <component name="ProjectId" id="1YHk6HoUZNBbHKP6XZ1L8MHd6oe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../renran_pc" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -121,7 +138,7 @@
       <workItem from="1582606731278" duration="1395000" />
       <workItem from="1582620721277" duration="59000" />
       <workItem from="1582771620032" duration="1625000" />
-      <workItem from="1582809786475" duration="3172000" />
+      <workItem from="1582809786475" duration="4366000" />
     </task>
     <servers />
   </component>
