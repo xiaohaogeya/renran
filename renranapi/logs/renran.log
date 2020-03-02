@@ -111,3 +111,11 @@ WARNING 2020-03-02 12:15:37,313 log 228 Bad Request: /users/login/
 WARNING 2020-03-02 12:15:37,315 basehttp 154 "POST /users/login/ HTTP/1.1" 400 108
 INFO 2020-03-02 12:15:51,921 basehttp 154 "POST /users/login/ HTTP/1.1" 200 195
 INFO 2020-03-02 12:16:24,647 basehttp 154 "POST /users/login/ HTTP/1.1" 200 195
+INFO 2020-03-02 12:19:34,996 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/models.py changed, reloading.
+INFO 2020-03-02 12:19:37,187 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 12:20:31,720 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 12:20:36,031 basehttp 154 "POST /users/login/ HTTP/1.1" 200 195
+INFO 2020-03-02 12:24:50,990 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2020-03-02 12:24:52,390 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 12:36:46,339 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/utils.py changed, reloading.
+INFO 2020-03-02 12:36:47,850 autoreload 578 Watching for file changes with StatReloader

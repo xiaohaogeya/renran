@@ -8,7 +8,7 @@ class User(AbstractUser):
     alipay = models.CharField(max_length=100, null=True, unique=True, help_text="支付宝账号", verbose_name="支付宝账号")
     qq_number = models.CharField(max_length=11, null=True, unique=True, help_text="QQ账号", verbose_name="QQ账号")
     avatar = models.ImageField(upload_to="avatar", null=True, default=None, verbose_name="头像")
-
+    nickname = models.CharField(max_length=100, null=True, default=None, verbose_name="用户昵称")
     class Meta:
         db_table = "rr_users"
         verbose_name = "用户信息"

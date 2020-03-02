@@ -79,11 +79,27 @@
                     if(this.remember_me){
                         // 永久存储
                         localStorage.user_token = response.data.token;
+                        localStorage.user_name = response.data.username;
+                        localStorage.user_id = response.data.id;
+                        localStorage.user_nickname = response.data.nickname;
+                        localStorage.user_avatar = response.data.avatar;
                         sessionStorage.removeItem("user_token");
+                        sessionStorage.removeItem("user_name");
+                        sessionStorage.removeItem("user_id");
+                        sessionStorage.removeItem("user_nickname");
+                        sessionStorage.removeItem("user_avatar");
                     }else {
                         // 临时存储
                         sessionStorage.user_token = response.data.token;
+                        sessionStorage.user_name = response.data.username;
+                        sessionStorage.user_id = response.data.id;
+                        sessionStorage.user_nickname = response.data.nickname;
+                        sessionStorage.user_avatar = response.data.avatar;
                         localStorage.removeItem("user_token");
+                        localStorage.removeItem("user_name");
+                        localStorage.removeItem("user_id");
+                        localStorage.removeItem("user_nickname");
+                        localStorage.removeItem("user_avatar");
                     }
                     // 登录跳转
                     this.$confirm("欢迎回到荏苒","登录成功",{
