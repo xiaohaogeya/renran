@@ -14,22 +14,22 @@
 <div class="js-sign-in-container">
   <form id="new_session" action="" method="post">
       <div class="input-prepend restyle js-normal">
-        <input placeholder="手机号或邮箱" type="text" name="session[email_or_mobile_number]" id="session_email_or_mobile_number">
+        <input placeholder="手机号或邮箱" type="text" v-model="username" id="session_email_or_mobile_number">
         <i class="iconfont ic-user"></i>
       </div>
     <!-- 海外登录登录名输入框 -->
 
     <div class="input-prepend">
-      <input placeholder="密码" type="password" name="password" id="session_password">
+      <input placeholder="密码" type="password" v-model="password" id="session_password">
       <i class="iconfont ic-password"></i>
     </div>
     <div class="remember-btn">
-      <input type="checkbox" value="true" checked="checked" name="remember_me" id="session_remember_me"><span>记住我</span>
+      <input type="checkbox" value="true" checked="checked" v-model="remember_me" id="session_remember_me"><span>记住我</span>
     </div>
     <div class="forget-btn">
       <a class="" data-toggle="dropdown" href="">登录遇到问题?</a>
     </div>
-    <button class="sign-in-button" id="sign-in-form-submit-btn" type="button">
+    <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click="loginHandler">
       <span id="sign-in-loading"></span>
       登录
     </button>
@@ -55,7 +55,59 @@
 
 <script>
     export default {
-        name: "Login"
+        name: "Login",
+        data(){
+            return {
+                username: "",
+                password: "",
+                remember_me: false,
+            }
+        },
+        methods:{
+            loginHandler(){
+                // 验证数据
+                if(this.username.length < 1 || this.password.length < 1){
+                    this.$message.error("对不起,用户名或密码不能为空!");
+                    return ;
+                }
+                // 发送ajax请求服务端
+                this.$axios.post(`http://api.renran.cn:8000/users/login/`,{
+                    username: this.username,
+                    password: this.password,
+                }).then(response=>{
+                    // 接收服务端返回的结果jwt
+                    if(this.remember_me){
+                        // 永久存储
+                        localStorage.user_token = response.data.token;
+                        sessionStorage.removeItem("user_token");
+                    }else {
+                        // 临时存储
+                        sessionStorage.user_token = response.data.token;
+                        localStorage.removeItem("user_token");
+                    }
+                    // 登录跳转
+                    this.$confirm("欢迎回到荏苒","登录成功",{
+                        confirmButtonText: "个人中心",
+                        cancelButtonText: "返回上一页",
+                        type: "warning"
+                    }).then(()=>{
+                        // 跳转到个人中心
+                        this.$route.push("/user");
+                    }).catch(()=>{
+                        // 跳转到上一页
+                        this.$route.back();
+                    })
+                }).catch(error=>{
+                    if(error.response){
+                        if(error.response.status === 400){
+                            this.$message.error("提交的数据有无,请检查您输入的用户名或密码错误!")
+                        }else {
+                            alert(error)
+                        }
+                    }
+                })
+            }
+        }
     }
 </script>
 

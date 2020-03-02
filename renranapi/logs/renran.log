@@ -39,3 +39,75 @@ INFO 2020-02-28 09:32:41,247 autoreload 203 /home/moluo/Desktop/renran/renranapi
 INFO 2020-02-28 09:32:42,687 autoreload 578 Watching for file changes with StatReloader
 INFO 2020-02-28 09:33:37,918 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
 INFO 2020-02-28 09:33:39,098 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 11:40:46,413 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/settings/dev.py changed, reloading.
+INFO 2020-03-02 11:40:48,737 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 11:46:52,994 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/urls.py changed, reloading.
+INFO 2020-03-02 11:46:54,066 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 11:49:22,583 autoreload 578 Watching for file changes with StatReloader
+WARNING 2020-03-02 11:49:33,629 log 228 Not Found: /
+WARNING 2020-03-02 11:49:33,632 basehttp 154 "GET / HTTP/1.1" 404 2034
+WARNING 2020-03-02 11:49:43,553 log 228 Not Found: /favicon.ico
+WARNING 2020-03-02 11:49:43,554 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 2085
+INFO 2020-03-02 12:12:30,748 basehttp 154 "GET /users/login HTTP/1.1" 301 0
+ERROR 2020-03-02 12:12:31,016 log 228 Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2020-03-02 12:12:31,024 basehttp 154 "GET /users/login/ HTTP/1.1" 500 86489
+WARNING 2020-03-02 12:12:42,087 log 228 Not Found: /users/
+WARNING 2020-03-02 12:12:42,089 basehttp 154 "GET /users/ HTTP/1.1" 404 2284
+ERROR 2020-03-02 12:12:52,015 log 228 Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2020-03-02 12:12:52,018 basehttp 154 "GET /users/login/ HTTP/1.1" 500 86489
+ERROR 2020-03-02 12:12:55,828 log 228 Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2020-03-02 12:12:55,839 basehttp 154 "GET /users/login/ HTTP/1.1" 500 86489
+WARNING 2020-03-02 12:14:55,510 log 228 Bad Request: /users/login/
+WARNING 2020-03-02 12:14:55,513 basehttp 154 "POST /users/login/ HTTP/1.1" 400 79
+WARNING 2020-03-02 12:15:37,313 log 228 Bad Request: /users/login/
+WARNING 2020-03-02 12:15:37,315 basehttp 154 "POST /users/login/ HTTP/1.1" 400 108
+INFO 2020-03-02 12:15:51,921 basehttp 154 "POST /users/login/ HTTP/1.1" 200 195
+INFO 2020-03-02 12:16:24,647 basehttp 154 "POST /users/login/ HTTP/1.1" 200 195
