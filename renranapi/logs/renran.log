@@ -119,3 +119,1543 @@ INFO 2020-03-02 12:24:50,990 autoreload 203 /home/moluo/Desktop/renran/renranapi
 INFO 2020-03-02 12:24:52,390 autoreload 578 Watching for file changes with StatReloader
 INFO 2020-03-02 12:36:46,339 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/utils.py changed, reloading.
 INFO 2020-03-02 12:36:47,850 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:22:06,011 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:23:09,442 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:24:27,895 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:24:44,269 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:24:51,078 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:24:56,202 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:25:03,806 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:26:06,063 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:26:18,738 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:26:25,803 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:27:02,122 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:27:57,085 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:28:33,090 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:30:50,992 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:35:08,343 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:35:27,877 autoreload 578 Watching for file changes with StatReloader
+WARNING 2020-03-02 21:35:41,183 log 228 Not Found: /
+WARNING 2020-03-02 21:35:41,202 basehttp 154 "GET / HTTP/1.1" 404 2035
+INFO 2020-03-02 21:35:55,930 basehttp 154 "GET /xadmin/ HTTP/1.1" 200 4151
+INFO 2020-03-02 21:35:56,092 basehttp 154 "GET /static/xadmin/css/themes/bootstrap-xadmin.css HTTP/1.1" 200 1888
+INFO 2020-03-02 21:35:56,096 basehttp 154 "GET /static/xadmin/vendor/bootstrap/css/bootstrap.css HTTP/1.1" 200 126432
+INFO 2020-03-02 21:35:56,154 basehttp 154 "GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 200 175
+INFO 2020-03-02 21:35:56,175 basehttp 154 "GET /static/xadmin/vendor/font-awesome/css/font-awesome.css HTTP/1.1" 200 21658
+INFO 2020-03-02 21:35:56,182 basehttp 154 "GET /static/xadmin/css/xadmin.main.css HTTP/1.1" 200 8376
+INFO 2020-03-02 21:35:56,183 basehttp 154 "GET /static/xadmin/css/xadmin.responsive.css HTTP/1.1" 200 4361
+INFO 2020-03-02 21:35:56,185 basehttp 154 "GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 200 240196
+INFO 2020-03-02 21:35:56,187 basehttp 154 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 200 8195
+INFO 2020-03-02 21:35:56,244 basehttp 154 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 200 15069
+INFO 2020-03-02 21:35:56,262 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 4158
+INFO 2020-03-02 21:35:56,267 basehttp 154 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 200 4561
+INFO 2020-03-02 21:35:56,270 basehttp 154 "GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 200 3401
+INFO 2020-03-02 21:35:56,277 basehttp 154 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 200 42543
+INFO 2020-03-02 21:35:56,277 basehttp 154 "GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 200 58327
+INFO 2020-03-02 21:35:56,302 basehttp 154 "GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 200 4165
+INFO 2020-03-02 21:35:56,656 basehttp 154 "GET /static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 200 44432
+INFO 2020-03-02 21:36:03,219 basehttp 154 "POST /xadmin/ HTTP/1.1" 302 0
+ERROR 2020-03-02 21:36:03,526 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 21:36:03,538 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239761
+INFO 2020-03-02 21:37:02,102 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:37:44,481 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:39:21,767 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:39:56,603 autoreload 578 Watching for file changes with StatReloader
+WARNING 2020-03-02 21:40:11,749 log 228 Not Found: /
+WARNING 2020-03-02 21:40:11,808 basehttp 154 "GET / HTTP/1.1" 404 2035
+ERROR 2020-03-02 21:40:22,601 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 21:40:22,614 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239651
+INFO 2020-03-02 21:42:08,822 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-02 21:42:17,604 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 21:42:17,630 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239609
+ERROR 2020-03-02 21:42:20,657 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 21:42:20,660 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239609
+ERROR 2020-03-02 21:42:44,098 log 228 Internal Server Error: /users/login/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2020-03-02 21:42:44,106 basehttp 154 "GET /users/login/ HTTP/1.1" 500 89343
+INFO 2020-03-02 21:42:58,327 basehttp 154 "POST /users/login/ HTTP/1.1" 200 248
+INFO 2020-03-02 21:43:30,173 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/adminx.py changed, reloading.
+INFO 2020-03-02 21:43:33,214 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-02 21:43:38,315 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 21:43:38,339 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239384
+ERROR 2020-03-02 21:43:40,664 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 21:43:40,674 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239385
+INFO 2020-03-02 21:45:28,164 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-02 21:45:34,318 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 21:45:34,342 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239610
+INFO 2020-03-02 21:46:23,100 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/adminx.py changed, reloading.
+INFO 2020-03-02 21:46:25,404 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:47:10,625 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-02 21:47:15,200 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 21:47:15,218 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239786
+INFO 2020-03-02 21:52:59,077 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:53:38,511 autoreload 578 Watching for file changes with StatReloader
+WARNING 2020-03-02 21:53:50,262 log 228 Not Found: /
+WARNING 2020-03-02 21:53:50,263 basehttp 154 "GET / HTTP/1.1" 404 2035
+WARNING 2020-03-02 21:53:51,893 log 228 Not Found: /favicon.ico
+WARNING 2020-03-02 21:53:51,895 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 2086
+ERROR 2020-03-02 21:53:58,431 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 21:53:58,436 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239651
+ERROR 2020-03-02 21:54:03,053 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 21:54:03,058 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239784
+INFO 2020-03-02 21:55:01,612 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-02 21:55:17,969 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 21:55:18,040 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239785
+INFO 2020-03-02 21:57:30,050 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 21:59:29,961 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-02 21:59:34,683 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 21:59:34,694 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239561
+ERROR 2020-03-02 21:59:41,989 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 21:59:41,997 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239560
+INFO 2020-03-02 22:01:25,656 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-02 22:01:59,701 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 22:01:59,714 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239562
+WARNING 2020-03-02 22:02:20,454 log 228 Not Found: /
+WARNING 2020-03-02 22:02:20,456 basehttp 154 "GET / HTTP/1.1" 404 2035
+ERROR 2020-03-02 22:02:27,345 log 228 Internal Server Error: /xadmin/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 592, in get
+    self.widgets = self.get_widgets()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/xadmin/views/dashboard.py", line 549, in get_widgets
+    if len(portal_pos):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1097, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'renran.xadmin_usersettings' doesn't exist")
+ERROR 2020-03-02 22:02:27,351 basehttp 154 "GET /xadmin/ HTTP/1.1" 500 239425
+INFO 2020-03-02 22:06:42,031 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 22:06:47,913 basehttp 154 "GET /xadmin/ HTTP/1.1" 200 11579
+INFO 2020-03-02 22:06:48,036 basehttp 154 "GET /static/xadmin/vendor/font-awesome/css/font-awesome.css HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,042 basehttp 154 "GET /static/xadmin/vendor/bootstrap/css/bootstrap.css HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,081 basehttp 154 "GET /static/xadmin/js/xadmin.plugin.portal.js HTTP/1.1" 200 1000
+INFO 2020-03-02 22:06:48,111 basehttp 154 "GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,116 basehttp 154 "GET /static/xadmin/css/xadmin.page.dashboard.css HTTP/1.1" 200 790
+INFO 2020-03-02 22:06:48,117 basehttp 154 "GET /static/xadmin/js/xadmin.page.dashboard.js HTTP/1.1" 200 3208
+INFO 2020-03-02 22:06:48,129 basehttp 154 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js HTTP/1.1" 200 31918
+INFO 2020-03-02 22:06:48,137 basehttp 154 "GET /static/xadmin/css/xadmin.main.css HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,142 basehttp 154 "GET /static/xadmin/css/themes/bootstrap-xadmin.css HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,154 basehttp 154 "GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,158 basehttp 154 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,159 basehttp 154 "GET /static/xadmin/css/xadmin.responsive.css HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,171 basehttp 154 "GET /static/xadmin/js/xadmin.plugin.themes.js HTTP/1.1" 200 3489
+INFO 2020-03-02 22:06:48,175 basehttp 154 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,184 basehttp 154 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,208 basehttp 154 "GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,210 basehttp 154 "GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,229 basehttp 154 "GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,231 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-02 22:06:48,238 basehttp 154 "GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 304 0
+INFO 2020-03-02 22:06:48,644 basehttp 154 "GET /static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 304 0
+INFO 2020-03-02 22:07:24,844 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/adminx.py changed, reloading.
+INFO 2020-03-02 22:07:26,905 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 22:08:23,359 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 22:08:39,378 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 22:08:52,175 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-02 22:09:00,669 basehttp 154 "GET /xadmin/ HTTP/1.1" 200 13850
+INFO 2020-03-02 22:09:00,763 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-02 22:09:05,874 basehttp 154 "POST /xadmin/settings/user HTTP/1.1" 200 0
+INFO 2020-03-02 22:09:05,912 basehttp 154 "GET /static/xadmin/css/themes/bootstrap-theme.css HTTP/1.1" 200 19791
+INFO 2020-03-02 22:09:53,417 basehttp 154 "POST /xadmin/settings/user HTTP/1.1" 200 0
+INFO 2020-03-02 22:10:22,820 basehttp 154 "GET /xadmin/users/user/ HTTP/1.1" 200 28292
+INFO 2020-03-02 22:10:22,859 basehttp 154 "GET /static/xadmin/css/xadmin.form.css HTTP/1.1" 200 3763
+INFO 2020-03-02 22:10:22,894 basehttp 154 "GET /static/xadmin/js/xadmin.plugin.bookmark.js HTTP/1.1" 200 529
+INFO 2020-03-02 22:10:22,903 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-02 22:10:22,905 basehttp 154 "GET /static/xadmin/js/xadmin.plugin.details.js HTTP/1.1" 200 2319
+INFO 2020-03-02 22:10:22,909 basehttp 154 "GET /static/xadmin/js/xadmin.plugin.filters.js HTTP/1.1" 200 1990
+INFO 2020-03-02 22:10:22,921 basehttp 154 "GET /static/xadmin/js/xadmin.page.form.js HTTP/1.1" 200 1948
+INFO 2020-03-02 22:10:22,938 basehttp 154 "GET /static/xadmin/js/xadmin.plugin.actions.js HTTP/1.1" 200 4198
+INFO 2020-03-02 22:10:22,940 basehttp 154 "GET /static/xadmin/js/xadmin.page.list.js HTTP/1.1" 200 1105
+INFO 2020-03-02 22:10:26,031 basehttp 154 "GET /xadmin/users/user/1/update/ HTTP/1.1" 200 30289
+INFO 2020-03-02 22:10:26,082 basehttp 154 "GET /static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css HTTP/1.1" 200 3339
+INFO 2020-03-02 22:10:26,093 basehttp 154 "GET /static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 10225
+INFO 2020-03-02 22:10:26,125 basehttp 154 "GET /static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.css HTTP/1.1" 200 3729
+INFO 2020-03-02 22:10:26,127 basehttp 154 "GET /static/xadmin/js/xadmin.plugin.quick-form.js HTTP/1.1" 200 7546
+INFO 2020-03-02 22:10:26,130 basehttp 154 "GET /static/xadmin/vendor/load-image/load-image.js HTTP/1.1" 200 8309
+INFO 2020-03-02 22:10:26,131 basehttp 154 "GET /static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 32656
+INFO 2020-03-02 22:10:26,140 basehttp 154 "GET /static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js HTTP/1.1" 200 15611
+INFO 2020-03-02 22:10:26,145 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-02 22:10:26,180 basehttp 154 "GET /static/xadmin/js/xadmin.widget.datetime.js HTTP/1.1" 200 2979
+INFO 2020-03-02 22:10:26,181 basehttp 154 "GET /static/xadmin/vendor/bootstrap-clockpicker/bootstrap-clockpicker.js HTTP/1.1" 200 21112
+INFO 2020-03-02 22:10:31,768 basehttp 154 "GET /xadmin/xadmin/log/ HTTP/1.1" 200 28281
+INFO 2020-03-02 22:10:31,829 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-02 22:10:35,500 basehttp 154 "GET /xadmin/auth/group/ HTTP/1.1" 200 23061
+INFO 2020-03-02 22:10:35,541 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-02 22:12:32,850 basehttp 154 "GET /xadmin/users/user/ HTTP/1.1" 200 28292
+INFO 2020-03-02 22:12:32,924 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-02 22:14:39,988 basehttp 154 "OPTIONS /users/login/ HTTP/1.1" 200 0
+INFO 2020-03-02 22:14:40,170 basehttp 154 "POST /users/login/ HTTP/1.1" 200 248
+INFO 2020-03-02 22:14:52,563 basehttp 154 "POST /users/login/ HTTP/1.1" 200 248
+INFO 2020-03-02 22:15:46,088 basehttp 154 "POST /users/login/ HTTP/1.1" 200 248
+INFO 2020-03-02 22:17:59,615 basehttp 154 "POST /users/login/ HTTP/1.1" 200 248
+INFO 2020-03-02 22:18:39,511 basehttp 154 "POST /users/login/ HTTP/1.1" 200 248

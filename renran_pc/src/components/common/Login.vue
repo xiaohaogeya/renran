@@ -108,10 +108,10 @@
                         type: "warning"
                     }).then(()=>{
                         // 跳转到个人中心
-                        this.$route.push("/user");
+                        this.$router.push("/user");
                     }).catch(()=>{
                         // 跳转到上一页
-                        this.$route.back();
+                        this.$router.back();
                     })
                 }).catch(error=>{
                     if(error.response){
