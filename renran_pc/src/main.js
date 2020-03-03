@@ -9,6 +9,7 @@ import "element-ui/lib/theme-chalk/index.css"
 import "../static/css/reset.css"
 import "../static/css/iconfont.css"
 import "../static/css/iconfont.eot"
+import "../static/js/TCaptcha"
 import axios from 'axios'
 axios.defaults.withCredentials = false;
 Vue.prototype.$axios = axios;

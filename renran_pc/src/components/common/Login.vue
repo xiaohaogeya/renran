@@ -29,7 +29,7 @@
     <div class="forget-btn">
       <a class="" data-toggle="dropdown" href="">登录遇到问题?</a>
     </div>
-    <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click="loginHandler">
+    <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click="show_captcha">
       <span id="sign-in-loading"></span>
       登录
     </button>
@@ -105,7 +105,7 @@
                     this.$confirm("欢迎回到荏苒","登录成功",{
                         confirmButtonText: "个人中心",
                         cancelButtonText: "返回上一页",
-                        type: "warning"
+                        type: "success"
                     }).then(()=>{
                         // 跳转到个人中心
                         this.$router.push("/user");
@@ -122,6 +122,36 @@
                         }
                     }
                 })
+            },
+            show_captcha(){
+                // 显示验证码
+                if(this.username.length < 1 || this.password.length < 1){
+                    this.$message.error("对不起,用户名或密码不能为空!");
+                    return ;
+                }
+                var captcha = new TencentCaptcha(this.$settings.TC_captcha.app_id, res=> {
+                    if(res.ret === 0){
+                        this.$axios.post(`${this.$settings.Host}/users/captcha/`,{
+                            ret: res.ret,
+                            ticket: res.ticket,
+                            randstr: res.randstr,
+                        }).then(response=>{
+                            if(response.data.message && response.data.randstr === res.randstr){
+                                // 验证成功
+                                this.loginHandler();
+                            }else {
+                                this.$message.error("验证码验证失败,请重新操作");
+                                captcha.destroy();
+                            }
+                        }).catch(error=>{
+                            console.log("发生错误", error);
+                            alert("发送错误");
+                        })
+                    }
+                });
+                captcha.show()
+
+
             }
         }
     }

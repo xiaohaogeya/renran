@@ -212,3 +212,10 @@ JWT_AUTH = {
 AUTHENTICATION_BACKENDS = [
     'users.utils.AccountModelBackend',
 ]
+
+# 腾讯防水墙配置
+TENCENT_CAPTCHA = {
+    "GATEWAY": "https://ssl.captcha.qq.com/ticket/verify",
+    "APPID": "2072894469",
+    "App_Secret_Key": "0vcR-k9wMOk1SArX_gvB7qQ**",
+}
