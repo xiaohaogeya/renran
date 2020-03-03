@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13cf5324-2cbd-4e11-a0cf-821492e8f572" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../renran_pc/static/js/TCaptcha.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../renran_pc/src/components/common/Register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/renranapi/apps/users/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/common/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/common/Header.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/common/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/common/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../renran_pc/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/renran.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/renran.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renranapi/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/users/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/users/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renranapi/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/settings/dev.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +160,7 @@
       <workItem from="1582771620032" duration="1625000" />
       <workItem from="1582809786475" duration="11637000" />
       <workItem from="1583157162923" duration="1441000" />
-      <workItem from="1583226171135" duration="3093000" />
+      <workItem from="1583226171135" duration="9948000" />
     </task>
     <servers />
   </component>
@@ -180,6 +181,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/renranapi$manage.coverage" NAME="manage Coverage Results" MODIFIED="1583231523587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/renranapi$manage.coverage" NAME="manage Coverage Results" MODIFIED="1583241048818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

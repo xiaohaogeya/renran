@@ -1,53 +1,48 @@
 <template>
-    <div class="sign">
-    <div class="logo"><router-link to="/"><img src="/static/image/nav-logo.png" alt="Logo"></router-link></div>
+<div class="sign">
+    <div class="logo"><a href="/"><img src="/static/image/nav-logo.png" alt="Logo"></a></div>
     <div class="main">
+      <h4 class="title">
+        <div class="normal-title">
+          <router-link to="/user/login">登录</router-link>
+          <b>·</b>
+          <router-link id="js-sign-up-btn" class="active" to="/user/register">注册</router-link>
+        </div>
+      </h4>
 
+      <div class="js-sign-up-container">
+        <form class="new_user" id="new_user" action="" accept-charset="UTF-8" method="post">
+          <div class="input-prepend restyle">
+              <input placeholder="你的昵称" type="text" value="" v-model="nickname" id="user_nickname">
+            <i class="iconfont ic-user"></i>
+          </div>
+            <div class="input-prepend restyle no-radius js-normal">
+                <input placeholder="手机号" type="tel" v-model="mobile" id="user_mobile_number" @blur="check_mobile">
+              <i class="iconfont ic-phonenumber"></i>
+            </div>
+          <div class="input-prepend restyle no-radius security-up-code js-security-number" v-if="is_show_sms_code">
+              <input type="text" v-model="sms_code" id="sms_code" placeholder="手机验证码">
+            <i class="iconfont ic-verify"></i>
+            <a tabindex="-1" class="btn-up-resend js-send-code-button" :class="{disable:send_able}" href="javascript:void(0);" id="send_code">{{sms_code_text}}</a>
+          </div>
+          <input type="hidden" name="security_number" id="security_number">
+          <div class="input-prepend">
+            <input placeholder="设置密码" type="password" v-model="password" id="user_password">
+            <i class="iconfont ic-password"></i>
+          </div>
+          <input type="submit" name="commit" value="注册" class="sign-up-button" id="sign_up_btn" data-disable-with="注册" @click.prevent="registerHander">
+          <p class="sign-up-msg">点击 “注册” 即表示您同意并愿意遵守荏苒<br> <a target="_blank" href="">用户协议</a> 和 <a target="_blank" href="">隐私政策</a> 。</p>
+        </form>
+        <!-- 更多注册方式 -->
+        <div class="more-sign">
+          <h6>社交帐号直接注册</h6>
+            <ul>
+            <li><a id="weixin" class="weixin" target="_blank" href=""><i class="iconfont ic-wechat"></i></a></li>
+            <li><a id="qq" class="qq" target="_blank" href=""><i class="iconfont ic-qq_connect"></i></a></li>
+          </ul>
 
-<h4 class="title">
-  <div class="normal-title">
-    <router-link class="active" to="/user/login">登录</router-link>
-    <b>·</b>
-    <router-link id="js-sign-up-btn" class="" to="/user/register">注册</router-link>
-  </div>
-</h4>
-<div class="js-sign-in-container">
-  <form id="new_session" action="" method="post">
-      <div class="input-prepend restyle js-normal">
-        <input placeholder="手机号或邮箱" type="text" v-model="username" id="session_email_or_mobile_number">
-        <i class="iconfont ic-user"></i>
+        </div>
       </div>
-    <!-- 海外登录登录名输入框 -->
-
-    <div class="input-prepend">
-      <input placeholder="密码" type="password" v-model="password" id="session_password">
-      <i class="iconfont ic-password"></i>
-    </div>
-    <div class="remember-btn">
-      <input type="checkbox" value="true" checked="checked" v-model="remember_me" id="session_remember_me"><span>记住我</span>
-    </div>
-    <div class="forget-btn">
-      <a class="" data-toggle="dropdown" href="">登录遇到问题?</a>
-    </div>
-    <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click="show_captcha">
-      <span id="sign-in-loading"></span>
-      登录
-    </button>
-</form>
-  <!-- 更多登录方式 -->
-  <div class="more-sign">
-    <h6>社交帐号登录</h6>
-    <ul>
-  <li id="weibo-link-wrap" class="">
-    <a class="weibo" id="weibo-link">
-      <i class="iconfont ic-weibo"></i>
-    </a>
-  </li>
-  <li><a id="weixin" class="weixin" target="_blank" href=""><i class="iconfont ic-wechat"></i></a></li>
-  <li><a id="qq" class="qq" target="_blank" href=""><i class="iconfont ic-qq_connect"></i></a></li>
-</ul>
-  </div>
-</div>
 
     </div>
   </div>
@@ -55,54 +50,68 @@
 
 <script>
     export default {
-        name: "Login",
+        name: "Register",
         data(){
-            return {
-                username: "",
-                password: "",
-                remember_me: false,
+          return {
+            nickname: "",
+            mobile: "",
+            sms_code: "",
+            password: "",
+            sms_code_text: "发送验证码",
+            is_show_sms_code: false,
+            send_able: false,
+          }
+        },
+        watch:{
+          mobile(){
+              // test类似于Python的re.match
+            if(/^1[3-9]\d{9}$/.test(this.mobile)){
+              this.is_show_sms_code = true;
+              this.send_able = false;
+            }else{
+              this.is_show_sms_code = true;
+              this.send_able = true;
             }
+          }
         },
         methods:{
-            loginHandler(){
-                // 验证数据
-                if(this.username.length < 1 || this.password.length < 1){
-                    this.$message.error("对不起,用户名或密码不能为空!");
-                    return ;
+            check_mobile(){
+                // 验证手机号是否唯一
+                if(this.is_show_sms_code){
+                    // 发送ajax到服务端验证手机号是否可用
+                    this.$axios.get(`${this.$settings.Host}/users/mobile/${this.mobile}/`
+                    ).then(response=>{
+                        this.send_able = false;
+                    }).catch(error=>{
+                        this.$message.error(error.response.data.err_msg);
+                        this.send_able = true;
+                    })
                 }
-                // 发送ajax请求服务端
-                this.$axios.post(`http://api.renran.cn:8000/users/login/`,{
-                    username: this.username,
+            },
+            registerHander(){
+                // 注册处理
+                if(this.nickname.length < 1 || this.mobile.length<1 || this.sms_code.length<1 || this.password.length <1){
+                    this.$message.error("不好意思,表单信息不能为空");
+                    return false;
+                }
+                this.$axios.post(`${this.$settings.Host}/users/`,{
+                    mobile: this.mobile,
+                    nickname: this.nickname,
                     password: this.password,
+                    sms_code: this.sms_code,
                 }).then(response=>{
-                    // 接收服务端返回的结果jwt
-                    if(this.remember_me){
-                        // 永久存储
-                        localStorage.user_token = response.data.token;
-                        localStorage.user_name = response.data.username;
-                        localStorage.user_id = response.data.id;
-                        localStorage.user_nickname = response.data.nickname;
-                        localStorage.user_avatar = response.data.avatar;
-                        sessionStorage.removeItem("user_token");
-                        sessionStorage.removeItem("user_name");
-                        sessionStorage.removeItem("user_id");
-                        sessionStorage.removeItem("user_nickname");
-                        sessionStorage.removeItem("user_avatar");
-                    }else {
-                        // 临时存储
-                        sessionStorage.user_token = response.data.token;
-                        sessionStorage.user_name = response.data.username;
-                        sessionStorage.user_id = response.data.id;
-                        sessionStorage.user_nickname = response.data.nickname;
-                        sessionStorage.user_avatar = response.data.avatar;
-                        localStorage.removeItem("user_token");
-                        localStorage.removeItem("user_name");
-                        localStorage.removeItem("user_id");
-                        localStorage.removeItem("user_nickname");
-                        localStorage.removeItem("user_avatar");
-                    }
-                    // 登录跳转
-                    this.$confirm("欢迎回到荏苒","登录成功",{
+                    console.log(111111);
+                    sessionStorage.user_token = response.data.token;
+                    sessionStorage.user_name = response.data.username;
+                    sessionStorage.user_id = response.data.id;
+                    sessionStorage.user_nickname = response.data.nickname;
+                    sessionStorage.user_avatar = response.data.avatar;
+                    localStorage.removeItem("user_token");
+                    localStorage.removeItem("user_name");
+                    localStorage.removeItem("user_id");
+                    localStorage.removeItem("user_nickname");
+                    localStorage.removeItem("user_avatar");
+                    this.$confirm("注册成功,欢迎来到荏苒!","提示",{
                         confirmButtonText: "个人中心",
                         cancelButtonText: "返回上一页",
                         type: "success"
@@ -114,44 +123,9 @@
                         this.$router.back();
                     })
                 }).catch(error=>{
-                    if(error.response){
-                        if(error.response.status === 400){
-                            this.$message.error("提交的数据有无,请检查您输入的用户名或密码错误!")
-                        }else {
-                            alert(error)
-                        }
-                    }
+                    console.log(error);
+                    this.$message.error("用户注册失败!");
                 })
-            },
-            show_captcha(){
-                // 显示验证码
-                if(this.username.length < 1 || this.password.length < 1){
-                    this.$message.error("对不起,用户名或密码不能为空!");
-                    return ;
-                }
-                var captcha = new TencentCaptcha(this.$settings.TC_captcha.app_id, res=> {
-                    if(res.ret === 0){
-                        this.$axios.post(`${this.$settings.Host}/users/captcha/`,{
-                            ret: res.ret,
-                            ticket: res.ticket,
-                            randstr: res.randstr,
-                        }).then(response=>{
-                            if(response.data.message && response.data.randstr === res.randstr){
-                                // 验证成功
-                                this.loginHandler();
-                            }else {
-                                this.$message.error("验证码验证失败,请重新操作");
-                                captcha.destroy();
-                            }
-                        }).catch(error=>{
-                            console.log("发生错误", error);
-                            alert("发送错误");
-                        })
-                    }
-                });
-                captcha.show()
-
-
             }
         }
     }
@@ -669,7 +643,7 @@ body.reader-night-mode .sign .more-sign .weibo-loading:after {
 }
 
 .sign .more-sign .weibo-loading:before {
-	content: "";
+	content: "";/user
 	position: absolute;
 	top: 50%;
 	left: 50%;

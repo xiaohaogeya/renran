@@ -28,3 +28,11 @@ class AccountModelBackend(ModelBackend):
         user = get_user_by_account(username)
         if user is not None and user.check_password(password) and self.user_can_authenticate(user):
             return user
+
+def get_user_by_data(**kwargs):
+    """根据字段信息获取用户"""
+    User = get_user_model()
+    try:
+        return User.objects.get(**kwargs)
+    except:
+        return None
