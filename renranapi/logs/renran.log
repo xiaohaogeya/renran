@@ -2123,3 +2123,69 @@ WARNING 2020-03-03 21:16:06,114 log 228 Bad Request: /users/
 WARNING 2020-03-03 21:16:06,126 basehttp 154 "POST /users/ HTTP/1.1" 400 61
 WARNING 2020-03-03 21:16:41,418 log 228 Bad Request: /users/
 WARNING 2020-03-03 21:16:41,420 basehttp 154 "POST /users/ HTTP/1.1" 400 61
+INFO 2020-03-03 21:28:03,473 basehttp 154 "GET /users/mobile/13945678930/ HTTP/1.1" 200 31
+INFO 2020-03-03 21:28:50,833 basehttp 154 "OPTIONS /users/captcha/ HTTP/1.1" 200 0
+ERROR 2020-03-03 21:28:52,730 log 228 Internal Server Error: /users/captcha/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/apps/users/views.py", line 32, in post
+    ret = self.txrequest(AppSecretKey, params)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/apps/users/views.py", line 43, in txrequest
+    f = urlopen(url, params)
+  File "/usr/lib/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.6/urllib/request.py", line 524, in open
+    req = meth(req)
+  File "/usr/lib/python3.6/urllib/request.py", line 1248, in do_request_
+    raise TypeError(msg)
+TypeError: POST data should be bytes, an iterable of bytes, or a file object. It cannot be of type str.
+ERROR 2020-03-03 21:28:52,748 basehttp 154 "POST /users/captcha/ HTTP/1.1" 500 18321
+ERROR 2020-03-03 21:29:28,464 log 228 Internal Server Error: /users/captcha/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/apps/users/views.py", line 32, in post
+    ret = self.txrequest(AppSecretKey, params)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/apps/users/views.py", line 43, in txrequest
+    f = urlopen(url, params)
+  File "/usr/lib/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.6/urllib/request.py", line 524, in open
+    req = meth(req)
+  File "/usr/lib/python3.6/urllib/request.py", line 1248, in do_request_
+    raise TypeError(msg)
+TypeError: POST data should be bytes, an iterable of bytes, or a file object. It cannot be of type str.
+ERROR 2020-03-03 21:29:28,505 basehttp 154 "POST /users/captcha/ HTTP/1.1" 500 18321

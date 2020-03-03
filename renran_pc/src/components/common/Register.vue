@@ -30,7 +30,7 @@
             <input placeholder="设置密码" type="password" v-model="password" id="user_password">
             <i class="iconfont ic-password"></i>
           </div>
-          <input type="submit" name="commit" value="注册" class="sign-up-button" id="sign_up_btn" data-disable-with="注册" @click.prevent="registerHander">
+          <input type="submit" name="commit" value="注册" class="sign-up-button" id="sign_up_btn" data-disable-with="注册" @click.prevent="show_captcha">
           <p class="sign-up-msg">点击 “注册” 即表示您同意并愿意遵守荏苒<br> <a target="_blank" href="">用户协议</a> 和 <a target="_blank" href="">隐私政策</a> 。</p>
         </form>
         <!-- 更多注册方式 -->
@@ -126,6 +126,35 @@
                     console.log(error);
                     this.$message.error("用户注册失败!");
                 })
+            },
+            show_captcha(){
+                // 显示验证码
+                if(this.nickname.length < 1 || this.mobile.length<1 || this.sms_code.length<1 || this.password.length <1){
+                    this.$message.error("不好意思,表单信息不能为空");
+                    return false;
+                }
+                var captcha = new TencentCaptcha(this.$settings.TC_captcha.app_id, res=> {
+                    if(res.ret === 0){
+                        this.$axios.post(`${this.$settings.Host}/users/captcha/`,{
+                            ret: res.ret,
+                            ticket: res.ticket,
+                            randstr: res.randstr,
+                        }).then(response=>{
+                            if(response.data.message && response.data.randstr === res.randstr){
+                                // 验证成功
+                                this.registerHander();
+                            }else {
+                                this.$message.error("验证码验证失败,请重新操作");
+                                captcha.destroy();
+                            }
+                        }).catch(error=>{
+                            console.log("发生错误", error);
+                            alert("发送错误");
+                        })
+                    }
+                });
+                captcha.show()
+
             }
         }
     }
