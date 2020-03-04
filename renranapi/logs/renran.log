@@ -2189,3 +2189,304 @@ Traceback (most recent call last):
     raise TypeError(msg)
 TypeError: POST data should be bytes, an iterable of bytes, or a file object. It cannot be of type str.
 ERROR 2020-03-03 21:29:28,505 basehttp 154 "POST /users/captcha/ HTTP/1.1" 500 18321
+INFO 2020-03-04 17:22:21,184 autoreload 578 Watching for file changes with StatReloader
+WARNING 2020-03-04 17:23:20,533 log 228 Bad Request: /users/mobile/19929238507/
+WARNING 2020-03-04 17:23:20,535 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 400 56
+WARNING 2020-03-04 17:23:35,144 log 228 Bad Request: /users/mobile/19929238507/
+WARNING 2020-03-04 17:23:35,145 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 400 56
+INFO 2020-03-04 17:24:27,054 autoreload 578 Watching for file changes with StatReloader
+WARNING 2020-03-04 17:24:32,289 log 228 Bad Request: /users/mobile/19929238507/
+WARNING 2020-03-04 17:24:32,293 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 400 56
+WARNING 2020-03-04 17:24:52,208 log 228 Bad Request: /users/mobile/19929238507/
+WARNING 2020-03-04 17:24:52,217 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 400 56
+WARNING 2020-03-04 17:24:58,845 log 228 Bad Request: /users/mobile/19929238507/
+WARNING 2020-03-04 17:24:58,846 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 400 56
+INFO 2020-03-04 17:26:03,167 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-04 17:26:23,249 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-04 17:27:41,322 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/views.py changed, reloading.
+INFO 2020-03-04 17:27:44,030 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-04 17:28:39,056 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-04 17:30:06,740 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-04 17:31:35,847 basehttp 154 "OPTIONS /users/captcha/ HTTP/1.1" 200 0
+ERROR 2020-03-04 17:31:36,023 log 228 Internal Server Error: /users/captcha/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/apps/users/views.py", line 36, in post
+    ret = self.txrequest(AppSecretKey, params)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/apps/users/views.py", line 47, in txrequest
+    f = urlopen(url, params)
+  File "/usr/lib/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.6/urllib/request.py", line 524, in open
+    req = meth(req)
+  File "/usr/lib/python3.6/urllib/request.py", line 1248, in do_request_
+    raise TypeError(msg)
+TypeError: POST data should be bytes, an iterable of bytes, or a file object. It cannot be of type str.
+ERROR 2020-03-04 17:31:36,029 basehttp 154 "POST /users/captcha/ HTTP/1.1" 500 18942
+ERROR 2020-03-04 17:32:01,904 log 228 Internal Server Error: /users/captcha/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/apps/users/views.py", line 36, in post
+    ret = self.txrequest(AppSecretKey, params)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/apps/users/views.py", line 47, in txrequest
+    f = urlopen(url, params)
+  File "/usr/lib/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.6/urllib/request.py", line 524, in open
+    req = meth(req)
+  File "/usr/lib/python3.6/urllib/request.py", line 1248, in do_request_
+    raise TypeError(msg)
+TypeError: POST data should be bytes, an iterable of bytes, or a file object. It cannot be of type str.
+ERROR 2020-03-04 17:32:01,906 basehttp 154 "POST /users/captcha/ HTTP/1.1" 500 18942
+WARNING 2020-03-04 17:33:17,417 log 228 Bad Request: /users/captcha/
+WARNING 2020-03-04 17:33:17,429 basehttp 154 "POST /users/captcha/ HTTP/1.1" 400 108
+INFO 2020-03-04 17:37:01,153 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-04 17:38:12,586 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+INFO 2020-03-04 17:38:12,596 basehttp 154 "OPTIONS /users/ HTTP/1.1" 200 0
+WARNING 2020-03-04 17:38:12,696 log 228 Bad Request: /users/
+WARNING 2020-03-04 17:38:12,696 basehttp 154 "POST /users/ HTTP/1.1" 400 61
+INFO 2020-03-04 17:38:55,517 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+INFO 2020-03-04 17:38:55,812 basehttp 154 "POST /users/ HTTP/1.1" 201 248
+INFO 2020-03-04 17:41:30,655 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+WARNING 2020-03-04 17:44:29,487 log 228 Method Not Allowed: /users/sms/19929238507/
+WARNING 2020-03-04 17:44:29,489 basehttp 154 "POST /users/sms/19929238507/ HTTP/1.1" 405 41
+ERROR 2020-03-04 17:45:00,182 log 228 Internal Server Error: /users/sms/19929238507
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to api.renran.cn:8000/users/sms/19929238507/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2020-03-04 17:45:00,184 basehttp 154 "POST /users/sms/19929238507 HTTP/1.1" 500 70702
+WARNING 2020-03-04 17:45:36,228 log 228 Not Found: /users/sms/
+WARNING 2020-03-04 17:45:36,229 basehttp 154 "POST /users/sms/ HTTP/1.1" 404 2993
+WARNING 2020-03-04 17:46:12,507 log 228 Not Found: /users/sms/
+WARNING 2020-03-04 17:46:12,508 basehttp 154 "POST /users/sms/ HTTP/1.1" 404 2993
+WARNING 2020-03-04 17:46:34,592 log 228 Not Found: /users/sms/
+WARNING 2020-03-04 17:46:34,601 basehttp 154 "POST /users/sms/ HTTP/1.1" 404 2993
+WARNING 2020-03-04 17:46:43,221 log 228 Not Found: /users/sms/
+WARNING 2020-03-04 17:46:43,222 basehttp 154 "POST /users/sms/ HTTP/1.1" 404 2993
+WARNING 2020-03-04 17:47:11,039 log 228 Not Found: /users/sms/
+WARNING 2020-03-04 17:47:11,042 basehttp 154 "GET /users/sms/ HTTP/1.1" 404 2992
+ERROR 2020-03-04 17:47:33,537 views 104 发送短信失败!
+INFO 2020-03-04 17:47:33,541 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21
+INFO 2020-03-04 17:50:07,167 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-04 17:51:10,792 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-04 17:52:02,902 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-04 17:52:35,071 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-04 17:56:50,502 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-04 18:02:00,326 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-04 18:09:29,906 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+ERROR 2020-03-04 18:09:30,440 views 105 发送短信失败!
+INFO 2020-03-04 18:09:30,452 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21
+ERROR 2020-03-04 18:09:41,969 views 105 发送短信失败!
+INFO 2020-03-04 18:09:42,003 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21
+ERROR 2020-03-04 18:09:52,679 views 105 发送短信失败!
+INFO 2020-03-04 18:09:52,683 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21
+INFO 2020-03-04 18:21:11,440 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-04 18:29:29,552 views 105 发送短信失败!
+INFO 2020-03-04 18:29:29,574 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21
+ERROR 2020-03-04 18:32:05,734 views 105 发送短信失败!
+INFO 2020-03-04 18:32:05,736 basehttp 154 "GET /users/sms/15914397060/ HTTP/1.1" 200 21
+ERROR 2020-03-04 18:32:17,592 views 105 发送短信失败!
+INFO 2020-03-04 18:32:17,598 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21
+INFO 2020-03-04 18:36:50,757 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/views.py changed, reloading.
+INFO 2020-03-04 18:36:53,772 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-04 18:38:09,440 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-04 18:38:16,074 views 105 发送短信失败!
+INFO 2020-03-04 18:38:16,086 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21
+INFO 2020-03-04 18:38:37,342 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-04 18:38:41,289 views 106 发送短信失败!
+INFO 2020-03-04 18:38:41,295 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21
+INFO 2020-03-04 18:43:54,433 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/serializers.py changed, reloading.
+INFO 2020-03-04 18:43:58,314 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-04 18:47:48,022 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/serializers.py changed, reloading.
+INFO 2020-03-04 18:47:49,920 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-04 18:49:43,163 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-04 18:51:07,751 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+ERROR 2020-03-04 18:51:08,012 views 106 发送短信失败!
+INFO 2020-03-04 18:51:08,014 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21
+ERROR 2020-03-04 18:51:18,256 views 106 发送短信失败!
+INFO 2020-03-04 18:51:18,265 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21
+INFO 2020-03-04 18:51:36,513 basehttp 154 "OPTIONS /users/captcha/ HTTP/1.1" 200 0
+INFO 2020-03-04 18:51:36,823 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+INFO 2020-03-04 18:51:36,830 basehttp 154 "OPTIONS /users/ HTTP/1.1" 200 0
+ERROR 2020-03-04 18:51:37,067 log 228 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 234, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 436, in run_validation
+    value = self.validate(value)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/apps/users/serializers.py", line 42, in validate
+    redis_sms_code = redis_conn.get("sms_%s" % mobile).decode()
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2020-03-04 18:51:37,073 basehttp 154 "POST /users/ HTTP/1.1" 500 19105
+INFO 2020-03-04 18:51:54,819 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+ERROR 2020-03-04 18:51:54,914 log 228 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 234, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 436, in run_validation
+    value = self.validate(value)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/apps/users/serializers.py", line 42, in validate
+    redis_sms_code = redis_conn.get("sms_%s" % mobile).decode()
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2020-03-04 18:51:54,915 basehttp 154 "POST /users/ HTTP/1.1" 500 19105
+INFO 2020-03-04 18:52:44,541 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+ERROR 2020-03-04 18:52:44,611 log 228 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 234, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 436, in run_validation
+    value = self.validate(value)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/apps/users/serializers.py", line 42, in validate
+    redis_sms_code = redis_conn.get("sms_%s" % mobile).decode()
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2020-03-04 18:52:44,624 basehttp 154 "POST /users/ HTTP/1.1" 500 19105
+INFO 2020-03-04 18:56:48,371 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-04 18:57:12,745 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+ERROR 2020-03-04 18:57:13,092 views 106 发送短信失败!
+INFO 2020-03-04 18:57:13,146 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21
+INFO 2020-03-04 18:57:29,407 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+WARNING 2020-03-04 18:57:29,471 log 228 Bad Request: /users/
+WARNING 2020-03-04 18:57:29,472 basehttp 154 "POST /users/ HTTP/1.1" 400 61
+INFO 2020-03-04 18:58:46,556 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+ERROR 2020-03-04 18:58:46,715 log 228 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 234, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 436, in run_validation
+    value = self.validate(value)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/apps/users/serializers.py", line 43, in validate
+    redis_sms_code = redis_conn.get("sms_%s" % mobile).decode()
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2020-03-04 18:58:46,717 basehttp 154 "POST /users/ HTTP/1.1" 500 19105
+INFO 2020-03-04 19:05:27,465 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-04 19:05:40,108 views 106 发送短信失败!
+INFO 2020-03-04 19:05:40,143 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21

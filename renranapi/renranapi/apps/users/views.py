@@ -3,11 +3,15 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.generics import CreateAPIView
 from django.conf import settings
+from django_redis import get_redis_connection
 from urllib.parse import urlencode
 from urllib.request import urlopen
 from .utils import get_user_by_data
 from .serializers import UserCreateModelSerializer
 from .models import User
+from renranapi.utils.yuntongxun.sms import CCP
+from renranapi.settings import constants
+import random
 import json
 import logging
 loger = logging.getLogger("django")
@@ -35,7 +39,7 @@ class CaptchaAPIView(APIView):
             "randstr": Randstr
         })
 
-    def txrequest(self, params, m = "GET"):
+    def txrequest(self, appkey, params, m = "GET"):
         url = "https://ssl.captcha.qq.com/ticket/verify"
         if m == "GET":
             f = urlopen("%s?%s" % (url, params))
@@ -74,6 +78,40 @@ class UserAPIView(CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserCreateModelSerializer
 
+class SMSCodeAPIView(APIView):
+    """短信验证码"""
+    def get(self, request, mobile):
+        # 1.验证数据
+        redis = get_redis_connection("sms_code")
+        result = redis.get("interval_%s" % mobile)
+        print(mobile)
+        if result:
+            return Response({
+                "message": "短信发送中,请留意您的手机,请勿频繁操作",
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        # 2.生成随机短信验证码
+        sms_code = "%04d" % random.randint(0, 9999)
+        print(sms_code)
+
+        # 3.发送短信验证码
+        try:
+            ccp = CCP()
+            ret = ccp.send_template_sms(mobile, [sms_code, constants.SMS_EXPIRE_TIME // 60], constants.SMS_TEMPLATE_ID)
+            print(ret)
+        except:
+            ret = False
+
+        if not ret:
+            loger.error("发送短信失败!")
+            return Response("发送短信失败!")
+
+        # 4.保存短信验证码到redis中
+        redis.setex("sms_%s" % mobile, constants.SMS_EXPIRE_TIME, sms_code)
+        redis.setex("interval_%s" % mobile, constants.SMS_INTERVAL_TIME, "_")
+
+        # 5.返回操作结果
+        return Response({"message": "短信已经发送,请留意您的手机"})
 
 
 

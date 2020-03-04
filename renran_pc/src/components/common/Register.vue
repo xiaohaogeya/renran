@@ -23,7 +23,7 @@
           <div class="input-prepend restyle no-radius security-up-code js-security-number" v-if="is_show_sms_code">
               <input type="text" v-model="sms_code" id="sms_code" placeholder="手机验证码">
             <i class="iconfont ic-verify"></i>
-            <a tabindex="-1" class="btn-up-resend js-send-code-button" :class="{disable:send_able}" href="javascript:void(0);" id="send_code">{{sms_code_text}}</a>
+             <a tabindex="-1" class="btn-up-resend js-send-code-button" :class="{disable:send_able}" href="javascript:void(0);" id="send_code" @click="send_sms">{{sms_code_text}}</a>
           </div>
           <input type="hidden" name="security_number" id="security_number">
           <div class="input-prepend">
@@ -100,7 +100,6 @@
                     password: this.password,
                     sms_code: this.sms_code,
                 }).then(response=>{
-                    console.log(111111);
                     sessionStorage.user_token = response.data.token;
                     sessionStorage.user_name = response.data.username;
                     sessionStorage.user_id = response.data.id;
@@ -155,7 +154,19 @@
                 });
                 captcha.show()
 
-            }
+            },
+            send_sms(){
+              // 发送短信
+                if(!/^1[3-9]\d{9}$/.test(this.mobile)){
+                    return false;
+                }
+                this.$axios.get(`${this.$settings.Host}/users/sms/${this.mobile}/`
+                ).then(response=>{
+                    this.$message(response.data.message);
+                }).catch(error=>{
+                    this.$message(error.response.data.message);
+                })
+            },
         }
     }
 </script>

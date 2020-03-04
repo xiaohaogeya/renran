@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import User
 from .utils import get_user_by_data
 from rest_framework_jwt.settings import api_settings
+from django_redis import get_redis_connection
 import re
 
 class UserCreateModelSerializer(serializers.ModelSerializer):
@@ -36,7 +37,13 @@ class UserCreateModelSerializer(serializers.ModelSerializer):
         if user:
             raise serializers.ValidationError("手机号码已经被注册", "mobile")
 
-        # todo 短信是否正确
+        # 验证手机号验证码
+        redis_conn = get_redis_connection("sms_code")
+        print(redis_conn,111111111111111)
+        redis_sms_code = redis_conn.get("sms_%s" % mobile).decode()
+        client_sms_code = attrs.get("sms_code")
+        if redis_sms_code != client_sms_code:
+            raise serializers.ValidationError("短信验证码有误!")
 
         return attrs
 
