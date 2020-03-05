@@ -92,13 +92,11 @@ class SMSCodeAPIView(APIView):
 
         # 2.生成随机短信验证码
         sms_code = "%04d" % random.randint(0, 9999)
-        print(sms_code)
 
         # 3.发送短信验证码
         try:
             ccp = CCP()
             ret = ccp.send_template_sms(mobile, [sms_code, constants.SMS_EXPIRE_TIME // 60], constants.SMS_TEMPLATE_ID)
-            print(ret)
         except:
             ret = False
 

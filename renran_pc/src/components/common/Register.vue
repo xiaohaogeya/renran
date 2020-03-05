@@ -160,9 +160,22 @@
                 if(!/^1[3-9]\d{9}$/.test(this.mobile)){
                     return false;
                 }
+                if(this.sms_code_text !== "发送验证码"){
+                    return false;
+                }
                 this.$axios.get(`${this.$settings.Host}/users/sms/${this.mobile}/`
                 ).then(response=>{
                     this.$message(response.data.message);
+                    // 发送短信冷却倒计时
+                    let timer = 60;
+                    let t = setInterval(()=>{
+                        if(--timer<1){
+                            this.sms_code_text = `发送验证码`;
+                            clearInterval(t);
+                        }else {
+                            this.sms_code_text = `${timer}秒后重新点击`;
+                        }
+                    })
                 }).catch(error=>{
                     this.$message(error.response.data.message);
                 })

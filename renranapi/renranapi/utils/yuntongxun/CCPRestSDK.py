@@ -50,7 +50,7 @@ class REST:
         self.AccountToken = AccountToken
 
     # 设置子帐号
-    # 
+    #
     # @param SubAccountSid  必选参数    子帐号
     # @param SubAccountToken  必选参数    子帐号Token
 
@@ -59,7 +59,7 @@ class REST:
         self.SubAccountToken = SubAccountToken
 
     # 设置应用ID
-    # 
+    #
     # @param AppId  必选参数    应用ID
 
     def setAppId(self, AppId):
@@ -384,7 +384,7 @@ class REST:
             <displayNum>%s</displayNum><lang>%s</lang><userData>%s</userData></VoiceVerify>\
             ''' % (self.AppId, verifyCode, playTimes, to, respUrl, displayNum, lang, userData)
         if self.BodyType == 'json':
-            # if this model is Json ..then do next code 
+            # if this model is Json ..then do next code
             body = '''{"appId": "%s", "verifyCode": "%s","playTimes": "%s","to": "%s","respUrl": "%s","displayNum": "%s","lang": "%s","userData": "%s"}''' % (
             self.AppId, verifyCode, playTimes, to, respUrl, displayNum, lang, userData)
         req.data = body.encode()
@@ -481,7 +481,7 @@ class REST:
             </BillRecords>\
             ''' % (self.AppId, date, keywords)
         if self.BodyType == 'json':
-            # if this model is Json ..then do next code 
+            # if this model is Json ..then do next code
             body = '''{"appId": "%s", "date": "%s","keywords": "%s"}''' % (self.AppId, date, keywords)
         req.data = body.encode()
         data = ''
@@ -547,7 +547,7 @@ class REST:
             return {'172001': '网络错误'}
 
     # 短信模板查询
-    # @param templateId  必选参数   模板Id，不带此参数查询全部可用模板 
+    # @param templateId  必选参数   模板Id，不带此参数查询全部可用模板
 
     def QuerySMSTemplate(self, templateId):
 
@@ -572,7 +572,7 @@ class REST:
             <appId>%s</appId><templateId>%s</templateId></Request>
             ''' % (self.AppId, templateId)
         if self.BodyType == 'json':
-            # if this model is Json ..then do next code 
+            # if this model is Json ..then do next code
             body = '''{"appId": "%s", "templateId": "%s"}''' % (self.AppId, templateId)
         req.data = body.encode()
         data = ''
@@ -639,7 +639,7 @@ class REST:
 
     # 呼叫状态查询
     # @param callid   必选参数    一个由32个字符组成的电话唯一标识符
-    # @param action      可选参数     查询结果通知的回调url地址 
+    # @param action      可选参数     查询结果通知的回调url地址
     def QueryCallState(self, callid, action):
 
         self.accAuth()
@@ -663,7 +663,7 @@ class REST:
             </Request>\
             ''' % (self.AppId, callid, action)
         if self.BodyType == 'json':
-            # if this model is Json ..then do next code 
+            # if this model is Json ..then do next code
             body = '''{"Appid":"%s","QueryCallState":{"callid":"%s","action":"%s"}}''' % (self.AppId, callid, action)
         req.data = body.encode()
         data = ''

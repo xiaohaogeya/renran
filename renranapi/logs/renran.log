@@ -2490,3 +2490,97 @@ ERROR 2020-03-04 18:58:46,717 basehttp 154 "POST /users/ HTTP/1.1" 500 19105
 INFO 2020-03-04 19:05:27,465 autoreload 578 Watching for file changes with StatReloader
 ERROR 2020-03-04 19:05:40,108 views 106 发送短信失败!
 INFO 2020-03-04 19:05:40,143 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21
+INFO 2020-03-05 10:15:28,584 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-05 10:22:53,281 views 106 发送短信失败!
+INFO 2020-03-05 10:22:53,307 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 21
+INFO 2020-03-05 10:31:03,199 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-05 10:37:36,352 views 106 发送短信失败!
+INFO 2020-03-05 10:37:36,363 basehttp 154 "GET /users/sms/13928335901/ HTTP/1.1" 200 21
+INFO 2020-03-05 10:58:35,639 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-05 10:58:45,074 views 108 发送短信失败!
+INFO 2020-03-05 10:58:45,082 basehttp 154 "GET /users/sms/13928335901/ HTTP/1.1" 200 21
+INFO 2020-03-05 11:00:25,335 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-05 11:00:30,877 views 108 发送短信失败!
+INFO 2020-03-05 11:00:30,880 basehttp 154 "GET /users/sms/13928335901/ HTTP/1.1" 200 21
+INFO 2020-03-05 11:02:31,349 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-05 11:02:35,093 views 108 发送短信失败!
+INFO 2020-03-05 11:02:35,110 basehttp 154 "GET /users/sms/13928335901/ HTTP/1.1" 200 21
+ERROR 2020-03-05 11:04:16,920 views 108 发送短信失败!
+INFO 2020-03-05 11:04:16,921 basehttp 154 "GET /users/sms/15914397060/ HTTP/1.1" 200 21
+ERROR 2020-03-05 11:05:51,331 views 108 发送短信失败!
+INFO 2020-03-05 11:05:51,332 basehttp 154 "GET /users/sms/15914397060/ HTTP/1.1" 200 21
+ERROR 2020-03-05 11:05:53,161 views 108 发送短信失败!
+INFO 2020-03-05 11:05:53,162 basehttp 154 "GET /users/sms/15914397060/ HTTP/1.1" 200 21
+ERROR 2020-03-05 11:05:54,501 views 108 发送短信失败!
+INFO 2020-03-05 11:05:54,502 basehttp 154 "GET /users/sms/15914397060/ HTTP/1.1" 200 21
+ERROR 2020-03-05 11:05:55,795 views 108 发送短信失败!
+INFO 2020-03-05 11:05:55,797 basehttp 154 "GET /users/sms/15914397060/ HTTP/1.1" 200 21
+ERROR 2020-03-05 11:05:57,085 views 108 发送短信失败!
+INFO 2020-03-05 11:05:57,086 basehttp 154 "GET /users/sms/15914397060/ HTTP/1.1" 200 21
+ERROR 2020-03-05 11:05:58,209 views 108 发送短信失败!
+INFO 2020-03-05 11:05:58,210 basehttp 154 "GET /users/sms/15914397060/ HTTP/1.1" 200 21
+INFO 2020-03-05 11:10:47,404 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/utils/yuntongxun/CCPRestSDK.py changed, reloading.
+INFO 2020-03-05 11:10:49,282 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-05 11:12:05,773 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-05 11:12:18,165 views 108 发送短信失败!
+INFO 2020-03-05 11:12:18,177 basehttp 154 "GET /users/sms/15914397060/ HTTP/1.1" 200 21
+ERROR 2020-03-05 11:12:52,783 views 108 发送短信失败!
+INFO 2020-03-05 11:12:52,785 basehttp 154 "GET /users/sms/13928335901/ HTTP/1.1" 200 21
+ERROR 2020-03-05 11:12:55,403 views 108 发送短信失败!
+INFO 2020-03-05 11:12:55,405 basehttp 154 "GET /users/sms/13928335901/ HTTP/1.1" 200 21
+INFO 2020-03-05 14:53:04,165 autoreload 578 Watching for file changes with StatReloader
+ERROR 2020-03-05 14:53:13,512 views 108 发送短信失败!
+INFO 2020-03-05 14:53:13,535 basehttp 154 "GET /users/sms/13928335901/ HTTP/1.1" 200 21
+ERROR 2020-03-05 14:53:17,166 views 108 发送短信失败!
+INFO 2020-03-05 14:53:17,167 basehttp 154 "GET /users/sms/13928335901/ HTTP/1.1" 200 21
+ERROR 2020-03-05 14:53:18,855 views 108 发送短信失败!
+INFO 2020-03-05 14:53:18,856 basehttp 154 "GET /users/sms/13928335901/ HTTP/1.1" 200 21
+ERROR 2020-03-05 14:53:20,687 views 108 发送短信失败!
+INFO 2020-03-05 14:53:20,690 basehttp 154 "GET /users/sms/13928335901/ HTTP/1.1" 200 21
+ERROR 2020-03-05 14:53:22,598 views 108 发送短信失败!
+INFO 2020-03-05 14:53:22,600 basehttp 154 "GET /users/sms/13928335901/ HTTP/1.1" 200 21
+ERROR 2020-03-05 14:53:24,011 views 108 发送短信失败!
+INFO 2020-03-05 14:53:24,013 basehttp 154 "GET /users/sms/13928335901/ HTTP/1.1" 200 21
+INFO 2020-03-05 15:41:19,276 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-05 15:41:32,619 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 54
+INFO 2020-03-05 15:43:07,564 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-05 15:43:07,862 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 54
+INFO 2020-03-05 15:43:30,363 basehttp 154 "OPTIONS /users/captcha/ HTTP/1.1" 200 0
+INFO 2020-03-05 15:43:30,629 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+INFO 2020-03-05 15:43:30,638 basehttp 154 "OPTIONS /users/ HTTP/1.1" 200 0
+WARNING 2020-03-05 15:43:30,863 log 228 Bad Request: /users/
+WARNING 2020-03-05 15:43:30,864 basehttp 154 "POST /users/ HTTP/1.1" 400 38
+ERROR 2020-03-05 15:43:49,360 log 228 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/renderers.py", line 723, in render
+    template = loader.get_template(self.template)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2020-03-05 15:43:49,362 basehttp 154 "GET /users/ HTTP/1.1" 500 90372
+WARNING 2020-03-05 15:43:50,572 log 228 Not Found: /favicon.ico
+WARNING 2020-03-05 15:43:50,578 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 2086
+INFO 2020-03-05 15:48:54,447 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/apps/users/views.py changed, reloading.
+INFO 2020-03-05 15:48:58,915 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-05 15:57:39,440 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-05 15:57:45,724 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 54
+INFO 2020-03-05 15:58:10,258 basehttp 154 "OPTIONS /users/captcha/ HTTP/1.1" 200 0
+INFO 2020-03-05 15:58:10,512 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+INFO 2020-03-05 15:58:10,519 basehttp 154 "OPTIONS /users/ HTTP/1.1" 200 0
+WARNING 2020-03-05 15:58:10,702 log 228 Bad Request: /users/
+WARNING 2020-03-05 15:58:10,702 basehttp 154 "POST /users/ HTTP/1.1" 400 38
+INFO 2020-03-05 15:59:48,725 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-05 16:00:05,783 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-05 16:00:11,161 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 54
+INFO 2020-03-05 16:00:29,314 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+INFO 2020-03-05 16:00:29,533 basehttp 154 "POST /users/ HTTP/1.1" 201 254

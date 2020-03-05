@@ -257,9 +257,9 @@ SESSION_CACHE_ALIAS = "session"
 
 # 云通讯的短信配置
 SMS = {
-    "_accountSid": "8a216da863f8e6c20164139687e80c1b",
-    "_accountToken": "6dd01b2b60104b3dbc88b2b74158bac6",
-    "_appId": "8a216da863f8e6c20164139688400c21",
+    "_accountSid": "8a216da87051c90f0170a4c069db2ba6",
+    "_accountToken": "57e4b0d21f0c4603bfdd3f25d5550e3e",
+    "_appId": "8a216da87051c90f0170a4c06a472bad",
     "_serverIP": "sandboxapp.cloopen.com",
     "_serverPort": "8883",
 }
