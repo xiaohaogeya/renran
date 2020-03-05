@@ -39,7 +39,6 @@ class UserCreateModelSerializer(serializers.ModelSerializer):
 
         # 验证手机号验证码
         redis_conn = get_redis_connection("sms_code")
-        print(redis_conn,111111111111111)
         redis_sms_code = redis_conn.get("sms_%s" % mobile).decode()
         client_sms_code = attrs.get("sms_code")
         if redis_sms_code != client_sms_code:

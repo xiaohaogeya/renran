@@ -9,7 +9,6 @@ from urllib.request import urlopen
 from .utils import get_user_by_data
 from .serializers import UserCreateModelSerializer
 from .models import User
-from renranapi.utils.yuntongxun.sms import CCP
 from renranapi.settings import constants
 import random
 import json
@@ -94,19 +93,21 @@ class SMSCodeAPIView(APIView):
         sms_code = "%04d" % random.randint(0, 9999)
 
         # 3.发送短信验证码
-        try:
-            ccp = CCP()
-            ret = ccp.send_template_sms(mobile, [sms_code, constants.SMS_EXPIRE_TIME // 60], constants.SMS_TEMPLATE_ID)
-        except:
-            ret = False
-
-        if not ret:
-            loger.error("发送短信失败!")
-            return Response("发送短信失败!")
+        # 3.1 声明一个和celery一模一样的任务函数,但是我们可以导包来解决
+        from mycelery.sms.tasks import send_sms
+        # 3.2 调用任务函数,发布任务
+        send_sms.delay(mobile=mobile, sms_code=sms_code)
 
         # 4.保存短信验证码到redis中
-        redis.setex("sms_%s" % mobile, constants.SMS_EXPIRE_TIME, sms_code)
-        redis.setex("interval_%s" % mobile, constants.SMS_INTERVAL_TIME, "_")
+        # 4.1 创建管道对象
+        pipe = redis.pipeline()
+        # 4.2 开启事务
+        pipe.multi()
+        # 4.3 设置事务中的相关命令
+        pipe.setex("sms_%s" % mobile, constants.SMS_EXPIRE_TIME, sms_code)
+        pipe.setex("interval_%s" % mobile, constants.SMS_INTERVAL_TIME, "_")
+        # 4.4 提交事务
+        pipe.execute()
 
         # 5.返回操作结果
         return Response({"message": "短信已经发送,请留意您的手机"})
