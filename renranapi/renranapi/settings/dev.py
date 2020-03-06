@@ -40,10 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
+    'rest_framework',
     'xadmin',
     'crispy_forms',
     'reversion',
     'users',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -127,14 +129,21 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATECFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
+# 项目中存储上传文件的根目录[暂时配置]，
+# 注意： uploads目录需要手动创建，否则上传文件时报错
+MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
+# 访问上传文件的url地址前缀
+MEDIA_URL = "/media/"
 
 LOGGING = {
     'version': 1,
