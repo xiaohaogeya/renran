@@ -7,8 +7,8 @@
           <!-- Banner -->
           <div class="banner">
             <el-carousel height="272px" indicator-position="none" :interval="2000">
-              <el-carousel-item v-for="item in 4" :key="item">
-                <h3 class="small">{{ item }}</h3>
+              <el-carousel-item v-for="banner,key in banner_list" :key="key">
+                <a :href="banner.link"><img :src="banner.image" alt=""></a>
               </el-carousel-item>
             </el-carousel>
           </div>
@@ -102,17 +102,38 @@
       name:"Home",
       data(){
           return {
-
+              // 轮播图广告
+              banner_list: [],
           }
       },
       components:{
         Header,
         Footer,
+      },
+      created() {
+          this.get_banner();
+      },
+      methods:{
+          get_banner(){
+              // 获取轮播广告
+              this.$axios.get(`${this.$settings.Host}/banner/`
+              ).then(response=>{
+                  this.banner_list = response.data;
+                  console.log(this.banner_list);
+                  console.log(response);
+              }).catch(error=>{
+                  this.$message.error("无法获取服务端的轮播广告信息!");
+              })
+          }
       }
   }
 </script>
 
 <style scoped>
+.banner img{
+  max-height: 100%;
+  min-height: 100%;
+}
 .container{
     width: 960px;
     margin-right: auto;
