@@ -8,7 +8,7 @@ class BannerListAPIView(ListAPIView):
 
     queryset = Banner.objects.filter(
         is_show=True,
-        is_delete=True,
+        is_delete=False,
         start_time__lte=datetime.now(),
         end_time__gte=datetime.now()
     ).order_by("orders", "-id")[:5]
@@ -18,7 +18,7 @@ class NavFooterListAPIView(ListAPIView):
     queryset = Nav.objects.filter(
         is_show=True,
         is_delete=False,
-        option=1,
+        option=2,
         pid=None
     ).order_by("orders", "-id")[:8]
     serializer_class = NavModelSerializer

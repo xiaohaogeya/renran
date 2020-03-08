@@ -15,27 +15,27 @@
             <ul class="nav navbar-nav">
               <li class="tab active">
                 <a href="/">
-                  <i class="iconfont ic-navigation-discover menu-icon"></i>
+                  <i class="iconfont el-icon-loading menu-icon"></i>
                   <span class="menu-text">首页</span>
                 </a>
               </li>
               <li class="tab" v-for="nav, key in nav_list" :key="key">
                 <router-link :to="nav.link" v-if="nav.is_http">
-                  <i class="iconfont ic-navigation-discover menu-icon"></i>
+                  <i class="iconfont menu-icon" :class="nav.icon"></i>
                   <span class="menu-text">{{nav.name}}</span>
                 </router-link>
                 <a :href="nav.link" v-else>
-                  <i class="iconfont ic-navigation-discover menu-icon"></i>
+                  <i class="iconfont menu-icon" :class="nav.icon"></i>
                   <span class="menu-text">{{nav.name}}</span>
                 </a>
                 <ul class="dropdown-menu" v-if="nav.son_list.length > 1">
                   <li v-for="son,key in nav.son_list" :key="key">
                     <router-link :to="son.link" v-if="son.is_http">
-                      <i class="iconfont ic-comments"></i>
+                      <i class="iconfont" :class="son.icon"></i>
                         <span>{{son.name}}</span>
                     </router-link>
                     <a :href="son.link" v-else>
-                      <i class="iconfont ic-comments"></i>
+                      <i class="iconfont" :class="son.icon"></i>
                       <span>{{son.name}}</span>
                     </a>
                   </li>
@@ -79,6 +79,7 @@
                 this.$axios.get(`${this.$settings.Host}/nav/header/`
                 ).then(response=>{
                     this.nav_list = response.data;
+                    console.log(this.nav_list);
                 }).catch(error=>{
                     this.$message.error("无法获取头部导航信息");
                 })
@@ -230,7 +231,7 @@ nav .menu-icon {
 @media (min-width:768px){.navbar-right .dropdown-menu{right:0;left:auto}
 .navbar-right .dropdown-menu-left{left:0;right:auto}}
 .dropdown-menu{
-  width:200px;margin-top:-1px;border-radius:0 0 4px 4px
+  width:200px;margin-top:-1px;border-radius:0 0 4px 4px;
 }
 .dropdown-menu li{margin:0}
 .dropdown-menu a{height:auto;padding:10px 20px;line-height:30px}
@@ -238,7 +239,7 @@ nav .menu-icon {
 .dropdown-menu i{margin-right:15px;font-size:22px;color:#ea6f5a;
   vertical-align:middle
 }
-.dropdown-menu span{vertical-align:middle}
+.dropdown-menu span{vertical-align:tem in 4middle}
 .dropdown-menu .badge{position:absolute;right:15px;margin-top:7px}
 
 nav .nav .tab a {
@@ -255,6 +256,9 @@ nav .navbar-nav li {
     box-sizing: border-box;
     height: 56px;
     line-height: 56px;
+}
+nav .tab:hover .dropdown-menu{
+  display: block;
 }
 .navbar-nav {
     float: left;

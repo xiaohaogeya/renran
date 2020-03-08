@@ -8,7 +8,9 @@ class Banner(BaseModel):
     image = models.ImageField(upload_to="banner", verbose_name="轮播图", null=True, blank=True)
     name = models.CharField(max_length=150, verbose_name="轮播图名称")
     note = models.CharField(max_length=500, verbose_name="备注信息")
-    link = models.CharField(max_length=150, verbose_name="轮播图广告地址")
+    is_http = models.BooleanField(default=True, verbose_name="是否站内链接", help_text="如果是站内地址,则默认勾选")
+    link = models.CharField(max_length=500, verbose_name="轮播图广告地址",
+                            help_text="如果是站外链接,必须加上协议,格式如:http://www.renran.com")
     start_time = models.DateTimeField(verbose_name="开始展示时间")
     end_time = models.DateTimeField(verbose_name="结束展示时间")
 
@@ -46,5 +48,6 @@ class Nav(BaseModel):
                 "name": nav.name,
                 "link": nav.link,
                 "is_http": nav.is_http,
+                "icon": nav.icon,
             })
         return data

@@ -8,7 +8,8 @@
           <div class="banner">
             <el-carousel height="272px" indicator-position="none" :interval="2000">
               <el-carousel-item v-for="banner,key in banner_list" :key="key">
-                <a :href="banner.link"><img :src="banner.image" alt=""></a>
+                <router-link :to="banner.link" v-if="banner.is_http" :title="banner.note"></router-link>
+                <a :href="banner.link" v-else><img :src="banner.image" :title="banner.note"></a>
               </el-carousel-item>
             </el-carousel>
           </div>

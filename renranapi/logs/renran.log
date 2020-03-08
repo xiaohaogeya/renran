@@ -2842,3 +2842,428 @@ WARNING 2020-03-07 13:53:31,467 basehttp 154 "GET /static/xadmin/vendor/select2/
 INFO 2020-03-07 13:53:31,471 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
 INFO 2020-03-07 13:53:31,475 basehttp 154 "GET /static/xadmin/vendor/select2/select2.js HTTP/1.1" 200 104906
 WARNING 2020-03-07 13:53:32,008 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 14:36:22,082 autoreload 578 Watching for file changes with StatReloader
+WARNING 2020-03-07 14:36:29,446 log 228 Not Found: /
+WARNING 2020-03-07 14:36:29,447 basehttp 154 "GET / HTTP/1.1" 404 2629
+WARNING 2020-03-07 14:36:31,307 log 228 Not Found: /favicon.ico
+WARNING 2020-03-07 14:36:31,308 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 2680
+INFO 2020-03-07 14:50:22,538 basehttp 154 "GET /xadmin/ HTTP/1.1" 200 15415
+INFO 2020-03-07 14:50:22,631 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 14:50:23,107 basehttp 154 "GET /xadmin/ HTTP/1.1" 200 15415
+INFO 2020-03-07 14:50:30,972 basehttp 154 "GET /xadmin/home/banner/ HTTP/1.1" 200 35721
+INFO 2020-03-07 14:50:31,088 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 14:50:32,215 basehttp 154 "GET /xadmin/home/banner/ HTTP/1.1" 200 35721
+INFO 2020-03-07 14:50:32,472 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 14:50:51,604 basehttp 154 "GET /xadmin/home/banner/2/update/ HTTP/1.1" 200 24301
+INFO 2020-03-07 14:50:51,682 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 14:50:51,860 basehttp 154 "GET /media/banner/2.jpeg HTTP/1.1" 304 0
+INFO 2020-03-07 14:51:00,903 basehttp 154 "POST /xadmin/home/banner/2/update/ HTTP/1.1" 302 0
+INFO 2020-03-07 14:51:01,359 basehttp 154 "GET /xadmin/home/banner/? HTTP/1.1" 200 35951
+INFO 2020-03-07 14:51:01,582 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 14:51:04,772 basehttp 154 "GET /xadmin/home/banner/1/update/ HTTP/1.1" 200 24299
+INFO 2020-03-07 14:51:04,961 basehttp 154 "GET /media/banner/1.jpeg HTTP/1.1" 304 0
+INFO 2020-03-07 14:51:04,998 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 14:51:09,225 basehttp 154 "POST /xadmin/home/banner/1/update/ HTTP/1.1" 302 0
+INFO 2020-03-07 14:51:09,535 basehttp 154 "GET /xadmin/home/banner/? HTTP/1.1" 200 35951
+INFO 2020-03-07 14:51:09,678 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 14:52:47,697 basehttp 154 "GET /xadmin/home/nav/ HTTP/1.1" 200 25485
+INFO 2020-03-07 14:52:47,766 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 14:59:26,177 basehttp 154 "GET /xadmin/home/banner/ HTTP/1.1" 200 35721
+INFO 2020-03-07 14:59:26,460 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 14:59:30,667 basehttp 154 "GET /xadmin/home/banner/2/update/ HTTP/1.1" 200 24293
+INFO 2020-03-07 14:59:30,810 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 14:59:39,664 basehttp 154 "POST /xadmin/home/banner/2/update/ HTTP/1.1" 302 0
+INFO 2020-03-07 14:59:39,846 basehttp 154 "GET /xadmin/home/banner/? HTTP/1.1" 200 35951
+INFO 2020-03-07 14:59:39,933 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 14:59:43,433 basehttp 154 "GET /xadmin/home/banner/1/update/ HTTP/1.1" 200 24291
+INFO 2020-03-07 14:59:43,651 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 15:00:10,549 basehttp 154 "POST /xadmin/home/banner/1/update/ HTTP/1.1" 302 0
+INFO 2020-03-07 15:00:10,731 basehttp 154 "GET /xadmin/home/banner/? HTTP/1.1" 200 35943
+INFO 2020-03-07 15:00:10,924 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 15:00:16,417 basehttp 154 "GET /xadmin/home/nav/ HTTP/1.1" 200 25485
+INFO 2020-03-07 15:00:16,469 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 15:02:13,012 basehttp 154 "GET /xadmin/home/nav/add/ HTTP/1.1" 200 20668
+INFO 2020-03-07 15:02:13,261 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 15:02:13,333 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+WARNING 2020-03-07 15:02:13,811 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 15:03:02,840 basehttp 154 "POST /xadmin/home/nav/add/ HTTP/1.1" 302 0
+INFO 2020-03-07 15:03:03,005 basehttp 154 "GET /xadmin/home/nav/ HTTP/1.1" 200 30162
+INFO 2020-03-07 15:03:03,055 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 15:03:06,989 basehttp 154 "GET /xadmin/home/nav/add/ HTTP/1.1" 200 20702
+WARNING 2020-03-07 15:03:07,093 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 15:03:07,141 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 15:03:07,328 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 15:03:30,670 basehttp 154 "POST /xadmin/home/nav/add/ HTTP/1.1" 302 0
+INFO 2020-03-07 15:03:30,819 basehttp 154 "GET /xadmin/home/nav/ HTTP/1.1" 200 31324
+INFO 2020-03-07 15:03:30,863 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 15:03:36,668 basehttp 154 "GET /xadmin/home/nav/add/ HTTP/1.1" 200 20736
+WARNING 2020-03-07 15:03:36,783 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 15:03:37,012 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 15:03:37,140 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 15:03:55,174 basehttp 154 "POST /xadmin/home/nav/add/ HTTP/1.1" 302 0
+INFO 2020-03-07 15:03:55,310 basehttp 154 "GET /xadmin/home/nav/ HTTP/1.1" 200 32486
+INFO 2020-03-07 15:03:55,393 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 15:03:58,271 basehttp 154 "GET /xadmin/home/nav/add/ HTTP/1.1" 200 20770
+WARNING 2020-03-07 15:03:58,426 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 15:03:58,462 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 15:03:58,829 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 15:04:16,892 basehttp 154 "POST /xadmin/home/nav/add/ HTTP/1.1" 302 0
+INFO 2020-03-07 15:04:17,058 basehttp 154 "GET /xadmin/home/nav/ HTTP/1.1" 200 33668
+INFO 2020-03-07 15:04:17,110 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 15:05:36,991 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:05:36,998 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:05:36,999 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:05:53,285 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:05:53,349 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:05:53,374 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:06:02,084 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:06:02,123 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:06:02,124 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:06:50,843 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:06:50,934 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:06:50,947 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:06:54,032 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:06:54,034 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:06:54,040 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:08:55,102 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:08:55,212 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:08:55,294 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:12:27,053 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:12:27,103 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:12:27,122 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:13:40,538 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 15:17:23,009 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 81
+INFO 2020-03-07 15:17:23,017 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:17:23,028 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:17:23,554 basehttp 154 "GET /media/banner/1.jpeg HTTP/1.1" 304 0
+INFO 2020-03-07 15:17:23,653 basehttp 154 "GET /media/banner/2.jpeg HTTP/1.1" 304 0
+INFO 2020-03-07 15:17:45,646 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 81
+INFO 2020-03-07 15:17:45,752 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:17:45,774 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:18:10,261 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 15:19:05,898 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:19:05,902 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 81
+INFO 2020-03-07 15:19:05,912 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:20:07,737 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:20:07,773 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 81
+INFO 2020-03-07 15:20:07,781 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:22:35,211 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 81
+INFO 2020-03-07 15:22:35,217 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:22:35,229 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:24:19,580 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 81
+INFO 2020-03-07 15:24:19,589 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:24:19,615 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:25:31,799 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:25:31,840 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:25:31,852 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 81
+INFO 2020-03-07 15:26:19,986 basehttp 154 "GET /xadmin/home/banner/ HTTP/1.1" 200 35713
+INFO 2020-03-07 15:26:20,165 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 15:26:30,279 basehttp 154 "GET /xadmin/home/banner/2/update/ HTTP/1.1" 200 24285
+INFO 2020-03-07 15:26:30,341 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 15:27:47,188 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:27:47,190 basehttp 154 "GET /banner/ HTTP/1.1" 200 171
+INFO 2020-03-07 15:27:47,194 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 81
+INFO 2020-03-07 15:29:14,464 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 15:29:22,364 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 81
+INFO 2020-03-07 15:29:22,400 basehttp 154 "GET /banner/ HTTP/1.1" 200 240
+INFO 2020-03-07 15:29:22,412 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:29:59,548 basehttp 154 "GET /banner/ HTTP/1.1" 200 240
+INFO 2020-03-07 15:29:59,597 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 81
+INFO 2020-03-07 15:29:59,605 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 146
+INFO 2020-03-07 15:50:35,331 basehttp 154 "GET /xadmin/home/nav/ HTTP/1.1" 200 33376
+INFO 2020-03-07 15:50:35,432 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 15:50:38,564 basehttp 154 "GET /xadmin/home/nav/4/update/ HTTP/1.1" 200 21086
+INFO 2020-03-07 15:50:38,801 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 15:50:38,817 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+WARNING 2020-03-07 15:50:39,256 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 15:50:54,685 basehttp 154 "GET /xadmin/home/nav/ HTTP/1.1" 200 33376
+INFO 2020-03-07 16:09:16,302 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py changed, reloading.
+INFO 2020-03-07 16:09:20,728 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:15:36,096 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:15:52,674 basehttp 154 "GET /xadmin/home/nav/ HTTP/1.1" 200 33506
+INFO 2020-03-07 16:15:52,793 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 16:16:01,256 basehttp 154 "GET /xadmin/home/nav/4/update/ HTTP/1.1" 200 22839
+WARNING 2020-03-07 16:16:01,345 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:16:01,361 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 16:16:01,706 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:16:11,202 basehttp 154 "POST /xadmin/home/nav/4/update/ HTTP/1.1" 200 23198
+WARNING 2020-03-07 16:16:11,283 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:16:11,287 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 16:16:11,501 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:16:20,774 basehttp 154 "POST /xadmin/home/nav/4/update/ HTTP/1.1" 200 23198
+WARNING 2020-03-07 16:16:21,144 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:16:21,146 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 16:16:21,213 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:16:26,339 basehttp 154 "POST /xadmin/home/nav/4/update/ HTTP/1.1" 200 23198
+INFO 2020-03-07 16:16:26,742 basehttp 154 "POST /xadmin/home/nav/4/update/ HTTP/1.1" 200 23198
+WARNING 2020-03-07 16:16:26,872 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:16:26,891 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 16:16:26,990 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:16:36,060 basehttp 154 "POST /xadmin/home/nav/4/update/ HTTP/1.1" 200 23199
+WARNING 2020-03-07 16:16:36,129 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:16:36,137 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 16:16:36,249 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:17:33,096 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py changed, reloading.
+INFO 2020-03-07 16:17:35,361 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:18:34,131 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py changed, reloading.
+INFO 2020-03-07 16:18:36,053 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:30:51,869 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py changed, reloading.
+INFO 2020-03-07 16:30:54,492 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:32:24,030 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py changed, reloading.
+INFO 2020-03-07 16:32:26,484 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:32:33,908 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py changed, reloading.
+INFO 2020-03-07 16:32:35,740 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:32:54,081 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:33:02,528 basehttp 154 "POST /xadmin/home/nav/4/update/ HTTP/1.1" 302 0
+INFO 2020-03-07 16:33:03,180 basehttp 154 "GET /xadmin/home/nav/? HTTP/1.1" 200 33738
+INFO 2020-03-07 16:33:03,692 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 16:33:11,766 basehttp 154 "GET /xadmin/home/nav/3/update/ HTTP/1.1" 200 22826
+INFO 2020-03-07 16:33:12,011 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 16:33:12,047 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+WARNING 2020-03-07 16:33:12,242 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:33:15,286 basehttp 154 "POST /xadmin/home/nav/3/update/ HTTP/1.1" 302 0
+INFO 2020-03-07 16:33:15,594 basehttp 154 "GET /xadmin/home/nav/? HTTP/1.1" 200 33738
+INFO 2020-03-07 16:33:15,793 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 16:33:20,612 basehttp 154 "GET /xadmin/home/nav/3/update/ HTTP/1.1" 200 22835
+WARNING 2020-03-07 16:33:20,776 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:33:20,933 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 16:33:21,026 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:33:27,848 basehttp 154 "POST /xadmin/home/nav/3/update/ HTTP/1.1" 302 0
+INFO 2020-03-07 16:33:28,076 basehttp 154 "GET /xadmin/home/nav/? HTTP/1.1" 200 33738
+INFO 2020-03-07 16:33:28,182 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 16:33:31,818 basehttp 154 "GET /xadmin/home/nav/1/update/ HTTP/1.1" 200 22826
+INFO 2020-03-07 16:33:32,015 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 16:33:32,060 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+WARNING 2020-03-07 16:33:32,256 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:33:37,738 basehttp 154 "POST /xadmin/home/nav/1/update/ HTTP/1.1" 302 0
+INFO 2020-03-07 16:33:37,977 basehttp 154 "GET /xadmin/home/nav/? HTTP/1.1" 200 33738
+INFO 2020-03-07 16:33:38,287 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 16:33:50,650 basehttp 154 "GET /banner/ HTTP/1.1" 200 240
+INFO 2020-03-07 16:33:50,655 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 155
+INFO 2020-03-07 16:33:50,701 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 91
+INFO 2020-03-07 16:33:52,012 basehttp 154 "GET /media/banner/2.jpeg HTTP/1.1" 304 0
+INFO 2020-03-07 16:35:45,499 basehttp 154 "GET /banner/ HTTP/1.1" 200 240
+INFO 2020-03-07 16:35:45,533 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 91
+INFO 2020-03-07 16:35:45,569 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 155
+INFO 2020-03-07 16:37:49,744 basehttp 154 "GET /banner/ HTTP/1.1" 200 240
+INFO 2020-03-07 16:37:49,793 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 91
+INFO 2020-03-07 16:37:49,797 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 155
+INFO 2020-03-07 16:40:57,478 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:41:09,004 basehttp 154 "GET /banner/ HTTP/1.1" 200 240
+INFO 2020-03-07 16:41:09,027 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 91
+INFO 2020-03-07 16:41:09,029 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 155
+INFO 2020-03-07 16:42:22,425 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py changed, reloading.
+INFO 2020-03-07 16:42:26,101 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:43:12,031 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:43:41,866 basehttp 154 "GET /banner/ HTTP/1.1" 200 240
+INFO 2020-03-07 16:43:41,890 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 155
+INFO 2020-03-07 16:43:41,900 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 91
+INFO 2020-03-07 16:45:11,555 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:45:21,310 basehttp 154 "GET /banner/ HTTP/1.1" 200 240
+ERROR 2020-03-07 16:45:21,449 log 228 Internal Server Error: /nav/header/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 678, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 516, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/fields.py", line 454, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/fields.py", line 94, in get_attribute
+    instance = getattr(instance, attr)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py", line 56, in getIcon
+    return self.ICON_CHOOSE[self.icon]
+TypeError: tuple indices must be integers or slices, not str
+ERROR 2020-03-07 16:45:21,472 log 228 Internal Server Error: /nav/footer/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 678, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 516, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/fields.py", line 454, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/fields.py", line 94, in get_attribute
+    instance = getattr(instance, attr)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py", line 56, in getIcon
+    return self.ICON_CHOOSE[self.icon]
+TypeError: tuple indices must be integers or slices, not str
+ERROR 2020-03-07 16:45:21,474 basehttp 154 "GET /nav/footer/ HTTP/1.1" 500 20099
+ERROR 2020-03-07 16:45:21,472 basehttp 154 "GET /nav/header/ HTTP/1.1" 500 20099
+INFO 2020-03-07 16:45:35,425 basehttp 154 "GET /banner/ HTTP/1.1" 200 240
+ERROR 2020-03-07 16:45:35,518 log 228 Internal Server Error: /nav/footer/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 678, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 516, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/fields.py", line 454, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/fields.py", line 94, in get_attribute
+    instance = getattr(instance, attr)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py", line 56, in getIcon
+    return self.ICON_CHOOSE[self.icon]
+TypeError: tuple indices must be integers or slices, not str
+ERROR 2020-03-07 16:45:35,521 basehttp 154 "GET /nav/footer/ HTTP/1.1" 500 20099
+ERROR 2020-03-07 16:45:35,536 log 228 Internal Server Error: /nav/header/
+Traceback (most recent call last):
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 678, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 516, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/fields.py", line 454, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/moluo/.virtualenvs/renran/lib/python3.6/site-packages/rest_framework/fields.py", line 94, in get_attribute
+    instance = getattr(instance, attr)
+  File "/home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py", line 56, in getIcon
+    return self.ICON_CHOOSE[self.icon]
+TypeError: tuple indices must be integers or slices, not str
+ERROR 2020-03-07 16:45:35,607 basehttp 154 "GET /nav/header/ HTTP/1.1" 500 20099
+INFO 2020-03-07 16:47:30,880 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:48:43,612 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 155
+INFO 2020-03-07 16:48:43,633 basehttp 154 "GET /banner/ HTTP/1.1" 200 240
+INFO 2020-03-07 16:48:43,650 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 91
+INFO 2020-03-07 16:49:49,183 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py changed, reloading.
+INFO 2020-03-07 16:49:51,210 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:49:59,826 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py changed, reloading.
+INFO 2020-03-07 16:50:02,630 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:50:13,466 autoreload 203 /home/moluo/Desktop/renran/renranapi/renranapi/utils/models.py changed, reloading.
+INFO 2020-03-07 16:50:16,052 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:50:35,327 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:51:57,030 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-07 16:52:02,811 basehttp 154 "GET /xadmin/home/nav/? HTTP/1.1" 200 33506
+INFO 2020-03-07 16:52:03,253 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 16:52:07,352 basehttp 154 "GET /xadmin/home/nav/3/update/ HTTP/1.1" 200 21370
+WARNING 2020-03-07 16:52:07,429 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:52:07,446 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 16:52:07,745 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:52:36,909 basehttp 154 "POST /xadmin/home/nav/3/update/ HTTP/1.1" 302 0
+INFO 2020-03-07 16:52:37,488 basehttp 154 "GET /xadmin/home/nav/? HTTP/1.1" 200 33738
+INFO 2020-03-07 16:52:37,661 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 16:52:40,919 basehttp 154 "GET /xadmin/home/nav/2/update/ HTTP/1.1" 200 21360
+WARNING 2020-03-07 16:52:41,144 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:52:41,199 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 16:52:41,347 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:52:59,053 basehttp 154 "POST /xadmin/home/nav/2/update/ HTTP/1.1" 302 0
+INFO 2020-03-07 16:52:59,293 basehttp 154 "GET /xadmin/home/nav/? HTTP/1.1" 200 33738
+INFO 2020-03-07 16:52:59,696 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 16:53:02,381 basehttp 154 "GET /xadmin/home/nav/1/update/ HTTP/1.1" 200 21370
+WARNING 2020-03-07 16:53:02,453 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:53:02,478 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+WARNING 2020-03-07 16:53:02,592 basehttp 154 "GET /static/xadmin/vendor/select2/select2_locale_zh-Hans.js HTTP/1.1" 404 1769
+INFO 2020-03-07 16:53:13,891 basehttp 154 "POST /xadmin/home/nav/1/update/ HTTP/1.1" 302 0
+INFO 2020-03-07 16:53:14,326 basehttp 154 "GET /xadmin/home/nav/? HTTP/1.1" 200 33738
+INFO 2020-03-07 16:53:14,460 basehttp 154 "GET /xadmin/jsi18n/ HTTP/1.1" 200 7722
+INFO 2020-03-07 16:54:12,264 basehttp 154 "GET /banner/ HTTP/1.1" 200 240
+INFO 2020-03-07 16:54:12,283 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 93
+INFO 2020-03-07 16:54:12,378 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 218

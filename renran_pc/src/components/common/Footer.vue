@@ -2,11 +2,11 @@
 <footer class="container">
   <div class="row">
     <div class="main">
-      <span v-for="nav, key in nav_list" :key="key">
+      <span v-for="nav,key in nav_list" :key="key">
         <router-link target="_blank" :to="nav.link" v-if="nav.is_http">
           {{nav.name}}
         </router-link>
-        <a target="_blank" :herf="nav.link" v-else">
+        <a target="_blank" :herf="nav.link" v-else>
           {{nav.name}}
         </a>
         <em> . </em>
