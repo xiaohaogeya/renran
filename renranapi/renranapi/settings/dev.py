@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'reversion',
     'users',
     'home',
+    'oauth',
 ]
 
 MIDDLEWARE = [
@@ -272,3 +273,9 @@ SMS = {
     "_serverIP": "sandboxapp.cloopen.com",
     "_serverPort": "8883",
 }
+
+# QQ登录参数
+QQ_APP_ID = '101403367'
+QQ_APP_KEY = '93112df14c10d6fde74baa62f5de95ab'
+QQ_REDIRECT_URL = 'http://www.moluo.net:8080/oauth_callback.html'
+QQ_STATE = "/" # 用于保存登录成功后的跳转页面路径

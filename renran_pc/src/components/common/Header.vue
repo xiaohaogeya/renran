@@ -28,7 +28,7 @@
                   <i class="iconfont menu-icon" :class="nav.icon"></i>
                   <span class="menu-text">{{nav.name}}</span>
                 </a>
-                <ul class="dropdown-menu" v-if="nav.son_list.length > 1">
+                <ul class="dropdown-menu" v-if="nav.son_list.length > 0">
                   <li v-for="son,key in nav.son_list" :key="key">
                     <router-link :to="son.link" v-if="son.is_http">
                       <i class="iconfont" :class="son.icon"></i>

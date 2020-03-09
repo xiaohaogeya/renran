@@ -44,7 +44,7 @@
     </a>
   </li>
   <li><a id="weixin" class="weixin" target="_blank" href=""><i class="iconfont ic-wechat"></i></a></li>
-  <li><a id="qq" class="qq" target="_blank" href=""><i class="iconfont ic-qq_connect"></i></a></li>
+  <li><a id="qq" class="qq" target="_blank" href="" @click="qq_login"><i class="iconfont ic-qq_connect"></i></a></li>
 </ul>
   </div>
 </div>
@@ -150,9 +150,18 @@
                     }
                 });
                 captcha.show()
-
-
-            }
+            },
+          qq_login(){
+              // 跳转到QQ第三方登录页面
+            this.$axios.get(`${this.$settings.Host}/oauth/qq/url/`
+            ).then(response=>{
+              let url = response.data;
+              // 跳转到登录页面
+              location.href = url;
+            }).catch(error=>{
+              this.$message.error("网络错误,无法使用QQ登录!")
+            })
+          }
         }
     }
 </script>
