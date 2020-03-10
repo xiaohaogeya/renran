@@ -4,8 +4,12 @@ from .models import OAuthUser, User
 from itsdangerous import TimedJSONWebSignatureSerializer
 from django.conf import settings
 from rest_framework import status
+from django_redis import get_redis_connection
 from .utils import OAuthQQ, OAuthQQTokenError, OAuthQQErrorOpenID, OAuthQQErrorUserInfo
+import ssl
 
+
+ssl._create_default_https_context = ssl._create_unverified_context 
 
 class OAuthQQAPIView(APIView):
     def get(self, request):
@@ -139,6 +143,10 @@ class QQUserInfoAPIView(APIView):
             return Response("openID丢失!", status=status.HTTP_400_BAD_REQUEST)
 
         # todo 2.1 校验sms_code验证码是否正确
+        redis_conn = get_redis_connection("sms_code")
+        redis_sms_code = redis_conn.get("sms_%s" % mobile).decode()
+        if redis_sms_code != sms_code:
+            raise Response("短信验证码有误!")
         # 3. 添加用户
         try:
             user = User.objects.create_user(

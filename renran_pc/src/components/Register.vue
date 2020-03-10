@@ -100,27 +100,8 @@
                     password: this.password,
                     sms_code: this.sms_code,
                 }).then(response=>{
-                    sessionStorage.user_token = response.data.token;
-                    sessionStorage.user_name = response.data.username;
-                    sessionStorage.user_id = response.data.id;
-                    sessionStorage.user_nickname = response.data.nickname;
-                    sessionStorage.user_avatar = response.data.avatar;
-                    localStorage.removeItem("user_token");
-                    localStorage.removeItem("user_name");
-                    localStorage.removeItem("user_id");
-                    localStorage.removeItem("user_nickname");
-                    localStorage.removeItem("user_avatar");
-                    this.$confirm("注册成功,欢迎来到荏苒!","提示",{
-                        confirmButtonText: "个人中心",
-                        cancelButtonText: "返回上一页",
-                        type: "success"
-                    }).then(()=>{
-                        // 跳转到个人中心
-                        this.$router.push("/user");
-                    }).catch(()=>{
-                        // 跳转到上一页
-                        this.$router.back();
-                    })
+                    this.$settings.save_user(sessionStorage, response.data);
+                    this.$settings.jump_page(this, response.data.nickname);
                 }).catch(error=>{
                     console.log(error);
                     this.$message.error("用户注册失败!");

@@ -39,11 +39,11 @@
                   <i class="iconfont ic-phonenumber"></i>
                 </div>
               <div class="input-prepend restyle no-radius security-up-code js-security-number" v-if="is_show_sms_code">
-                  <input type="text" v-model="sms_code" id="sms_code" placeholder="手机验证码">
-                <i class="iconfont ic-verify"></i>
-                <a tabindex="-1" class="btn-up-resend js-send-code-button"  href="javascript:void(0);" id="send_code" @click.prevent="send_sms">{{sms_code_text}}</a>
-              </div>
-              <input type="hidden" name="security_number" id="security_number">
+              <input type="text" v-model="sms_code" id="sms_code" placeholder="手机验证码">
+            <i class="iconfont ic-verify"></i>
+             <a tabindex="-1" class="btn-up-resend js-send-code-button" :class="{disable:send_able}" href="javascript:void(0);" id="send_code" @click="send_sms">{{sms_code_text}}</a>
+          </div>
+          <input type="hidden" name="security_number" id="security_number">
               <div class="input-prepend">
                 <input placeholder="设置密码" type="password" v-model="password" id="user_password">
                 <i class="iconfont ic-password"></i>
@@ -72,10 +72,23 @@
               sms_code_text:"发送验证码",
               is_show_sms_code:false,
               qq_user:"",
+              send_able: false,
           }
         },
         created(){
             this.get_user_info();
+        },
+       watch:{
+          mobile(){
+              // test类似于Python的re.match
+            if(/^1[3-9]\d{9}$/.test(this.mobile)){
+              this.is_show_sms_code = true;
+              this.send_able = false;
+            }else{
+              this.is_show_sms_code = true;
+              this.send_able = true;
+            }
+          }
         },
         methods:{
             get_user_info(){
@@ -150,7 +163,75 @@
                 }).catch(error=>{
                     this.$message.error("绑定QQ账号失败!"+error.response.data);
                 });
-            }
+            },
+          check_mobile(){
+                // 验证手机号是否唯一
+                if(this.is_show_sms_code){
+                    // 发送ajax到服务端验证手机号是否可用
+                    this.$axios.get(`${this.$settings.Host}/users/mobile/${this.mobile}/`
+                    ).then(response=>{
+                        this.send_able = false;
+                    }).catch(error=>{
+                        this.$message.error(error.response.data.err_msg);
+                        this.send_able = true;
+                    })
+                }
+            },
+          show_captcha(){
+                // 显示验证码
+                if(this.nickname.length < 1 || this.mobile.length<1 || this.sms_code.length<1 || this.password.length <1){
+                    this.$message.error("不好意思,表单信息不能为空");
+                    return false;
+                }
+                var captcha = new TencentCaptcha(this.$settings.TC_captcha.app_id, res=> {
+                    if(res.ret === 0){
+                        this.$axios.post(`${this.$settings.Host}/users/captcha/`,{
+                            ret: res.ret,
+                            ticket: res.ticket,
+                            randstr: res.randstr,
+                        }).then(response=>{
+                            if(response.data.message && response.data.randstr === res.randstr){
+                                // 验证成功
+                                this.registerHander();
+                            }else {
+                                this.$message.error("验证码验证失败,请重新操作");
+                                captcha.destroy();
+                            }
+                        }).catch(error=>{
+                            console.log("发生错误", error);
+                            alert("发送错误");
+                        })
+                    }
+                });
+                captcha.show()
+
+            },
+            send_sms(){
+              // 发送短信
+                if(!/^1[3-9]\d{9}$/.test(this.mobile)){
+                    return false;
+                }
+                if(this.sms_code_text !== "发送验证码"){
+                    return false;
+                }
+                this.$axios.get(`${this.$settings.Host}/users/sms/${this.mobile}/`
+                ).then(response=>{
+                    this.$message(response.data.message);
+                    // 发送短信冷却倒计时
+                    let timer = 60;
+                    let t = setInterval(()=>{
+                        if(--timer<1){
+                            this.sms_code_text = `发送验证码`;
+                            clearInterval(t);
+                        }else {
+                            this.sms_code_text = `${timer}秒后重新点击`;
+                        };
+                        console.log(this.sms_code_text)
+                    },1000)
+                }).catch(error=>{
+                    this.$message(error.response.data.message);
+                })
+            },
         }
     }
 </script>
