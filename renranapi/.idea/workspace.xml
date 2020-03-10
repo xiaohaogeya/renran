@@ -2,18 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13cf5324-2cbd-4e11-a0cf-821492e8f572" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../renran_pc/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/common/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/common/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/renranapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/renranapi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/QQCallBack.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/QQCallBack.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../renran_pc/src/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/792dfcc3-3950-4778-94db-f3417ac7705f.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/792dfcc3-3950-4778-94db-f3417ac7705f/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/renran.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/renran.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/settings/dev.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/home/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/home/migrations/0002_auto_20200307_1650.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/oauth/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/oauth/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/oauth/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/oauth/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/oauth/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/oauth/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/oauth/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/users/migrations/0002_user_nickname.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/utils/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/utils/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +36,37 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="renran@localhost [2]" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="renran@localhost [2]" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="renran@localhost [2]" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="renran: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="renran@localhost [2]" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="renran: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="rr_oauth_qq: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="renranapi" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -159,7 +190,10 @@
       <workItem from="1583562413698" duration="7227000" />
       <workItem from="1583672871912" duration="58000" />
       <workItem from="1583676205762" duration="56000" />
-      <workItem from="1583714123593" duration="15137000" />
+      <workItem from="1583714123593" duration="17586000" />
+      <workItem from="1583766642733" duration="1561000" />
+      <workItem from="1583798785093" duration="2933000" />
+      <workItem from="1583808235259" duration="5105000" />
     </task>
     <servers />
   </component>
@@ -184,42 +218,50 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="193" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1583758851684" />
+    <state x="91" y="153" key="CommitChangelistDialog2" timestamp="1583803874888">
+      <screen x="0" y="23" width="1792" height="1020" />
+    </state>
+    <state x="91" y="153" key="CommitChangelistDialog2/0.23.1792.1020@0.23.1792.1020" timestamp="1583803874888" />
     <state x="522" y="311" key="FileChooserDialogImpl" timestamp="1583729666312">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="522" y="311" key="FileChooserDialogImpl/0.23.1792.1017@0.23.1792.1017" timestamp="1583729666312" />
-    <state width="1074" height="251" key="GridCell.Tab.0.bottom" timestamp="1583761668910">
-      <screen x="0" y="23" width="1792" height="1017" />
+    <state width="1074" height="251" key="GridCell.Tab.0.bottom" timestamp="1583853306240">
+      <screen x="0" y="23" width="1792" height="1040" />
     </state>
-    <state width="1074" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1583761668910" />
-    <state width="1358" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1020@0.23.1792.1020" timestamp="1583740254826" />
-    <state width="1358" height="263" key="GridCell.Tab.0.bottom/0.23.1792.1022@0.23.1792.1022" timestamp="1583739927954" />
-    <state width="1358" height="263" key="GridCell.Tab.0.bottom/0.23.1792.1024@0.23.1792.1024" timestamp="1583735404436" />
+    <state width="1074" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1583798934480" />
+    <state width="1074" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1020@0.23.1792.1020" timestamp="1583803975112" />
+    <state width="1074" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1022@0.23.1792.1022" timestamp="1583767061733" />
+    <state width="1074" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1024@0.23.1792.1024" timestamp="1583807842626" />
     <state width="1358" height="263" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1583735257949" />
-    <state width="1074" height="251" key="GridCell.Tab.0.center" timestamp="1583761668909">
-      <screen x="0" y="23" width="1792" height="1017" />
+    <state width="1074" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1040@0.23.1792.1040" timestamp="1583853306240" />
+    <state width="1074" height="251" key="GridCell.Tab.0.center" timestamp="1583853306239">
+      <screen x="0" y="23" width="1792" height="1040" />
     </state>
-    <state width="1074" height="251" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1583761668909" />
-    <state width="1358" height="251" key="GridCell.Tab.0.center/0.23.1792.1020@0.23.1792.1020" timestamp="1583740254825" />
-    <state width="1358" height="263" key="GridCell.Tab.0.center/0.23.1792.1022@0.23.1792.1022" timestamp="1583739927953" />
-    <state width="1358" height="263" key="GridCell.Tab.0.center/0.23.1792.1024@0.23.1792.1024" timestamp="1583735404435" />
+    <state width="1074" height="251" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1583798934479" />
+    <state width="1074" height="251" key="GridCell.Tab.0.center/0.23.1792.1020@0.23.1792.1020" timestamp="1583803975111" />
+    <state width="1074" height="251" key="GridCell.Tab.0.center/0.23.1792.1022@0.23.1792.1022" timestamp="1583767061732" />
+    <state width="1074" height="251" key="GridCell.Tab.0.center/0.23.1792.1024@0.23.1792.1024" timestamp="1583807842625" />
     <state width="1358" height="263" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1583735257948" />
-    <state width="1074" height="251" key="GridCell.Tab.0.left" timestamp="1583761668909">
-      <screen x="0" y="23" width="1792" height="1017" />
+    <state width="1074" height="251" key="GridCell.Tab.0.center/0.23.1792.1040@0.23.1792.1040" timestamp="1583853306239" />
+    <state width="1074" height="251" key="GridCell.Tab.0.left" timestamp="1583853306238">
+      <screen x="0" y="23" width="1792" height="1040" />
     </state>
-    <state width="1074" height="251" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1583761668909" />
-    <state width="1358" height="251" key="GridCell.Tab.0.left/0.23.1792.1020@0.23.1792.1020" timestamp="1583740254825" />
-    <state width="1358" height="263" key="GridCell.Tab.0.left/0.23.1792.1022@0.23.1792.1022" timestamp="1583739927953" />
-    <state width="1358" height="263" key="GridCell.Tab.0.left/0.23.1792.1024@0.23.1792.1024" timestamp="1583735404434" />
+    <state width="1074" height="251" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1583798934479" />
+    <state width="1074" height="251" key="GridCell.Tab.0.left/0.23.1792.1020@0.23.1792.1020" timestamp="1583803975111" />
+    <state width="1074" height="251" key="GridCell.Tab.0.left/0.23.1792.1022@0.23.1792.1022" timestamp="1583767061731" />
+    <state width="1074" height="251" key="GridCell.Tab.0.left/0.23.1792.1024@0.23.1792.1024" timestamp="1583807842625" />
     <state width="1358" height="263" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1583735257948" />
-    <state width="1074" height="251" key="GridCell.Tab.0.right" timestamp="1583761668910">
-      <screen x="0" y="23" width="1792" height="1017" />
+    <state width="1074" height="251" key="GridCell.Tab.0.left/0.23.1792.1040@0.23.1792.1040" timestamp="1583853306238" />
+    <state width="1074" height="251" key="GridCell.Tab.0.right" timestamp="1583853306239">
+      <screen x="0" y="23" width="1792" height="1040" />
     </state>
-    <state width="1074" height="251" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1583761668910" />
-    <state width="1358" height="251" key="GridCell.Tab.0.right/0.23.1792.1020@0.23.1792.1020" timestamp="1583740254825" />
-    <state width="1358" height="263" key="GridCell.Tab.0.right/0.23.1792.1022@0.23.1792.1022" timestamp="1583739927954" />
-    <state width="1358" height="263" key="GridCell.Tab.0.right/0.23.1792.1024@0.23.1792.1024" timestamp="1583735404435" />
+    <state width="1074" height="251" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1583798934480" />
+    <state width="1074" height="251" key="GridCell.Tab.0.right/0.23.1792.1020@0.23.1792.1020" timestamp="1583803975111" />
+    <state width="1074" height="251" key="GridCell.Tab.0.right/0.23.1792.1022@0.23.1792.1022" timestamp="1583767061732" />
+    <state width="1074" height="251" key="GridCell.Tab.0.right/0.23.1792.1024@0.23.1792.1024" timestamp="1583807842625" />
     <state width="1358" height="263" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1583735257949" />
+    <state width="1074" height="251" key="GridCell.Tab.0.right/0.23.1792.1040@0.23.1792.1040" timestamp="1583853306239" />
     <state x="236" y="190" key="SettingsEditor" timestamp="1583733364239">
       <screen x="0" y="23" width="1792" height="1024" />
     </state>
@@ -232,6 +274,6 @@
     <state x="573" y="364" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1583676211627" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/renranapi$manage.coverage" NAME="manage Coverage Results" MODIFIED="1583761668903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/renranapi$manage.coverage" NAME="manage Coverage Results" MODIFIED="1583853306230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

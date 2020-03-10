@@ -174,8 +174,9 @@
                             clearInterval(t);
                         }else {
                             this.sms_code_text = `${timer}秒后重新点击`;
-                        }
-                    })
+                        };
+                        console.log(this.sms_code_text)
+                    },1000)
                 }).catch(error=>{
                     this.$message(error.response.data.message);
                 })

@@ -3532,3 +3532,120 @@ INFO 2020-03-09 21:48:18,649 basehttp 154 "GET /oauth/qq/url/ HTTP/1.1" 200 179
 INFO 2020-03-09 21:48:24,689 basehttp 154 "GET /oauth/qq/url/ HTTP/1.1" 200 179
 INFO 2020-03-09 22:01:15,810 autoreload 203 /Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/oauth/utils.py changed, reloading.
 INFO 2020-03-09 22:01:16,644 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 22:55:06,581 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 22:55:50,484 autoreload 203 /Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/oauth/models.py changed, reloading.
+INFO 2020-03-09 22:55:51,238 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 22:56:00,290 autoreload 203 /Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/oauth/migrations/0001_initial.py changed, reloading.
+INFO 2020-03-09 22:56:00,956 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 22:59:03,486 autoreload 203 /Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/oauth/migrations/0001_initial.py changed, reloading.
+INFO 2020-03-09 22:59:04,662 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 22:59:44,317 autoreload 203 /Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/oauth/migrations/0001_initial.py changed, reloading.
+INFO 2020-03-09 22:59:45,047 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 23:00:01,694 autoreload 203 /Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/oauth/migrations/0001_initial.py changed, reloading.
+INFO 2020-03-09 23:00:02,419 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 23:00:23,377 autoreload 203 /Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/oauth/migrations/0001_initial.py changed, reloading.
+INFO 2020-03-09 23:00:24,074 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 23:07:49,712 autoreload 203 /Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py changed, reloading.
+INFO 2020-03-09 23:07:50,807 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 23:08:06,397 autoreload 203 /Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/pymysql/err.py changed, reloading.
+INFO 2020-03-09 23:08:07,052 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 23:15:47,514 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 23:17:06,703 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 23:17:10,119 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 23:17:26,807 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 23:17:38,938 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-09 23:20:19,891 autoreload 203 /Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/core/management/__init__.py changed, reloading.
+INFO 2020-03-09 23:20:20,713 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-10 08:06:37,237 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-10 08:07:39,373 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 2
+INFO 2020-03-10 08:07:39,373 basehttp 154 "GET /banner/ HTTP/1.1" 200 2
+INFO 2020-03-10 08:07:39,373 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 2
+INFO 2020-03-10 08:07:43,972 basehttp 154 "GET /banner/ HTTP/1.1" 200 2
+INFO 2020-03-10 08:07:43,972 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 2
+INFO 2020-03-10 08:07:43,973 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 2
+INFO 2020-03-10 08:08:03,378 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+ERROR 2020-03-10 08:08:03,598 log 228 Internal Server Error: /users/sms/19929238507/
+Traceback (most recent call last):
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 552, in connect
+    sock = self._connect()
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 609, in _connect
+    raise err
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/users/views.py", line 89, in get
+    result = redis.get("interval_%s" % mobile)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/client.py", line 1579, in get
+    return self.execute_command('GET', name)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 1185, in get_connection
+    connection.connect()
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+ERROR 2020-03-10 08:08:03,600 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 500 19183
+INFO 2020-03-10 08:08:55,789 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-10 08:09:09,701 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-10 08:09:10,593 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 54
+WARNING 2020-03-10 08:10:09,807 log 228 Bad Request: /users/sms/19929238507/
+WARNING 2020-03-10 08:10:09,807 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 400 70
+INFO 2020-03-10 08:45:28,658 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-10 08:45:28,759 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 54
+WARNING 2020-03-10 08:46:12,086 log 228 Bad Request: /users/sms/19929238507/
+WARNING 2020-03-10 08:46:12,087 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 400 70
+INFO 2020-03-10 08:48:51,474 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-10 08:48:51,622 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 54
+INFO 2020-03-10 08:58:24,564 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+INFO 2020-03-10 08:58:24,672 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 54
+INFO 2020-03-10 08:59:03,050 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 200 31
+WARNING 2020-03-10 08:59:03,116 log 228 Bad Request: /users/sms/19929238507/
+WARNING 2020-03-10 08:59:03,116 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 400 70
+INFO 2020-03-10 08:59:31,666 basehttp 154 "GET /users/sms/19929238507/ HTTP/1.1" 200 54
+INFO 2020-03-10 09:31:09,210 autoreload 203 /Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/oauth/views.py changed, reloading.
+INFO 2020-03-10 09:31:10,010 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-10 09:32:56,323 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-10 11:03:35,165 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-10 23:05:46,872 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-10 23:07:20,751 autoreload 203 /Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/oauth/urls.py changed, reloading.
+INFO 2020-03-10 23:07:21,444 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-10 23:11:32,497 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-10 23:11:45,441 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 2
+INFO 2020-03-10 23:11:45,442 basehttp 154 "GET /banner/ HTTP/1.1" 200 2
+INFO 2020-03-10 23:11:45,442 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 2
+INFO 2020-03-10 23:14:10,979 basehttp 154 "GET /oauth/qq/url/ HTTP/1.1" 200 179
+INFO 2020-03-10 23:14:19,512 basehttp 154 "GET /oauth/qq/url/ HTTP/1.1" 200 179
+WARNING 2020-03-10 23:14:25,510 log 228 Not Found: /oauth/qq/info/
+WARNING 2020-03-10 23:14:25,511 basehttp 154 "GET /oauth/qq/info/?code=169454651D72086FB08F7BF603E683AC&state=%2F HTTP/1.1" 404 3062
+WARNING 2020-03-10 23:14:36,319 log 228 Not Found: /oauth/qq/info/
+WARNING 2020-03-10 23:14:36,319 basehttp 154 "GET /oauth/qq/info/?code=C9DC50357B7193DF3641CBD4ED7FCDAD&state=%2F HTTP/1.1" 404 3062
+INFO 2020-03-10 23:15:07,734 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-10 23:15:17,990 basehttp 154 "GET /oauth/qq/url/ HTTP/1.1" 200 179
+INFO 2020-03-10 23:15:22,093 basehttp 154 "GET /oauth/qq/info/?code=1B7E0EA88D9F0F7BCE409DFEA8DA93EA&state=%2F HTTP/1.1" 200 351
+INFO 2020-03-10 23:15:47,807 basehttp 154 "OPTIONS /oauth/qq/info/ HTTP/1.1" 200 0
+INFO 2020-03-10 23:15:47,938 basehttp 154 "POST /oauth/qq/info/ HTTP/1.1" 200 248
+INFO 2020-03-10 23:15:56,652 basehttp 154 "GET /banner/ HTTP/1.1" 200 2
+INFO 2020-03-10 23:15:56,652 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 2
+INFO 2020-03-10 23:15:56,653 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 2

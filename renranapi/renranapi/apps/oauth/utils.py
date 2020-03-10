@@ -47,11 +47,15 @@ class OAuthQQ(object):
             response_data = response.read().decode()
             # parse_qs把字符串格式的内容转化成字典[注意⚠️：转化后的字典，值是列表格式]
             data = parse_qs(response_data)
-            access_token = data.get("access_token")[0]
+            if data.get("access_token") != None:
+                access_token = data.get("access_token")[0]
+                refresh_token = data.get("refresh_token")[0]
+            else:
+                raise OAuthQQTokenError("code已经过期,请重新登录QQ账号")
         except:
             logger.error(f"code={data.get('code')} msg={data.get('msg')}")
-            raise OAuthQQError
-        return access_token
+            raise OAuthQQTokenError
+        return access_token, refresh_token
 
     def get_open_id(self, access_token=None):
         """根据access_token获取openid"""
@@ -63,7 +67,7 @@ class OAuthQQ(object):
             openid = data.get("openid")
         except:
             logger.error(f"code={data.get('code')} msg={data.get('msg')}")
-            raise OAuthQQError
+            raise OAuthQQErrorOpenID
         return openid
 
     def get_qq_user_info(self, access_token=None, openid=None):
@@ -79,8 +83,15 @@ class OAuthQQ(object):
             data = json.loads(response_data)
         except:
             logger.error(f"code={data.get('code')} msg={data.get('msg')}")
-            raise OAuthQQError
+            raise OAuthQQErrorUserInfo
         return data
 
-class OAuthQQError(Exception):
+
+class OAuthQQTokenError(Exception):
+    pass
+
+class OAuthQQErrorOpenID(Exception):
+    pass
+
+class OAuthQQErrorUserInfo(Exception):
     pass

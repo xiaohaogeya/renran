@@ -42,7 +42,6 @@ class BaseModel(models.Model):
     created_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
     updated_time = models.DateTimeField(auto_now=True, verbose_name="结束时间")
     # icon = models.IntegerField(verbose_name="icon图标", choices=ICON_CHOOSE, default=1)
-    icon = models.CharField(verbose_name="icon图标", default="el-icon-info", max_length=100, null=True, blank=True)
 
     class Meta:
         # 设置当前模型在数据迁移的时候不要为它创建表
