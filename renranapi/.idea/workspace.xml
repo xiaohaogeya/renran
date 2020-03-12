@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13cf5324-2cbd-4e11-a0cf-821492e8f572" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../renran_pc/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/common/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/common/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/Write.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/Write.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/renran.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/renran.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/settings/dev.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +181,7 @@
       <workItem from="1583798785093" duration="2933000" />
       <workItem from="1583808235259" duration="7151000" />
       <workItem from="1583936103853" duration="1708000" />
-      <workItem from="1583995932034" duration="8729000" />
+      <workItem from="1583995932034" duration="9214000" />
     </task>
     <servers />
   </component>

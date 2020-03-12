@@ -1,19 +1,19 @@
 <template>
-  <div class="write">
+  <div class="write" v-show="is_show_page">
     <div class="_2v5v5">
       <div class="_3zibT"><a href="/">回首页</a></div>
       <div class="_1iZMb">
         <div class="_33Zlg" @click="collection_form=true"><i class="fa fa-plus"></i><span>新建文集</span></div>
         <div class="_2G97m">
           <form class="M8J6Q" :class="collection_form?'_2a1Rp':'_1mU5v'">
-            <input type="text" placeholder="请输入文集名..." v-model="collection_name" class="_1CtV4">
-            <button type="submit" class="dwU8Q _3zXcJ _3QfkW" @click.prevent="add_collection"><span>提 交</span></button>
+            <input type="text" placeholder="请输入文集名..." name="name" class="_1CtV4">
+            <button type="submit" class="dwU8Q _3zXcJ _3QfkW"><span>提 交</span></button>
             <button type="button" class="vIzwB _3zXcJ" @click="collection_form=false"><span>取 消</span></button>
           </form>
         </div>
       </div>
       <ul class="_3MbJ4 _3t059">
-        <li class="_3DM7w _31PCv" title="日记本">
+        <li class="_3DM7w" :class="current_collection==key?'_31PCv':''" :title="collection.name" v-for="collection,key in collection_list" :key="key">
           <div class="_3P4JX _2VLy-">
             <i class="fa fa-gear"></i>
             <span>
@@ -27,9 +27,8 @@
               </ul>
             </span>
           </div>
-          <span>日记本</span>
+          <span @click="current_collection=key">{{collection.name}}</span>
         </li>
-        <li class="_3DM7w" title="随笔"><span>随笔</span></li>
       </ul>
       <div style="height: 50px;"></div>
       <div role="button" class="h-5Am">
@@ -100,22 +99,33 @@
   </div>
 </template>
 <script>
-  import { mavonEditor } from 'mavon-editor'
-  import 'mavon-editor/dist/css/index.css'
+    import { mavonEditor } from 'mavon-editor'
+    import 'mavon-editor/dist/css/index.css';
+    import "../../static/font-awesome/css/font-awesome.css";
     export default {
         name: "Write",
         data(){
             return {
-                collection_name: "",
+                is_show_page: false,
                 editorContent:"",
                 img_file:[],
                 collection_form:false,
+                token: "",
+                collection_list:[],
+                current_collection: 0, // 默认让用户选中的文集的下标为0
             }
         },
         watch:{
             editorContent(){
-                console.log(this.editorContent)
+                console.log(this.editorContent);
             }
+        },
+        created(){
+          this.token = this.$settings.check_user_login(this);
+          if(this.token){
+              this.is_show_page = true;
+          }
+          this.get_collection();
         },
         mounted(){
             document.querySelector("#editor").style.height = document.documentElement.clientHeight-document.querySelector("._24i7u").clientHeight+"px";
@@ -126,46 +136,27 @@
         methods:{
           // 绑定@imgAdd event
           imgAdd(pos, $file){
-              // 第一步.将图片上传到服务器.
-              var formdata = new FormData();
-              formdata.append('image', $file);
-              this.img_file[pos] = $file;
-              this.$axios.post(`${this.$settings.Host}/article/uploadimg/`, formdata,{
-                  'Content-Type': 'multipart/form-data'
-              }).then((res) => {
-                  let _res = res.data;
-                  // 第二步.将返回的url替换到文本原位置![...](0) -> ![...](url)
-                  this.$refs.md.$img2Url(pos, _res.image);
-              });
+              // 添加文件
           },
           imgDel(pos) {
-              delete this.img_file[pos];
+              // 删除文件
           },
-          add_collection(){
-              if(this.collection_name.length<1){
-                  this.$message.error("文集名称不能为空！");
-              }
-              let token = this.$settings.get_login_user();
-              if(!token){
-                  this.$message.error("对不起，请登录后再继续操作！");
-                  return false;
-              }
-
-              this.$axios.post(`${this.$settings.Host}/article/collection/`,{
-                  name: this.collection_name,
-              },{
+          get_collection(){
+              // 获取当前登陆用户的文集
+              this.$axios.get(`${this.$settings.Host}/article/collection/`,{
                   headers:{
-                      Authorization: "jwt " + token,
+                      Authorization: "jwt " + this.token,
                   }
               }).then(response=>{
-                  this.$message.success("添加文集成功！");
+                  this.collection_list = response.data;
               }).catch(error=>{
-                  this.$message.error("添加文集失败！");
+                  this.$message.error("对不起,无法获取当前用户的文集列表!");
               });
           }
         }
     }
 </script>
+
 <style scoped>
   body *{
     box-sizing: border-box;
