@@ -4,6 +4,7 @@ import Home from "../components/Home";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import QQCallBack from "../components/QQCallBack";
+import Write from "../components/Write";
 Vue.use(Router);
 
 export default new Router({
@@ -35,5 +36,10 @@ export default new Router({
       path: "/oauth_callback.html",
       component: QQCallBack
     },
+    {
+      name: "Write",
+      path: "/writer",
+      component: Write
+    }
   ]
 })

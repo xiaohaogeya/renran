@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'users',
     'home',
     'oauth',
+    'article',
 ]
 
 MIDDLEWARE = [
@@ -279,3 +280,11 @@ QQ_APP_ID = '101403367'
 QQ_APP_KEY = '93112df14c10d6fde74baa62f5de95ab'
 QQ_REDIRECT_URL = 'http://www.moluo.net:8080/oauth_callback.html'
 QQ_STATE = "/" # 用于保存登录成功后的跳转页面路径
+
+
+# django文件存储
+DEFAULT_FILE_STORAGE = 'renranapi.utils.fastdfs.fdfs_storage.FastDFSStorage'
+
+# FastDFS
+FDFS_URL = 'http://192.168.0.109:8888/'  # 访问图片的路径域名 ip地址修改为自己机器的ip地址
+FDFS_CLIENT_CONF = os.path.join(BASE_DIR, 'utils/fastdfs/client.conf')

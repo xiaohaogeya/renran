@@ -35,6 +35,15 @@ export default {
       // 跳转到上一页
       vm.$router.back();
     });
+  },
+  check_user_login(vm){
+    // 判断用户是否已经登录
+    let token = localStorage.user_token || sessionStorage.user_token;
+    if(!token){
+      // 跳转到登录页面
+      this.jump_page(vm, "尊敬的游客,您尚未登录!请登录后再进行操作!", "警告", "去登录", "/user/login");
+    }
+    return token;
   }
 
 }
