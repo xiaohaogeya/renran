@@ -6,19 +6,19 @@
         <div class="_33Zlg" @click="collection_form=true"><i class="fa fa-plus"></i><span>新建文集</span></div>
         <div class="_2G97m">
           <form class="M8J6Q" :class="collection_form?'_2a1Rp':'_1mU5v'">
-            <input type="text" placeholder="请输入文集名..." name="name" class="_1CtV4">
-            <button type="submit" class="dwU8Q _3zXcJ _3QfkW"><span>提 交</span></button>
+            <input type="text" placeholder="请输入文集名..." v-model="collection_name" class="_1CtV4">
+            <button type="submit" class="dwU8Q _3zXcJ _3QfkW" @click.prevent.stop="add_collection"><span>提 交</span></button>
             <button type="button" class="vIzwB _3zXcJ" @click="collection_form=false"><span>取 消</span></button>
           </form>
         </div>
       </div>
       <ul class="_3MbJ4 _3t059">
         <li class="_3DM7w" :class="current_collection==key?'_31PCv':''" :title="collection.name" v-for="collection,key in collection_list" :key="key">
-          <div class="_3P4JX _2VLy-">
+          <div class="_3P4JX _2VLy-" v-if="current_collection==key" @click.stop="show_collection_menu">
             <i class="fa fa-gear"></i>
             <span>
-              <ul class="_2V8zt _3FcHm _2w9pn" :class="true?'':'NvfK4'">
-                <li class="_2po2r cRfUr" title="">
+              <ul class="_2V8zt _3FcHm _2w9pn" :class="is_show_collection_menu?'NvfK4':''">
+                <li class="_2po2r cRfUr" title="" @click.stop="edit_collection">
                   <span class=""><i class="fa fa-pencil-square-o _22XWG"></i>修改文集</span>
                 </li>
                 <li class="_2po2r cRfUr" title="">
@@ -40,14 +40,14 @@
       <div class="_3revO _2mnPN">
         <div class="_3br9T">
           <div>
-            <div class="_1GsW5"><i class="fa fa-plus-circle"></i><span> 新建文章</span></div>
+            <div class="_1GsW5" @click.stop="add_article(0)"><i class="fa fa-plus-circle"></i><span> 新建文章</span></div>
             <ul class="_2TxA-">
-              <li class="_25Ilv _33nt7" title="ABC">
+              <li class="_25Ilv" @click.stop="current_article=key" :class="current_article==key?'_33nt7':''" :title="article.name" v-for="article,key in article_list" :key="key">
                 <i class="_13kgp _2m93u"></i>
-                <div class="_3P4JX poOXI">
+                <div class="_3P4JX poOXI" v-if="current_article==key" @click.stop="show_article_menu">
                   <i class="fa fa-gear"></i>
                   <span>
-                    <ul class="_2V8zt _3FcHm _2w9pn">
+                    <ul class="_2V8zt _3FcHm _2w9pn" :class="is_show_article_menu?'NvfK4':''">
                       <li class="_2po2r cRfUr" title=""><span class=""><i class="fa fa-share _22XWG"></i>直接发布</span></li>
                       <li class="_2po2r cRfUr" title=""><span class=""><i class="fa fa-clock-o _22XWG"></i>定时发布</span></li>
                       <li class="_2po2r cRfUr" title=""><span class="_20tIi"><i class="iconfont ic-paid _22XWG"></i>发布为付费文章</span></li>
@@ -66,26 +66,17 @@
                     </ul>
                   </span>
                 </div>
-                <span class="NariC">ABC</span>
-                <span class="hLzJv">题目：有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？
-
-题目：企业发放的奖金根据利润提成</span>
-                <span class="_29C-V">字数:905</span>
-              </li>
-              <li class="_25Ilv" title="2020-01-12">
-                <i class="_13kgp"></i>
-                <span class="NariC">2020-01-12</span>
-                <span class="hLzJv">题目：有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？
-
-题目：企业发放的奖金根据利润提成</span>
+                <span class="NariC">{{article.name}}</span>
+                <span class="hLzJv" v-show="current_article==key">{{article.content}}</span>
+                <span class="_29C-V" v-show="current_article==key">字数:{{article.content?article.content.length:0}}</span>
               </li>
             </ul>
-            <div class="_2cVn3"><i class="fa fa-plus"></i><span> 在下方新建文章</span></div>
+            <div class="_2cVn3" @click.stop="add_article(1)"><i class="fa fa-plus"></i><span> 在下方新建文章</span></div>
           </div>
         </div>
       </div>
-      <input type="text" class="_24i7u" value="2020-01-12">
-      <div id="editor">
+      <input type="text" class="_24i7u" value="2020-01-12" v-if="article_list.length>0">
+      <div id="editor" v-if="article_list.length>0">
         <mavon-editor
           style="height: 100%"
           v-model="editorContent"
@@ -111,24 +102,42 @@
                 img_file:[],
                 collection_form:false,
                 token: "",
-                collection_list:[],
-                current_collection: 0, // 默认让用户选中的文集的下标为0
+                collection_list:[],     // 当前用户的文集列表
+                current_collection: 0,  // 默认让用户选中的文集的下标为0
+                collection_name: "",    // 新建文集表单中的文集名称
+                is_show_collection_menu: false,    // 是否显示文集菜单
+                article_list: [],
+                current_article: 0,     // 默认让用户选中的文章的下标为0
+                is_show_article_menu: false,    // 是否显示文章菜单
             }
         },
         watch:{
             editorContent(){
                 console.log(this.editorContent);
-            }
+            },
+            current_collection(){
+                this.get_article_list();
+            },
         },
         created(){
           this.token = this.$settings.check_user_login(this);
           if(this.token){
+              // 显示页面
               this.is_show_page = true;
+              // 获取文集
+              this.get_collection();
           }
-          this.get_collection();
         },
         mounted(){
-            document.querySelector("#editor").style.height = document.documentElement.clientHeight-document.querySelector("._24i7u").clientHeight+"px";
+            if(this.article_list.length>0){
+              document.querySelector("#editor").style.height = document.documentElement.clientHeight-document.querySelector("._24i7u").clientHeight+"px";
+            }
+            // 给当前网页绑定点击事件
+            document.onclick = ()=>{
+                // 点击文档,隐藏操作文集的的菜单
+                this.hide_collection_menu();
+                this.hide_article_menu();
+            }
         },
         components: {
           mavonEditor
@@ -149,13 +158,125 @@
                   }
               }).then(response=>{
                   this.collection_list = response.data;
+                  // 获取当前文集下的所有文章
+                  this.get_article_list();
               }).catch(error=>{
                   this.$message.error("对不起,无法获取当前用户的文集列表!");
               });
-          }
+          },
+          add_collection(){
+              // 添加文集
+              if(this.collection_name.length<1){
+                  // 不能为空!
+                  this.$message.error("对不起,文集名称不能为空!");
+                  return;
+              }
+
+              // 发送ajax
+              this.$axios.post(`${this.$settings.Host}/article/collect/`,{
+                  name: this.collection_name
+              },{
+                  headers:{
+                      Authorization: "jwt " + this.token,
+                  }
+              }).then(response=>{
+                  this.$message.success("添加文集成功!");
+                  this.collection_name = "";
+                  this.collection_form = false; // 隐藏添加文集的表单
+                  // 把服务端中添加返回的文集信息,保存到collection_list中
+                  this.collection_list.unshift(response.data);
+              }).catch(error=>{
+                  this.$message.error(error.response.data);
+              })
+
+          },
+          show_collection_menu(){
+              // 控制当前文集菜单的显示隐藏
+              this.is_show_collection_menu = !this.is_show_collection_menu;
+          },
+          hide_collection_menu(){
+              // 隐藏操作文集的菜单
+              this.is_show_collection_menu = false;
+          },
+          edit_collection(){
+              // 修改文集
+              this.$prompt('请输入新文集名', '提示', {
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                inputPattern: /.{1,}/,
+                inputErrorMessage: '文集名称不能为空!'
+              }).then(({ value }) => {
+                 // 点击确定,需要把当前文集名称提交到服务端进行修改
+                 let collection_id = this.collection_list[this.current_collection].id;
+                 this.$axios.put(`${this.$settings.Host}/article/collect/${collection_id}/`,{
+                     name: value,
+                 },{
+                     headers:{
+                         Authorization:"jwt " + this.token,
+                     }
+                 }).then(response=>{
+                     this.collection_list[this.current_collection].name = value;
+                 }).catch(error=>{
+                     this.$message.error(error.response.data);
+                 })
+              }).catch(() => {
+
+              });
+          },
+          del_collection(){
+              // 删除文集
+              // 获取当前文件的id
+              let collection_id = this.collection_list[this.current_collection].id;
+              // 刚发送ajax
+
+          },
+          get_article_list(){
+              // 获取文章列表
+              this.$axios.get(`${this.$settings.Host}/article/`,{
+                  params:{
+                      collection: this.collection_list[this.current_collection].id,
+                  },
+                  headers:{
+                     Authorization:"jwt " + this.token,
+                  }
+              }).then(response=>{
+                  this.article_list = response.data;
+              }).catch(error=>{
+                  this.$message.error(error.response.data);
+              })
+          },
+          show_article_menu(){
+              // 控制当前文章菜单的显示隐藏
+             this.is_show_article_menu = !this.is_show_article_menu;
+          },
+          hide_article_menu(){
+             this.is_show_article_menu = false;
+          },
+          add_article(position){ // position 表示添加文章位置
+              // 在前面添加文章
+              this.$axios.post(`${this.$settings.Host}/article/`,{
+                  position: position,
+                  collection: this.collection_list[this.current_collection].id,
+              },{
+                  headers:{
+                      Authorization: "jwt " + this.token,
+                  }
+              }).then(response=>{
+                  if(position==0){
+                      // 把文章设置为前面位置
+                      this.article_list.unshift(response.data);
+                  }else {
+                      // 把文章设置为后面位置
+                      this.article_list.push(response.data);
+                  }
+              }).catch(error=>{
+                  this.$message.error(error.response.data);
+              })
+          },
         }
     }
 </script>
+
 
 <style scoped>
   body *{

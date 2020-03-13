@@ -7,7 +7,6 @@ from users.models import User
 
 class ArticleCollectionModel(BaseModel):
     """文集模型"""
-    name = models.CharField(max_length=200, verbose_name="文章标题")
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, verbose_name="用户")
 
     class Meta:
@@ -18,7 +17,6 @@ class ArticleCollectionModel(BaseModel):
 
 class SpecialModel(BaseModel):
     """专题模型"""
-    name = models.CharField(max_length=200, verbose_name="专题名称")
     image = models.ImageField(null=True, blank=True, verbose_name="封面图片")
     notice = models.TextField(null=True, blank=True, verbose_name="专题公告")
     article_count = models.IntegerField(default=0, null=True, blank=True, verbose_name="文章总数")
@@ -34,7 +32,6 @@ class SpecialModel(BaseModel):
 
 class ArticleModel(BaseModel):
     """文章模型"""
-    title = models.CharField(max_length=200, verbose_name="文章标题")
     content = models.TextField(null=True, blank=True, verbose_name="文章内容")
     pub_date = models.DateTimeField(null=True, default=None, verbose_name="发布时间")
     access_pwd = models.CharField(max_length=15, null=True, blank=True, verbose_name="访问密码")

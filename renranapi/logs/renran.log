@@ -3729,3 +3729,124 @@ INFO 2020-03-12 19:40:15,138 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 2
 INFO 2020-03-12 19:40:17,258 basehttp 154 "OPTIONS /article/collection/ HTTP/1.1" 200 0
 WARNING 2020-03-12 19:40:17,261 log 228 Unauthorized: /article/collection/
 WARNING 2020-03-12 19:40:17,261 basehttp 154 "GET /article/collection/ HTTP/1.1" 401 38
+INFO 2020-03-13 21:52:18,567 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-13 21:52:30,997 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 2
+INFO 2020-03-13 21:52:30,997 basehttp 154 "GET /banner/ HTTP/1.1" 200 2
+INFO 2020-03-13 21:52:30,998 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 2
+INFO 2020-03-13 21:52:31,011 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 2
+INFO 2020-03-13 21:52:31,011 basehttp 154 "GET /banner/ HTTP/1.1" 200 2
+INFO 2020-03-13 21:52:31,012 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 2
+WARNING 2020-03-13 21:52:49,694 log 228 Bad Request: /users/mobile/19929238507/
+WARNING 2020-03-13 21:52:49,694 basehttp 154 "GET /users/mobile/19929238507/ HTTP/1.1" 400 56
+INFO 2020-03-13 21:52:54,271 basehttp 154 "GET /users/mobile/19929238500/ HTTP/1.1" 200 31
+ERROR 2020-03-13 21:52:54,417 log 228 Internal Server Error: /users/sms/19929238500/
+Traceback (most recent call last):
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 552, in connect
+    sock = self._connect()
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 609, in _connect
+    raise err
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/users/views.py", line 89, in get
+    result = redis.get("interval_%s" % mobile)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/client.py", line 1579, in get
+    return self.execute_command('GET', name)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 1185, in get_connection
+    connection.connect()
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+ERROR 2020-03-13 21:52:54,418 basehttp 154 "GET /users/sms/19929238500/ HTTP/1.1" 500 19353
+INFO 2020-03-13 21:53:07,224 basehttp 154 "OPTIONS /users/captcha/ HTTP/1.1" 200 0
+INFO 2020-03-13 21:53:07,413 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+INFO 2020-03-13 21:53:07,416 basehttp 154 "OPTIONS /users/ HTTP/1.1" 200 0
+ERROR 2020-03-13 21:53:07,441 log 228 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 552, in connect
+    sock = self._connect()
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 609, in _connect
+    raise err
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 234, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/rest_framework/serializers.py", line 436, in run_validation
+    value = self.validate(value)
+  File "/Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/users/serializers.py", line 42, in validate
+    redis_sms_code = redis_conn.get("sms_%s" % mobile).decode()
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/client.py", line 1579, in get
+    return self.execute_command('GET', name)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 1185, in get_connection
+    connection.connect()
+  File "/Users/xiaohaoge/virtualenvs/renran/lib/python3.6/site-packages/redis/connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+ERROR 2020-03-13 21:53:07,442 basehttp 154 "POST /users/ HTTP/1.1" 500 20038
+INFO 2020-03-13 21:53:28,139 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+INFO 2020-03-13 21:53:28,143 basehttp 154 "OPTIONS /users/login/ HTTP/1.1" 200 0
+INFO 2020-03-13 21:53:28,263 basehttp 154 "POST /users/login/ HTTP/1.1" 200 248
+INFO 2020-03-13 21:53:38,958 basehttp 154 "OPTIONS /article/collection/ HTTP/1.1" 200 0
+INFO 2020-03-13 21:53:38,971 basehttp 154 "GET /article/collection/ HTTP/1.1" 200 54
+INFO 2020-03-13 21:53:38,976 basehttp 154 "OPTIONS /article/?collection=1 HTTP/1.1" 200 0
+INFO 2020-03-13 21:53:38,987 basehttp 154 "GET /article/?collection=1 HTTP/1.1" 200 2
+INFO 2020-03-13 21:53:42,070 basehttp 154 "OPTIONS /article/ HTTP/1.1" 200 0
+INFO 2020-03-13 21:53:42,081 basehttp 154 "POST /article/ HTTP/1.1" 201 58
+INFO 2020-03-13 21:53:47,815 basehttp 154 "OPTIONS /article/?collection=2 HTTP/1.1" 200 0
+INFO 2020-03-13 21:53:47,823 basehttp 154 "GET /article/?collection=2 HTTP/1.1" 200 2
+INFO 2020-03-13 21:53:49,660 basehttp 154 "GET /article/?collection=1 HTTP/1.1" 200 60
+INFO 2020-03-13 21:54:03,382 basehttp 154 "POST /article/ HTTP/1.1" 201 58
+INFO 2020-03-13 21:54:04,587 basehttp 154 "POST /article/ HTTP/1.1" 201 58
