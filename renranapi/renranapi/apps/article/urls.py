@@ -9,4 +9,6 @@ urlpatterns = [
     re_path(r"^collect/(?P<pk>\d+)/$", views.CollectionUpdateOrDeleteAPIView.as_view()),
     path("", views.ArticleOfCollectionViewSet.as_view({"get": "list"})),
     re_path(r"^public/(?P<pk>\d+)/$", views.ArticlePublicStatusAPIView.as_view()),
+    re_path(r"^move/(?P<pk>\d+)/$", views.ArticleChangeCollection.as_view()),
+    re_path(r"interval/(?P<pk>\d+)/$", views.ArticleIntervalAPIView.as_view()),
 ]

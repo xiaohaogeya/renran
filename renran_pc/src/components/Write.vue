@@ -48,14 +48,15 @@
                   <i class="fa fa-gear"></i>
                   <span>
                     <ul class="_2V8zt _3FcHm _2w9pn" :class="is_show_article_menu?'NvfK4':''">
-                      <li class="_2po2r cRfUr" title=""><span class=""><i class="fa fa-share _22XWG"></i>直接发布</span></li>
-                      <li class="_2po2r cRfUr" title=""><span class=""><i class="fa fa-clock-o _22XWG"></i>定时发布</span></li>
+                      <li class="_2po2r cRfUr" title="" v-if="!article.is_public" ><span class="" @click.stop="public_article(true)"><i class="fa fa-share _22XWG"></i>直接发布</span></li>
+                      <li class="_2po2r cRfUr" title="" v-else @click.stop="public_article(false)"><span class=""><i class="fa fa-lock _22XWG"></i>设为私密</span></li>
+                      <li class="_2po2r cRfUr" title=""><span class="" @click.stop="interval_public(article)"><i class="fa fa-clock-o _22XWG"></i>定时发布</span></li>
                       <li class="_2po2r cRfUr" title=""><span class="_20tIi"><i class="iconfont ic-paid _22XWG"></i>发布为付费文章</span></li>
                       <li class="_2po2r cRfUr" title=""><span class=""><i class="iconfont ic-set _22XWG"></i>设置发布样式</span></li>
-                      <li class="_3nZXj _2_WAp _3df2u _2po2r cRfUr" title=""><span class=""><i class="fa fa-folder-open _22XWG"></i>移动文章
+                      <li class="_3nZXj _2_WAp _3df2u _2po2r cRfUr" title="" @click.stop="move_article(article.id)"><span class=""><i class="fa fa-folder-open _22XWG"></i>移动文章
                         <div class="_3x4X_">
                           <ul class="_2KzJx oGKRI _3DXDE _2w9pn">
-                            <li class="_2po2r cRfUr" title="随笔"><span class="">随笔</span></li>
+                            <li class="_2po2r cRfUr" :title="collection.name" v-for="collection in collection_list" v-if="collection.id!=article.collection" @click.stop="move_article(collection.id)"><span class="">{{collection.name}}</span></li>
                           </ul>
                         </div>
                       </span>
@@ -87,6 +88,36 @@
         ></mavon-editor>
       </div>
     </div>
+    <div class="interval_box" style="" v-show="is_interval_pub_article">
+      <transition name="el-fade-in-linear">
+        <div class="transition-box">
+          <div class="_2tIvb">
+            <div class="ZTNas" aria-label="Close"><i class="fa fa-close"></i></div>
+            <div class="_1KgC3">
+              <div class="-K8Re">定时发文 </div>
+            </div>
+            <div class="_1LROK PWCkH">
+              <div class="wzwGh">选择定时发文的时间：</div>
+              <div class="On4jq">
+                  <el-date-picker
+                  v-model="pub_date"
+                  type="datetime"
+                  format="yyyy-MM-dd HH:mm"
+                  placeholder="选择日期时间">
+                </el-date-picker>
+              </div>
+              <div class="_3mEYS">本文章将于<span class="yfqan">{{timeformat(pub_date)}}</span>发布。
+              </div>
+            </div>
+            <div class="RzhZ5 pCffa">
+              <button type="button" class="_3zXcJ"><span>取 消</span></button>
+              <button type="button" class="_3zXcJ _3QfkW"><span>确 认</span></button>
+            </div>
+          </div>
+
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 <script>
@@ -109,6 +140,8 @@
                 article_list: [],
                 current_article: 0,     // 默认让用户选中的文章的下标为0
                 is_show_article_menu: false,    // 是否显示文章菜单
+                pub_date:new Date().toLocaleDateString(), //定时发布文章的时间设置
+                is_interval_pub_article: false,
             }
         },
         watch:{
@@ -275,7 +308,7 @@
                       Authorization: "jwt " + this.token,
                   }
               }).then(response=>{
-                  if(position==0){
+                  if(position===0){
                       // 把文章设置为前面位置
                       this.article_list.unshift(response.data);
                   }else {
@@ -286,6 +319,69 @@
                   this.$message.error(error.response.data);
               })
           },
+          public_article(is_public){
+            // 文章发布状态的切换
+              let article_id = this.article_list[this.current_article].id;
+              this.$axios.put(`${this.$settings.Host}/article/public/${article_id}/`,{
+                is_public: is_public
+              },{
+                headers:{
+                  Authorization: "jwt" + this.token,
+                }
+              }).then(response=>{
+                this.article_list[this.current_article].is_public = is_public;
+                this.is_show_article_menu = false;
+                if(is_public){
+                  this.$message.success("文章发布成功")
+                  // todo 跳转到文章发布成功页面
+                }else {
+                  this.$message.success("文章设置成功")
+                }
+              }).catch(error=>{
+                this.$message.error("操作失败!请联系客服工作人员!")
+              })
+          },
+          move_article(collection_id){
+            // 文章发布状态切换
+            let article_id = this.article_list[this.current_article].id;
+            this.$axios.put(`${this.$settings.Host}/article/move/${article_id}/`,{
+              collection_id:collection_id,
+            },{
+              headers:{
+                Authorization: "jwt" + this.token,
+              }
+            }).then(response=>{
+              this.article_list.splice(this.current_article, 1);
+              this.is_show_article_menu = false;
+              this.$message.success("文章设置成功")
+            }).catch(error=>{
+              this.$message.error("操作失败!请联系客服工作人员!")
+            })
+          },
+          interval_public(article){
+            // 定时发布文章
+            let article_id = this.article_list[this.current_article].id;
+            this.$axios.put(`${this.$settings.Host}/article/interval/${article_id}/`,{
+              pub_date: this.pub_date,
+            },{
+              headers:{
+                Authorization: "jwt" + this.token
+              }
+            }).then(response=>{
+              this.article_list[this.current_article].is_public = true;
+              this.is_show_article_menu = false;
+              this.$message.success("文章设置成功");
+            }).catch(error=>{
+              this.$message.error("操作失败!请联系客服工作人员!")
+            });
+            this.is_interval_pub_article = false;
+          },
+          timeformat(time){
+            time = new Date(time);
+            return `${time.getFullYear()}-
+            ${time.getMonth() + 1}-${time.getDate()}
+            ${time.getHours()}:${time.getMinutes()}`;
+          }
         }
     }
 </script>
@@ -310,7 +406,7 @@
     background-color: #404040;
     color: #f2f2f2;
     z-index: 100;
-    width: 16.66666667%;
+    width: 13.66666667%;
     display: block;
     flex: 0 0 auto;
     float: left;
@@ -451,6 +547,15 @@
     padding-left: 12px;
 
 }
+._2_WAp ._2KzJx, ._2_WAp ._3x4X_ {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    display: none;
+}
+._2_WAp:hover ._2KzJx, ._2_WAp:hover ._3x4X_ {
+    display: block;
+}
 ._3DM7w ._2VLy- {
     float: right;
 }
@@ -500,7 +605,7 @@
 }
 .h-5Am {
     display: block;
-    width: 16.66666667%;
+    width: 13.66666667%;
     position: fixed;
     bottom: 0;
     height: 50px;
@@ -771,5 +876,247 @@
     right: 0;
     top: 44px;
     height: 580px;
+  }
+      .interval_box{
+      display: flex;
+      height: 280px;
+      width: 400px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      background: #fff;
+      border-radius: 4px;
+      z-index: 2000;
+    }
+    .NVdZF{display:block}
+
+  ._20JYe {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: hsla(0, 0%, 100%, .7);
+    height: 100%;
+    z-index: 1000;
+    filter: alpha(opacity=30)
+  }
+
+  body.reader-night-mode ._20JYe {
+    background-color: hsla(0, 0%, 40%, .7)
+  }
+
+  ._3WS2u {
+    display: none
+  }
+
+  ._23VW8 {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1010;
+    -webkit-overflow-scrolling: touch;
+    outline: 0
+  }
+
+  ._3cgNz {
+    position: relative;
+    background-color: #fff;
+    width: auto;
+    border: 0;
+    border-radius: 6px;
+    margin: 0 auto 24px;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2)
+  }
+
+  body.reader-night-mode ._3cgNz {
+    background-color: #3d3d3d
+  }
+
+  .cjahm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+  }
+
+  .cjahm.move-up-appear.move-up-appear-active, .cjahm.move-up-enter.move-up-enter-active {
+    -webkit-animation-name: _2oyZp;
+    animation-name: _2oyZp
+  }
+
+  .cjahm.move-up-leave.move-up-leave-active {
+    -webkit-animation-name: _3g8pf;
+    animation-name: _3g8pf
+  }
+
+  ._2tIvb {
+    position: relative;
+    border-radius: 6px;
+    background-color: #eee;
+  }
+
+  body.reader-night-mode ._2tIvb {
+    background-color: #3d3d3d
+  }
+
+  .ZTNas {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    line-height: 46px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: #999;
+    -webkit-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    transition: color .3s ease
+  }
+
+  .ZTNas:hover {
+    color: #4d4d4d
+  }
+
+  ._1KgC3 {
+    padding: 13px 16px;
+    border-radius: 4px 4px 0 0;
+    color: #595959;
+    border-bottom: 1px solid #d9d9d9
+  }
+
+  body.reader-night-mode ._1KgC3 {
+    border-color: #2e2e2e
+  }
+
+  .-K8Re {
+    margin: 0;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #4d4d4d
+  }
+
+  body.reader-night-mode .-K8Re {
+    color: #b3b3b3
+  }
+
+  ._3O4M2 {
+    font-size: 13px;
+    padding-left: 10px;
+    color: #999
+  }
+
+  ._3O4M2 a {
+    color: #3294d0
+  }
+
+  .PWCkH {
+    padding: 16px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #595959
+  }
+
+  body.reader-night-mode .PWCkH {
+    color: #b3b3b3
+  }
+
+  .pCffa {
+    padding: 0 16px 16px;
+    text-align: right;
+    border-radius: 0 0 2px 2px
+  }
+
+  ._26mjB {
+    display: block
+  }
+
+  .HhIYk {
+    zoom: 1
+  }
+
+  .HhIYk:after, .HhIYk:before {
+    content: " ";
+    display: table
+  }
+
+  .HhIYk:after {
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0
+  }
+
+  ._37SYn {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 30px 30px 20px;
+    color: #333
+  }
+
+  body.reader-night-mode ._37SYn {
+    color: #b3b3b3
+  }
+
+  ._2BmdS {
+    padding: 0 16px 16px;
+    text-align: right;
+    border-radius: 0 0 2px 2px
+  }
+
+  ._26mjB .PWCkH {
+    padding: 0;
+    border-radius: 2px
+  }
+
+  ._26mjB .PWCkH a {
+    color: #3194d0
+  }
+
+  ._26mjB .PWCkH a:active, ._26mjB .PWCkH a:hover {
+    color: #2b86bc
+  }
+
+  ._26mjB ._38pIX {
+    padding: 30px 16px;
+    border: 0
+  }
+
+  ._26mjB ._38pIX input {
+    display: block;
+    border-radius: 4px;
+    width: 100%;
+    line-height: 20px;
+    padding: 5px 10px;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid #ccc
+  }
+
+  body.reader-night-mode ._26mjB ._38pIX input {
+    border-color: #2e2e2e
+  }
+
+  ._26mjB .ZTNas {
+    width: 32px;
+    height: 32px;
+    line-height: 32px
+  }
+
+  .HSpeJ .PWCkH {
+    border: 0
   }
 </style>

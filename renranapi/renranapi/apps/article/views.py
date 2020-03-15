@@ -90,6 +90,33 @@ class ArticlePublicStatusAPIView(APIView):
         return Response("操作成功")
 
 
+class ArticleChangeCollection(APIView):
+    """移动文章"""
+    permission_classes = [IsAuthenticated]
+    def put(self, request, pk):
+        try:
+            article = ArticleModel.objects.get(pk=pk)
+        except ArticleModel.DoesNotExist:
+            return Response("对不起,当前文章不存在", status=status.HTTP_400_BAD_REQUEST)
+        collection_id = request.data.get("collection_id")
+        article.collection_id = int(collection_id)
+        article.save()
+        return Response("操作成功")
+
+
+class ArticleIntervalAPIView(APIView):
+    """定时发布文章"""
+    permission_classes = [IsAuthenticated]
+    def put(self, request, pk):
+        try:
+            article = ArticleModel.objects.get(pk=pk)
+        except ArticleModel.DoesNotExist:
+            return Response("对不起,当前文章不存在!", status=status.HTTP_400_BAD_REQUEST)
+        pub_date = request.data.get("pub_date")
+        article.pub_date = pub_date
+        article.save()
+        return Response("操作成功!")
+
 
 
 

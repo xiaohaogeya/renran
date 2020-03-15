@@ -15,4 +15,4 @@ app.config_from_object("mycelery.config")
 
 # 自动搜索并加载任务
 # 参数必须是一个列表,里面的每一个任务都是任务的路径名称
-app.autodiscover_tasks(["mycelery.sms"])
+app.autodiscover_tasks(["mycelery.sms", "mycelery.article"])
