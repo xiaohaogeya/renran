@@ -118,6 +118,13 @@ class ArticleIntervalAPIView(APIView):
         return Response("操作成功!")
 
 
+class ArticleDeleteAPIView(DestroyAPIView):
+    """删除文章"""
+    queryset = ArticleModel.objects.all()
+    serializer_class = ArticleModelSerializer
+    permission_classes = [IsAuthenticated]  # 必须是登录用户才能访问过来
+
+
 
 
 

@@ -62,7 +62,7 @@
                       </span>
                       </li>
                       <li class="_2po2r cRfUr" title=""><span class=""><i class="fa fa-history _22XWG"></i>历史版本</span></li>
-                      <li class="_2po2r cRfUr" title=""><span class=""><i class="fa fa-trash-o _22XWG"></i>删除文章</span></li>
+                      <li class="_2po2r cRfUr" title=""><span class="" @click.stop="delete_article"><i class="fa fa-trash-o _22XWG"></i>删除文章</span></li>
                       <li class="_2po2r cRfUr" title=""><span class=""><i class="fa fa-ban _22XWG"></i>设置禁止转载</span></li>
                     </ul>
                   </span>
@@ -318,6 +318,20 @@
               }).catch(error=>{
                   this.$message.error(error.response.data);
               })
+          },
+          delete_article(){
+            // 删除文章
+            let article_id = this.article_list[this.current_article].id;
+            this.$axios.delete(`${this.$settings.Host}/article/delete/${article_id}`,{
+              headers:{
+                  Authorization: "jwt" + this.token,}
+            }).then(response=>{
+              this.article_list.splice(this.current_article, 1);
+              this.is_show_article_menu = false;
+              this.$message.success("删除成功");
+            }).catch(error=>{
+              this.$message.error("删除失败!请联系客服工作人员!")
+            })
           },
           public_article(is_public){
             // 文章发布状态的切换
