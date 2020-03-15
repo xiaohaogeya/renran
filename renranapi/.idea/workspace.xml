@@ -4,7 +4,7 @@
     <list default="true" id="13cf5324-2cbd-4e11-a0cf-821492e8f572" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/Write.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/Write.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/article/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/renran.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/renran.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renranapi/apps/article/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renranapi/apps/article/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renranapi/apps/article/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/views.py" afterDir="false" />
@@ -46,7 +46,7 @@
         <item name="renran@localhost [2]" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="renran: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="rr_oauth_qq: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="rr_article_collection: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -185,7 +185,8 @@
       <workItem from="1583808235259" duration="7151000" />
       <workItem from="1583936103853" duration="1708000" />
       <workItem from="1583995932034" duration="9755000" />
-      <workItem from="1584084808707" duration="7615000" />
+      <workItem from="1584084808707" duration="8196000" />
+      <workItem from="1584239394983" duration="4100000" />
     </task>
     <servers />
   </component>
@@ -218,8 +219,8 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="522" y="311" key="FileChooserDialogImpl/0.23.1792.1017@0.23.1792.1017" timestamp="1583729666312" />
-    <state width="1062" height="251" key="GridCell.Tab.0.bottom" timestamp="1584029780169">
-      <screen x="0" y="23" width="1792" height="1040" />
+    <state width="1062" height="251" key="GridCell.Tab.0.bottom" timestamp="1584243809284">
+      <screen x="0" y="23" width="1792" height="1049" />
     </state>
     <state width="1074" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1583798934480" />
     <state width="1074" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1020@0.23.1792.1020" timestamp="1583803975112" />
@@ -227,8 +228,9 @@
     <state width="1074" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1024@0.23.1792.1024" timestamp="1583807842626" />
     <state width="1358" height="263" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1583735257949" />
     <state width="1062" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1040@0.23.1792.1040" timestamp="1584029780169" />
-    <state width="1062" height="251" key="GridCell.Tab.0.center" timestamp="1584029780168">
-      <screen x="0" y="23" width="1792" height="1040" />
+    <state width="1062" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1049@0.23.1792.1049" timestamp="1584243809284" />
+    <state width="1062" height="251" key="GridCell.Tab.0.center" timestamp="1584243809283">
+      <screen x="0" y="23" width="1792" height="1049" />
     </state>
     <state width="1074" height="251" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1583798934479" />
     <state width="1074" height="251" key="GridCell.Tab.0.center/0.23.1792.1020@0.23.1792.1020" timestamp="1583803975111" />
@@ -236,8 +238,9 @@
     <state width="1074" height="251" key="GridCell.Tab.0.center/0.23.1792.1024@0.23.1792.1024" timestamp="1583807842625" />
     <state width="1358" height="263" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1583735257948" />
     <state width="1062" height="251" key="GridCell.Tab.0.center/0.23.1792.1040@0.23.1792.1040" timestamp="1584029780168" />
-    <state width="1062" height="251" key="GridCell.Tab.0.left" timestamp="1584029780168">
-      <screen x="0" y="23" width="1792" height="1040" />
+    <state width="1062" height="251" key="GridCell.Tab.0.center/0.23.1792.1049@0.23.1792.1049" timestamp="1584243809283" />
+    <state width="1062" height="251" key="GridCell.Tab.0.left" timestamp="1584243809282">
+      <screen x="0" y="23" width="1792" height="1049" />
     </state>
     <state width="1074" height="251" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1583798934479" />
     <state width="1074" height="251" key="GridCell.Tab.0.left/0.23.1792.1020@0.23.1792.1020" timestamp="1583803975111" />
@@ -245,8 +248,9 @@
     <state width="1074" height="251" key="GridCell.Tab.0.left/0.23.1792.1024@0.23.1792.1024" timestamp="1583807842625" />
     <state width="1358" height="263" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1583735257948" />
     <state width="1062" height="251" key="GridCell.Tab.0.left/0.23.1792.1040@0.23.1792.1040" timestamp="1584029780168" />
-    <state width="1062" height="251" key="GridCell.Tab.0.right" timestamp="1584029780169">
-      <screen x="0" y="23" width="1792" height="1040" />
+    <state width="1062" height="251" key="GridCell.Tab.0.left/0.23.1792.1049@0.23.1792.1049" timestamp="1584243809282" />
+    <state width="1062" height="251" key="GridCell.Tab.0.right" timestamp="1584243809283">
+      <screen x="0" y="23" width="1792" height="1049" />
     </state>
     <state width="1074" height="251" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1583798934480" />
     <state width="1074" height="251" key="GridCell.Tab.0.right/0.23.1792.1020@0.23.1792.1020" timestamp="1583803975111" />
@@ -254,6 +258,7 @@
     <state width="1074" height="251" key="GridCell.Tab.0.right/0.23.1792.1024@0.23.1792.1024" timestamp="1583807842625" />
     <state width="1358" height="263" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1583735257949" />
     <state width="1062" height="251" key="GridCell.Tab.0.right/0.23.1792.1040@0.23.1792.1040" timestamp="1584029780169" />
+    <state width="1062" height="251" key="GridCell.Tab.0.right/0.23.1792.1049@0.23.1792.1049" timestamp="1584243809283" />
     <state x="236" y="193" key="SettingsEditor" timestamp="1583937674319">
       <screen x="0" y="23" width="1792" height="1040" />
     </state>
@@ -267,6 +272,6 @@
     <state x="573" y="364" key="com.intellij.ide.util.TipDialog/0.23.1792.1017@0.23.1792.1017" timestamp="1583676211627" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/renranapi$manage.coverage" NAME="manage Coverage Results" MODIFIED="1584107537114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/renranapi$manage.coverage" NAME="manage Coverage Results" MODIFIED="1584243809276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

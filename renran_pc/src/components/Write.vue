@@ -21,7 +21,7 @@
                 <li class="_2po2r cRfUr" title="" @click.stop="edit_collection">
                   <span class=""><i class="fa fa-pencil-square-o _22XWG"></i>修改文集</span>
                 </li>
-                <li class="_2po2r cRfUr" title="">
+                <li class="_2po2r cRfUr" title="" @click="del_collection">
                   <span class=""><i class="fa fa-trash-o _22XWG"></i>删除文集</span>
                 </li>
               </ul>
@@ -157,6 +157,7 @@
                       Authorization: "jwt " + this.token,
                   }
               }).then(response=>{
+                console.log(response.data);
                   this.collection_list = response.data;
                   // 获取当前文集下的所有文章
                   this.get_article_list();
@@ -228,6 +229,18 @@
               // 获取当前文件的id
               let collection_id = this.collection_list[this.current_collection].id;
               // 刚发送ajax
+            this.$axios.delete(`${this.$settings.Host}/article/collect/${collection_id}/`,
+              {
+                headers:{
+                  Authorization:"jwt " + this.token,
+                }}
+            ).then(response=>{
+              this.collection_list.splice(this.current_collection, 1);
+              this.hide_collection_menu();
+              this.$message.success("删除成功");
+            }).catch(error=>{
+              this.$message.error("删除失败,请重新操作！")
+            })
 
           },
           get_article_list(){

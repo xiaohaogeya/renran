@@ -1,12 +1,14 @@
 from django.shortcuts import render
 
 # Create your views here.
-from rest_framework.generics import CreateAPIView, ListAPIView, UpdateAPIView
+from rest_framework.generics import CreateAPIView, ListAPIView, UpdateAPIView, DestroyAPIView
 from .models import ArticleImageModel, ArticleCollectionModel, ArticleModel
 from .serializers import ArticleImageModelSerializer, ArticleCollectionModelSerializer, ArticleModelSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
+from rest_framework import status
+from rest_framework.views import APIView
 
 
 class ImageAPIView(CreateAPIView):
@@ -20,8 +22,8 @@ class CollectionCreateAPIView(CreateAPIView):
     permission_classes = [IsAuthenticated]  # 必须是登录用户才能访问过来
 
 
-class CollectionUpdateAPIView(UpdateAPIView):
-    """修改文集"""
+class CollectionUpdateOrDeleteAPIView(UpdateAPIView, DestroyAPIView):
+    """修改文集或删除文集"""
     queryset = ArticleCollectionModel.objects.all()
     serializer_class = ArticleCollectionModelSerializer
     permission_classes = [IsAuthenticated]  # 必须是登录用户才能访问过来
@@ -52,7 +54,7 @@ class MyCollectionListAPIView(ListAPIView):
                 {"id": collection_one.pk, "name": collection_one.name},
                 {"id": collection_two.pk, "name": collection_two.name},
             ]
-            return ret
+        return ret
 
 
 class ArticleOfCollectionViewSet(GenericViewSet, ListAPIView, CreateAPIView):
@@ -69,6 +71,32 @@ class ArticleOfCollectionViewSet(GenericViewSet, ListAPIView, CreateAPIView):
         ).order_by("orders", "-id")
         serializer = self.get_serializer(query_set, many=True)
         return Response(serializer.data)
+
+
+class ArticlePublicStatusAPIView(APIView):
+    """切换文章的发布状态"""
+    permission_classes = [IsAuthenticated]  # 必须是登录用户才能访问过来
+
+    def put(self, request, pk):
+        try:
+            article = ArticleModel.objects.get(pk=pk)
+        except ArticleModel.DoesNotExist:
+            return Response("对不起,当前文章不存在!", status=status.HTTP_400_BAD_REQUEST)
+
+        is_public = request.data.get("is_public")
+        article.is_publish = not not is_public
+        article.pub_date = None
+        article.save()
+        return Response("操作成功")
+
+
+
+
+
+
+
+
+
 
 
 

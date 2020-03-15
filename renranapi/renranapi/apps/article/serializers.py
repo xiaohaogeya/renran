@@ -5,6 +5,7 @@ from datetime import datetime
 
 class ArticleImageModelSerializer(serializers.ModelSerializer):
     """文章图片的序列化器"""
+
     class Meta:
         model = ArticleImageModel
         fields = ["image"]
@@ -20,6 +21,7 @@ class ArticleImageModelSerializer(serializers.ModelSerializer):
 
 class ArticleCollectionModelSerializer(serializers.ModelSerializer):
     """文集的序列化器"""
+
     class Meta:
         model = ArticleCollectionModel
         fields = ["id", "name"]
@@ -44,6 +46,7 @@ class ArticleCollectionModelSerializer(serializers.ModelSerializer):
             )
         except:
             raise serializers.ValidationError("对不起,添加文集失败了!")
+        return collection
 
     def update(self, instance, validated_data):
         """修改数据"""
@@ -78,18 +81,3 @@ class ArticleModelSerializer(serializers.ModelSerializer):
             article.orders = article.id
             article.save()
         return article
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
