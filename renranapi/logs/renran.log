@@ -4049,3 +4049,5 @@ INFO 2020-03-16 20:03:40,688 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
 INFO 2020-03-16 20:03:40,692 basehttp 154 "OPTIONS /users/login/ HTTP/1.1" 200 0
 WARNING 2020-03-16 20:03:40,832 log 228 Bad Request: /users/login/
 WARNING 2020-03-16 20:03:40,833 basehttp 154 "POST /users/login/ HTTP/1.1" 400 67
+INFO 2020-03-16 20:08:13,114 autoreload 203 /Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/article/urls.py changed, reloading.
+INFO 2020-03-16 20:08:13,941 autoreload 578 Watching for file changes with StatReloader

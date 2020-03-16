@@ -194,9 +194,23 @@
           // 绑定@imgAdd event
           imgAdd(pos, $file){
               // 添加文件
+            //第一步：将图片上传到服务器
+            var formdata = new FormData();
+            formdata.append("image", $file);
+            this.img_file[pos] = $file;
+            this.$axios.post(`${this.$settings.Host}/article/image/`,formdata,{
+              "Content-Type":"multipart/form-data"
+            }).then((res)=>{
+              let _res = res.data;
+              // 第二步,将返回的url替换到文本原位置!
+              this.$refs.md.$img2Url(pos, _res.image);
+            }).catch(error=>{
+              this.$message.error("上传失败,请联系管理员")
+            })
           },
           imgDel(pos) {
               // 删除文件
+            delete this.img_file[pos];
           },
           get_collection(){
               // 获取当前登陆用户的文集

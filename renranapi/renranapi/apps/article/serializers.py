@@ -11,11 +11,14 @@ class ArticleImageModelSerializer(serializers.ModelSerializer):
         fields = ["image"]
 
     def create(self, validated_data):
+        user_id = self.context["request"].user.id
         instance = ArticleImageModel.objects.create(
             image=validated_data.get("image"),
-            group=1
+            orders=0,
+            user=user_id
         )
-
+        instance.group = str(instance.image).split("/")[0]
+        instance.save()
         return instance
 
 

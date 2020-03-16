@@ -12,6 +12,7 @@ from rest_framework.views import APIView
 
 
 class ImageAPIView(CreateAPIView):
+    """保存文章图片"""
     queryset = ArticleImageModel.objects.all()
     serializer_class = ArticleImageModelSerializer
 
