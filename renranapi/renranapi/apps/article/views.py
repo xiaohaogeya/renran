@@ -125,7 +125,21 @@ class ArticleDeleteAPIView(DestroyAPIView):
     permission_classes = [IsAuthenticated]  # 必须是登录用户才能访问过来
 
 
+class ArticleUpdateAPIView(APIView):
+    """文章标题和内容修改保存"""
+    permission_classes = [IsAuthenticated]
 
+    def put(self, request, pk):
+        try:
+            article = ArticleModel.objects.get(pk=pk)
+        except ArticleModel.DoesNotExist:
+            return Response("对不起,当前文章不存在", status=status.HTTP_400_BAD_REQUEST)
+
+        article.name = request.data.get("name")
+        article.content = request.data.get("content")
+        article.render = request.data.get("render")
+        article.save()
+        return Response("操作成功")
 
 
 

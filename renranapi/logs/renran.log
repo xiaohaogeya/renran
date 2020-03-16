@@ -4040,3 +4040,12 @@ WARNING 2020-03-15 18:33:24,223 log 228 Unauthorized: /article/delete/4/
 WARNING 2020-03-15 18:33:24,223 basehttp 154 "DELETE /article/delete/4/ HTTP/1.1" 401 43
 WARNING 2020-03-15 18:33:35,362 log 228 Unauthorized: /article/delete/4/
 WARNING 2020-03-15 18:33:35,362 basehttp 154 "GET /article/delete/4/ HTTP/1.1" 401 3931
+INFO 2020-03-16 20:02:40,989 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-16 20:03:00,524 basehttp 154 "GET /banner/ HTTP/1.1" 200 2
+INFO 2020-03-16 20:03:00,524 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 2
+INFO 2020-03-16 20:03:00,525 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 2
+INFO 2020-03-16 20:03:40,496 basehttp 154 "OPTIONS /users/captcha/ HTTP/1.1" 200 0
+INFO 2020-03-16 20:03:40,688 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+INFO 2020-03-16 20:03:40,692 basehttp 154 "OPTIONS /users/login/ HTTP/1.1" 200 0
+WARNING 2020-03-16 20:03:40,832 log 228 Bad Request: /users/login/
+WARNING 2020-03-16 20:03:40,833 basehttp 154 "POST /users/login/ HTTP/1.1" 400 67

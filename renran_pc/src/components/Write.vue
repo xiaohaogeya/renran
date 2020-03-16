@@ -76,11 +76,12 @@
           </div>
         </div>
       </div>
-      <input type="text" class="_24i7u" value="2020-01-12" v-if="article_list.length>0">
+      <input type="text" class="_24i7u" v-model="editorTitle" v-if="article_list.length>0">
       <div id="editor" v-if="article_list.length>0">
         <mavon-editor
           style="height: 100%"
           v-model="editorContent"
+          @change="change_article"
           :ishljs="true"
           ref=md
           @imgAdd="imgAdd"
@@ -129,7 +130,6 @@
         data(){
             return {
                 is_show_page: false,
-                editorContent:"",
                 img_file:[],
                 collection_form:false,
                 token: "",
@@ -140,17 +140,32 @@
                 article_list: [],
                 current_article: 0,     // 默认让用户选中的文章的下标为0
                 is_show_article_menu: false,    // 是否显示文章菜单
-                pub_date:new Date().toLocaleDateString(), //定时发布文章的时间设置
+                pub_date:new Date().toLocaleDateString(), //定时发布文章的事件设置
                 is_interval_pub_article: false,
+                editorTitle: "", //当前编辑文章的标题
+                editorContent: "", //当前编辑文章的内容
+                editorContentRender: "", //当前编辑文章的内容[解析后的html代码]
+                timer: "", //提供给文章编辑的定时器使用的变量,用于保存定时器的返回值
             }
         },
         watch:{
             editorContent(){
                 console.log(this.editorContent);
             },
+          editorTitle(){
+            this.save_article();
+          },
             current_collection(){
                 this.get_article_list();
+              // 填充当前编辑的文章标题和内容
+                this.editorTitle = this.article_list[this.current_article] ? this.article_list[this.current_article].name : "";
+                this.editorContent = this.article_list[this.current_article] ? this.article_list[this.current_article].content : "";
             },
+          current_article(){
+            // 填充当前编辑的文章标题和内容
+                this.editorTitle = this.article_list[this.current_article] ? this.article_list[this.current_article].name : "";
+                this.editorContent = this.article_list[this.current_article] ? this.article_list[this.current_article].content : "";
+          },
         },
         created(){
           this.token = this.$settings.check_user_login(this);
@@ -287,6 +302,9 @@
                   }
               }).then(response=>{
                   this.article_list = response.data;
+                  // 填充当前编辑的文章标题和内容
+                this.editorTitle = this.article_list[this.current_article] ? this.article_list[this.current_article].name : "";
+                this.editorContent = this.article_list[this.current_article] ? this.article_list[this.current_article].content : "";
               }).catch(error=>{
                   this.$message.error(error.response.data);
               })
@@ -395,7 +413,30 @@
             return `${time.getFullYear()}-
             ${time.getMonth() + 1}-${time.getDate()}
             ${time.getHours()}:${time.getMinutes()}`;
-          }
+          },
+          change_article(value, render){
+            // 监听编辑器内容发生改变
+            this.editorContentRender = render;
+            this.editorContent = value;
+            this.save_article();
+          },
+          save_article(){
+            // 保存文章
+            let article_id = this.article_list[this.current_article].id;
+            this.$axios.put(`${this.$settings.Host}/article/save/${article_id}/`,{
+              name: this.editorTitle,
+              content: this.editorContent,
+              render: this.editorContentRender
+            },{
+              headers:{
+                Authorization: "jwt" + this.token
+              }
+            }).then(response=>{
+              this.$message.success("保存成功")
+            }).catch(error=>{
+              this.$message.error("保存失败")
+            })
+          },
         }
     }
 </script>

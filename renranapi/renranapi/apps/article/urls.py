@@ -10,6 +10,7 @@ urlpatterns = [
     path("", views.ArticleOfCollectionViewSet.as_view({"get": "list"})),
     re_path(r"^public/(?P<pk>\d+)/$", views.ArticlePublicStatusAPIView.as_view()),
     re_path(r"^move/(?P<pk>\d+)/$", views.ArticleChangeCollection.as_view()),
-    re_path(r"interval/(?P<pk>\d+)/$", views.ArticleIntervalAPIView.as_view()),
-    re_path(r"delete/(?P<pk>\d+)/$", views.ArticleDeleteAPIView.as_view()),
+    re_path(r"^interval/(?P<pk>\d+)/$", views.ArticleIntervalAPIView.as_view()),
+    re_path(r"^delete/(?P<pk>\d+)/$", views.ArticleDeleteAPIView.as_view()),
+    re_path(r"^save/(?P<pk>\d+)/$", views.ArticleUpdateAPIView.as_view()),
 ]

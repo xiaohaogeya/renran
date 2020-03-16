@@ -33,6 +33,7 @@ class SpecialModel(BaseModel):
 class ArticleModel(BaseModel):
     """文章模型"""
     content = models.TextField(null=True, blank=True, verbose_name="文章内容")
+    render = models.TextField(null=True, blank=True, verbose_name="文章内容[解析后]")
     pub_date = models.DateTimeField(null=True, default=None, verbose_name="发布时间")
     access_pwd = models.CharField(max_length=15, null=True, blank=True, verbose_name="访问密码")
     read_count = models.IntegerField(default=0, null=True, blank=True, verbose_name="阅读量")
