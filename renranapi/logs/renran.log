@@ -4053,3 +4053,58 @@ INFO 2020-03-16 20:08:13,114 autoreload 203 /Users/xiaohaoge/Desktop/renran/renr
 INFO 2020-03-16 20:08:13,941 autoreload 578 Watching for file changes with StatReloader
 INFO 2020-03-16 23:11:44,336 autoreload 203 /Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/article/views.py changed, reloading.
 INFO 2020-03-16 23:11:45,437 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-17 23:27:15,172 autoreload 578 Watching for file changes with StatReloader
+INFO 2020-03-17 23:27:18,489 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 2
+INFO 2020-03-17 23:27:18,490 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 2
+INFO 2020-03-17 23:27:18,490 basehttp 154 "GET /banner/ HTTP/1.1" 200 2
+INFO 2020-03-17 23:27:53,052 basehttp 154 "OPTIONS /users/captcha/ HTTP/1.1" 200 0
+INFO 2020-03-17 23:27:53,257 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+INFO 2020-03-17 23:27:53,261 basehttp 154 "OPTIONS /users/login/ HTTP/1.1" 200 0
+WARNING 2020-03-17 23:27:53,389 log 228 Bad Request: /users/login/
+WARNING 2020-03-17 23:27:53,389 basehttp 154 "POST /users/login/ HTTP/1.1" 400 67
+INFO 2020-03-17 23:28:26,501 basehttp 154 "GET /banner/ HTTP/1.1" 200 2
+INFO 2020-03-17 23:28:26,501 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 2
+INFO 2020-03-17 23:28:26,504 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 2
+INFO 2020-03-17 23:28:43,070 basehttp 154 "POST /users/captcha/ HTTP/1.1" 200 33
+INFO 2020-03-17 23:28:43,201 basehttp 154 "POST /users/login/ HTTP/1.1" 200 248
+INFO 2020-03-17 23:28:48,298 basehttp 154 "GET /nav/header/ HTTP/1.1" 200 2
+INFO 2020-03-17 23:28:48,299 basehttp 154 "GET /banner/ HTTP/1.1" 200 2
+INFO 2020-03-17 23:28:48,300 basehttp 154 "GET /nav/footer/ HTTP/1.1" 200 2
+INFO 2020-03-17 23:28:50,287 basehttp 154 "OPTIONS /article/collection/ HTTP/1.1" 200 0
+INFO 2020-03-17 23:28:50,295 basehttp 154 "GET /article/collection/ HTTP/1.1" 200 82
+INFO 2020-03-17 23:28:50,352 basehttp 154 "OPTIONS /article/?collection=7 HTTP/1.1" 200 0
+INFO 2020-03-17 23:28:50,361 basehttp 154 "GET /article/?collection=7 HTTP/1.1" 200 60
+INFO 2020-03-17 23:28:50,453 basehttp 154 "OPTIONS /article/save/4/ HTTP/1.1" 200 0
+WARNING 2020-03-17 23:28:50,457 log 228 Unauthorized: /article/save/4/
+WARNING 2020-03-17 23:28:50,457 basehttp 154 "PUT /article/save/4/ HTTP/1.1" 401 43
+WARNING 2020-03-17 23:29:00,784 log 228 Unauthorized: /article/save/4/
+WARNING 2020-03-17 23:29:00,784 basehttp 154 "PUT /article/save/4/ HTTP/1.1" 401 43
+WARNING 2020-03-17 23:29:00,939 log 228 Unauthorized: /article/save/4/
+WARNING 2020-03-17 23:29:00,939 basehttp 154 "PUT /article/save/4/ HTTP/1.1" 401 43
+WARNING 2020-03-17 23:29:01,083 log 228 Unauthorized: /article/save/4/
+WARNING 2020-03-17 23:29:01,083 basehttp 154 "PUT /article/save/4/ HTTP/1.1" 401 43
+WARNING 2020-03-17 23:29:01,911 log 228 Unauthorized: /article/save/4/
+WARNING 2020-03-17 23:29:01,911 basehttp 154 "PUT /article/save/4/ HTTP/1.1" 401 43
+INFO 2020-03-17 23:29:31,477 basehttp 154 "OPTIONS /article/public/4/ HTTP/1.1" 200 0
+WARNING 2020-03-17 23:29:31,479 log 228 Unauthorized: /article/public/4/
+WARNING 2020-03-17 23:29:31,480 basehttp 154 "PUT /article/public/4/ HTTP/1.1" 401 43
+WARNING 2020-03-17 23:29:32,870 log 228 Unauthorized: /article/public/4/
+WARNING 2020-03-17 23:29:32,870 basehttp 154 "PUT /article/public/4/ HTTP/1.1" 401 43
+WARNING 2020-03-17 23:29:33,557 log 228 Unauthorized: /article/public/4/
+WARNING 2020-03-17 23:29:33,557 basehttp 154 "PUT /article/public/4/ HTTP/1.1" 401 43
+WARNING 2020-03-17 23:29:33,718 log 228 Unauthorized: /article/public/4/
+WARNING 2020-03-17 23:29:33,718 basehttp 154 "PUT /article/public/4/ HTTP/1.1" 401 43
+WARNING 2020-03-17 23:29:33,918 log 228 Unauthorized: /article/public/4/
+WARNING 2020-03-17 23:29:33,918 basehttp 154 "PUT /article/public/4/ HTTP/1.1" 401 43
+WARNING 2020-03-17 23:29:35,540 log 228 Unauthorized: /article/public/4/
+WARNING 2020-03-17 23:29:35,540 basehttp 154 "PUT /article/public/4/ HTTP/1.1" 401 43
+INFO 2020-03-17 23:31:35,533 basehttp 154 "GET /article/collection/ HTTP/1.1" 200 82
+INFO 2020-03-17 23:31:35,594 basehttp 154 "GET /article/?collection=7 HTTP/1.1" 200 60
+WARNING 2020-03-17 23:31:35,702 log 228 Unauthorized: /article/save/4/
+WARNING 2020-03-17 23:31:35,703 basehttp 154 "PUT /article/save/4/ HTTP/1.1" 401 43
+INFO 2020-03-17 23:32:36,368 basehttp 154 "GET /article/collection/ HTTP/1.1" 200 82
+INFO 2020-03-17 23:32:36,426 basehttp 154 "GET /article/?collection=7 HTTP/1.1" 200 60
+WARNING 2020-03-17 23:32:36,537 log 228 Unauthorized: /article/save/4/
+WARNING 2020-03-17 23:32:36,537 basehttp 154 "PUT /article/save/4/ HTTP/1.1" 401 43
+INFO 2020-03-17 23:37:25,823 basehttp 154 "OPTIONS /article/special/list/ HTTP/1.1" 200 0
+INFO 2020-03-17 23:37:25,831 basehttp 154 "GET /article/special/list/ HTTP/1.1" 200 2

@@ -53,8 +53,8 @@ class ArticleModel(BaseModel):
 
 class SpecialArticleModel(BaseModel):
     """文章和专题的绑定关系"""
-    article = models.ForeignKey(ArticleModel, on_delete=models.CASCADE, verbose_name="文章")
-    special = models.ForeignKey(SpecialModel, on_delete=models.CASCADE, verbose_name="专题")
+    article = models.ForeignKey(ArticleModel, related_name="post_special_list", on_delete=models.CASCADE, verbose_name="文章")
+    special = models.ForeignKey(SpecialModel, related_name="post_article_list", on_delete=models.CASCADE, verbose_name="专题")
 
     class Meta:
         db_table = "rr_special_article"

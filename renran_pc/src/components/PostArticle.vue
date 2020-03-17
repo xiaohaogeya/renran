@@ -30,7 +30,8 @@
               <h3>我管理的专题<a href="">新建</a></h3>
               <ul class="_1hEmG">
                 <li v-for="special in my_special_list">
-                  <a>收录</a>
+                  <a v-if="special.is_post" style="color: red">已收录</a>
+                  <a @click.stop="article_post(special.id)" v-else>收录</a>
                   <img alt="png" :src="special.image">
                   <span class="_1CN24" :title="special.name">{{special.name}}</span>
                 </li>
@@ -102,7 +103,28 @@
             }).catch(error=>{
               this.$message.error("对不起，获取专题列表失败！");
             });
-          }
+          },
+          article_post(special_id){
+            // 文章投稿
+            this.$axios.post(`${this.$settings.Host}/article/post/`,{
+              article_id:this.article_id,
+              special_id:special_id
+            },{
+              headers:{
+                Authorization: "jwt" + this.token
+              }
+            }).then(response=>{
+              // 更新收录状态
+              for(let special in this.my_special_list){
+                if(special.id === special_id){
+                  special.is_post = true;
+                }
+              }
+              this.$message.success("投稿成功")
+            }).catch(error=>{
+              this.$message.error("投稿失败")
+            })
+          },
         }
     }
 </script>

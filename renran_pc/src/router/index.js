@@ -6,6 +6,7 @@ import Register from "../components/Register";
 import QQCallBack from "../components/QQCallBack";
 import Write from "../components/Write";
 import PostArticle from "../components/PostArticle";
+import Article from "../components/Article";
 Vue.use(Router);
 
 export default new Router({
@@ -46,6 +47,11 @@ export default new Router({
       name: "PostArticle",
       path: "/post",
       component: PostArticle,
+    },
+    {
+      name: "Article",
+      path: "/article/:id",
+      component: Article,
     },
 
   ]

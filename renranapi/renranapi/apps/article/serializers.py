@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import ArticleImageModel, ArticleCollectionModel, ArticleModel, SpecialModel
+from .models import ArticleImageModel, ArticleCollectionModel, ArticleModel, SpecialModel, User
 from datetime import datetime
 
 
@@ -91,3 +91,51 @@ class SpecialModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = SpecialModel
         fields = ["id", "name", "image", "article_count", "follow_count", "collect_count"]
+
+
+class AuthorModelSerializer(serializers.ModelSerializer):
+    """文章作者"""
+    class Meta:
+        model = User
+        fields = ["id", "nickname", "avatar"]
+
+
+class CollectionInfoModelSerializer(serializers.ModelSerializer):
+    """文集信息"""
+    class Meta:
+        model = ArticleCollectionModel
+        fields = ["id", "name"]
+
+
+class ArticleInfoModelSerializer(serializers.ModelSerializer):
+    """文章信息序列化器"""
+    user = AuthorModelSerializer()
+    collection = CollectionInfoModelSerializer()
+
+    class Meta:
+        model = ArticleModel
+        fields = [
+            "name", "render", "content", "user", "collection", "updated_time",
+            "read_count", "like_count", "collect_count", "comment_count", "reward_count"
+        ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
