@@ -4108,3 +4108,5 @@ WARNING 2020-03-17 23:32:36,537 log 228 Unauthorized: /article/save/4/
 WARNING 2020-03-17 23:32:36,537 basehttp 154 "PUT /article/save/4/ HTTP/1.1" 401 43
 INFO 2020-03-17 23:37:25,823 basehttp 154 "OPTIONS /article/special/list/ HTTP/1.1" 200 0
 INFO 2020-03-17 23:37:25,831 basehttp 154 "GET /article/special/list/ HTTP/1.1" 200 2
+INFO 2020-03-17 23:52:18,732 autoreload 203 /Users/xiaohaoge/Desktop/renran/renranapi/renranapi/apps/article/views.py changed, reloading.
+INFO 2020-03-17 23:52:19,682 autoreload 578 Watching for file changes with StatReloader

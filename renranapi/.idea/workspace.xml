@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="13cf5324-2cbd-4e11-a0cf-821492e8f572" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/PostArticle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/PostArticle.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/Write.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/Write.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/renran.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/renran.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/article/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/article/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renranapi/apps/article/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renranapi/apps/article/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/views.py" afterDir="false" />
     </list>
@@ -214,7 +210,7 @@
       <workItem from="1584239394983" duration="8503000" />
       <workItem from="1584262260198" duration="3164000" />
       <workItem from="1584359765708" duration="2645000" />
-      <workItem from="1584412483795" duration="13284000" />
+      <workItem from="1584412483795" duration="15697000" />
     </task>
     <servers />
   </component>

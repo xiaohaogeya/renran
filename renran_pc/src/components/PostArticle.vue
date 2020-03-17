@@ -40,26 +40,21 @@
             <div class="_18jMg">
               <h3>最近投稿</h3>
               <ul class="_1hEmG">
-                <li>
+                <li v-for="special in six_special">
                   <a data-collection-id="83" data-post-text="投稿" data-posting-text="投稿中" data-posted-text="等待审核">投稿</a>
-                  <img alt="png" src="https://upload.jianshu.io/collections/images/83/1.jpg">
-                  <span class="_1CN24" title="摄影">摄影</span>
+                  <img alt="png" :src="special.image">
+                  <span class="_1CN24" :itle="special.name">{{special.name}}</span>
                 </li>
               </ul>
             </div>
             <div class="_18jMg">
               <h3>推荐专题</h3>
               <div>
-                <ul class="_1hEmG">
+                <ul class="_1hEmG" v-for="special in ten_special">
                   <li class="_3GDE6">
-                    <img alt="png" src="https://upload.jianshu.io/collections/images/83/1.jpg">
-                    <span class="_1CN24">摄影<em>154.8K篇文章，2575.1K人关注</em></span>
+                    <img alt="png" :src="special.image">
+                    <span class="_1CN24">{{special.name}}<em>{{special.follow_count}}人关注</em></span>
                     <a data-collection-id="83" data-post-text="投稿" data-posting-text="投稿中" data-posted-text="等待审核">投稿</a>
-                  </li>
-                  <li class="_3GDE6">
-                    <img alt="png" src="https://upload.jianshu.io/collections/images/95/1.jpg">
-                    <span class="_1CN24">故事<em>192.2K篇文章，1920.7K人关注</em></span>
-                    <a data-collection-id="95" data-post-text="投稿" data-posting-text="投稿中" data-posted-text="等待审核">投稿</a>
                   </li>
                 </ul>
                 <div class="_27pBl">没有更多了 </div>
@@ -80,6 +75,8 @@
              token: "",
              article_id: 0,
              article_name:"",
+             six_special: [],
+             ten_special: [],
            }
         },
         created() {
@@ -89,7 +86,9 @@
             this.article_name = sessionStorage.current_article_name;
             if(this.token){
                 this.get_special_list();
-            }
+            };
+            this.get_six_special();
+            this.get_ten_special();
         },
         methods:{
           get_special_list(){
@@ -103,6 +102,24 @@
             }).catch(error=>{
               this.$message.error("对不起，获取专题列表失败！");
             });
+          },
+          get_six_special(){
+            // 获取最近6个投稿记录的专题的名称和图片
+            this.$axios.get(`${this.$settings.Host}/article/six/special/`,
+            ).then(response=>{
+              this.six_special = response.data;
+            }).catch(error=>{
+              this.$message.error("获取最近的投稿记录失败,请联系客服管理员")
+            })
+          },
+          get_ten_special(){
+            // 专题表中人数最多的，文章最多的10哥专题
+            this.$axios.get(`${this.$settings.Host}/article/ten/special/`,
+            ).then(response=>{
+              this.ten_special = response.data;
+            }).catch(error=>{
+              this.$message.error("获取专题失败,请联系客服管理员")
+            })
           },
           article_post(special_id){
             // 文章投稿

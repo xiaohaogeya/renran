@@ -245,6 +245,40 @@ class ArticleInfoAPIView(RetrieveAPIView):
     queryset = ArticleModel.objects.filter(is_publish=True)
 
 
+class SpecialSixListAPIView(APIView):
+    """获取最近6个投稿记录的专题的名称和图片"""
+    def get(self, request):
+        try:
+            special_list = SpecialModel.objects.all().order_by("-id").limit(6)
+            data = []
+            for special in special_list:
+                data.append({
+                    "name": special.name,
+                    "id": special.id,
+                    "image": special.image,
+                })
+            return Response(data)
+        except SpecialModel.DoesNotExist:
+            return Response("操作失败")
+
+
+class SpecialTenListAPIView(APIView):
+    """专题表中人数最多的，文章最多的10哥专题"""
+    def get(self, request):
+        try:
+            special_list = SpecialModel.objects.all().order_by("article_count", "follow_count").limit(10)
+            data = []
+            for special in special_list:
+                data.append({
+                    "name": special.name,
+                    "id": special.id,
+                    "image": special.image,
+                    "follow_count": special.follow_count,
+                })
+            return Response(data)
+        except SpecialModel.DoesNotExist:
+            return Response("操作失败")
+
 
 
 
