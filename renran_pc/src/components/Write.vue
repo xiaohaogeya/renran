@@ -378,8 +378,11 @@
                 this.article_list[this.current_article].is_public = is_public;
                 this.is_show_article_menu = false;
                 if(is_public){
-                  this.$message.success("文章发布成功")
-                  // todo 跳转到文章发布成功页面
+                  // this.$message.success("文章发布成功")
+                  // 跳转到文章发布成功页面
+                  sessionStorage.current_article_id = this.article_list[this.current_article].id;
+                  sessionStorage.current_article_name = this.article_list[this.current_article].name;
+                  this.$router.push("/post");
                 }else {
                   this.$message.success("文章设置成功")
                 }

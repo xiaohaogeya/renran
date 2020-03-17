@@ -35,7 +35,7 @@ class BaseModel(models.Model):
         (31, "el-icon-search"),
         (32, "el-icon-info"),
     )
-    name = models.CharField(max_length=150, verbose_name="标题")
+    name = models.CharField(null=True, blank=True, max_length=150, verbose_name="标题")
     orders = models.IntegerField(verbose_name="显示顺序")
     is_show = models.BooleanField(verbose_name="是否上架", default=True)
     is_delete = models.BooleanField(verbose_name="逻辑删除", default=False)

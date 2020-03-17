@@ -3,11 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="13cf5324-2cbd-4e11-a0cf-821492e8f572" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/Write.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/Write.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../renran_pc/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/renran.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/renran.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/article/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/article/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renranapi/apps/article/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renranapi/apps/article/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/renranapi/apps/article/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/utils/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/utils/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +89,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -153,6 +157,28 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:renran@localhost [2]" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:renran@localhost [2]" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@76c566c6" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -188,7 +214,8 @@
       <workItem from="1584084808707" duration="8196000" />
       <workItem from="1584239394983" duration="8503000" />
       <workItem from="1584262260198" duration="3164000" />
-      <workItem from="1584359765708" duration="1318000" />
+      <workItem from="1584359765708" duration="2645000" />
+      <workItem from="1584412483795" duration="7051000" />
     </task>
     <servers />
   </component>
@@ -221,7 +248,7 @@
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
     <state x="522" y="311" key="FileChooserDialogImpl/0.23.1792.1017@0.23.1792.1017" timestamp="1583729666312" />
-    <state width="1062" height="251" key="GridCell.Tab.0.bottom" timestamp="1584360237312">
+    <state width="722" height="263" key="GridCell.Tab.0.bottom" timestamp="1584418809987">
       <screen x="0" y="23" width="1792" height="1049" />
     </state>
     <state width="1074" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1583798934480" />
@@ -230,8 +257,8 @@
     <state width="1074" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1024@0.23.1792.1024" timestamp="1583807842626" />
     <state width="1358" height="263" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1583735257949" />
     <state width="1062" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1040@0.23.1792.1040" timestamp="1584029780169" />
-    <state width="1062" height="251" key="GridCell.Tab.0.bottom/0.23.1792.1049@0.23.1792.1049" timestamp="1584360237312" />
-    <state width="1062" height="251" key="GridCell.Tab.0.center" timestamp="1584360237310">
+    <state width="722" height="263" key="GridCell.Tab.0.bottom/0.23.1792.1049@0.23.1792.1049" timestamp="1584418809987" />
+    <state width="722" height="263" key="GridCell.Tab.0.center" timestamp="1584418809987">
       <screen x="0" y="23" width="1792" height="1049" />
     </state>
     <state width="1074" height="251" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1583798934479" />
@@ -240,8 +267,8 @@
     <state width="1074" height="251" key="GridCell.Tab.0.center/0.23.1792.1024@0.23.1792.1024" timestamp="1583807842625" />
     <state width="1358" height="263" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1583735257948" />
     <state width="1062" height="251" key="GridCell.Tab.0.center/0.23.1792.1040@0.23.1792.1040" timestamp="1584029780168" />
-    <state width="1062" height="251" key="GridCell.Tab.0.center/0.23.1792.1049@0.23.1792.1049" timestamp="1584360237310" />
-    <state width="1062" height="251" key="GridCell.Tab.0.left" timestamp="1584360237310">
+    <state width="722" height="263" key="GridCell.Tab.0.center/0.23.1792.1049@0.23.1792.1049" timestamp="1584418809987" />
+    <state width="722" height="263" key="GridCell.Tab.0.left" timestamp="1584418809986">
       <screen x="0" y="23" width="1792" height="1049" />
     </state>
     <state width="1074" height="251" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1583798934479" />
@@ -250,8 +277,8 @@
     <state width="1074" height="251" key="GridCell.Tab.0.left/0.23.1792.1024@0.23.1792.1024" timestamp="1583807842625" />
     <state width="1358" height="263" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1583735257948" />
     <state width="1062" height="251" key="GridCell.Tab.0.left/0.23.1792.1040@0.23.1792.1040" timestamp="1584029780168" />
-    <state width="1062" height="251" key="GridCell.Tab.0.left/0.23.1792.1049@0.23.1792.1049" timestamp="1584360237310" />
-    <state width="1062" height="251" key="GridCell.Tab.0.right" timestamp="1584360237311">
+    <state width="722" height="263" key="GridCell.Tab.0.left/0.23.1792.1049@0.23.1792.1049" timestamp="1584418809986" />
+    <state width="722" height="263" key="GridCell.Tab.0.right" timestamp="1584418809987">
       <screen x="0" y="23" width="1792" height="1049" />
     </state>
     <state width="1074" height="251" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1583798934480" />
@@ -260,14 +287,15 @@
     <state width="1074" height="251" key="GridCell.Tab.0.right/0.23.1792.1024@0.23.1792.1024" timestamp="1583807842625" />
     <state width="1358" height="263" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1583735257949" />
     <state width="1062" height="251" key="GridCell.Tab.0.right/0.23.1792.1040@0.23.1792.1040" timestamp="1584029780169" />
-    <state width="1062" height="251" key="GridCell.Tab.0.right/0.23.1792.1049@0.23.1792.1049" timestamp="1584360237311" />
-    <state x="236" y="193" key="SettingsEditor" timestamp="1583937674319">
-      <screen x="0" y="23" width="1792" height="1040" />
+    <state width="722" height="263" key="GridCell.Tab.0.right/0.23.1792.1049@0.23.1792.1049" timestamp="1584418809987" />
+    <state x="236" y="194" key="SettingsEditor" timestamp="1584416569235">
+      <screen x="0" y="23" width="1792" height="1049" />
     </state>
     <state x="236" y="189" key="SettingsEditor/0.23.1792.1017@0.23.1792.1017" timestamp="1583731316265" />
     <state x="236" y="190" key="SettingsEditor/0.23.1792.1022@0.23.1792.1022" timestamp="1583733265896" />
     <state x="236" y="190" key="SettingsEditor/0.23.1792.1024@0.23.1792.1024" timestamp="1583733364239" />
     <state x="236" y="193" key="SettingsEditor/0.23.1792.1040@0.23.1792.1040" timestamp="1583937674319" />
+    <state x="236" y="194" key="SettingsEditor/0.23.1792.1049@0.23.1792.1049" timestamp="1584416569235" />
     <state x="573" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1583676211627">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>

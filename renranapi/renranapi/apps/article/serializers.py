@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import ArticleImageModel, ArticleCollectionModel, ArticleModel
+from .models import ArticleImageModel, ArticleCollectionModel, ArticleModel, SpecialModel
 from datetime import datetime
 
 
@@ -84,3 +84,10 @@ class ArticleModelSerializer(serializers.ModelSerializer):
             article.orders = article.id
             article.save()
         return article
+
+
+class SpecialModelSerializer(serializers.ModelSerializer):
+    """专题序列化器"""
+    class Meta:
+        model = SpecialModel
+        fields = ["id", "name", "image", "article_count", "follow_count", "collect_count"]

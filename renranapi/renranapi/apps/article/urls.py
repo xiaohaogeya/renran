@@ -13,4 +13,5 @@ urlpatterns = [
     re_path(r"^interval/(?P<pk>\d+)/$", views.ArticleIntervalAPIView.as_view()),
     re_path(r"^delete/(?P<pk>\d+)/$", views.ArticleDeleteAPIView.as_view()),
     re_path(r"^save/(?P<pk>\d+)/$", views.ArticleUpdateAPIView.as_view()),
+    path("special/list/", views.SpecialListAPIView.as_view()),
 ]

@@ -2,8 +2,11 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework.generics import CreateAPIView, ListAPIView, UpdateAPIView, DestroyAPIView
-from .models import ArticleImageModel, ArticleCollectionModel, ArticleModel
-from .serializers import ArticleImageModelSerializer, ArticleCollectionModelSerializer, ArticleModelSerializer
+from .models import ArticleImageModel, ArticleCollectionModel, ArticleModel, SpecialModel
+from .serializers import ArticleImageModelSerializer, \
+    ArticleCollectionModelSerializer, \
+    ArticleModelSerializer, \
+    SpecialModelSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
@@ -94,6 +97,7 @@ class ArticlePublicStatusAPIView(APIView):
 class ArticleChangeCollection(APIView):
     """移动文章"""
     permission_classes = [IsAuthenticated]
+
     def put(self, request, pk):
         try:
             article = ArticleModel.objects.get(pk=pk)
@@ -108,6 +112,7 @@ class ArticleChangeCollection(APIView):
 class ArticleIntervalAPIView(APIView):
     """定时发布文章"""
     permission_classes = [IsAuthenticated]
+
     def put(self, request, pk):
         try:
             article = ArticleModel.objects.get(pk=pk)
@@ -143,9 +148,17 @@ class ArticleUpdateAPIView(APIView):
         return Response("操作成功")
 
 
+class SpecialListAPIView(APIView):
+    permission_classes = [IsAuthenticated]
 
-
-
-
-
-
+    def get(self, request):
+        user = request.user
+        manage_list = SpecialModel.objects.filter(user=user)
+        data = []
+        for item in manage_list:
+            data.append({
+                "id": item.special.id,
+                "name": item.special.name,
+                "image": item.special.image.url if item.special.image else "",
+            })
+        return Response(data)

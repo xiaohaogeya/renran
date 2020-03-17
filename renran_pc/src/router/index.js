@@ -5,6 +5,7 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import QQCallBack from "../components/QQCallBack";
 import Write from "../components/Write";
+import PostArticle from "../components/PostArticle";
 Vue.use(Router);
 
 export default new Router({
@@ -40,6 +41,12 @@ export default new Router({
       name: "Write",
       path: "/writer",
       component: Write
-    }
+    },
+    {
+      name: "PostArticle",
+      path: "/post",
+      component: PostArticle,
+    },
+
   ]
 })

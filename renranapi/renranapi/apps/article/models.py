@@ -64,8 +64,8 @@ class SpecialArticleModel(BaseModel):
 
 class SpecialManagerModel(BaseModel):
     """专题管理员"""
-    user = models.ForeignKey(User, on_delete=models.DO_NOTHING, verbose_name="管理员")
-    special = models.ForeignKey(SpecialModel, on_delete=models.CASCADE, verbose_name="专题")
+    user = models.ForeignKey(User, related_name="special_list", on_delete=models.DO_NOTHING, verbose_name="管理员")
+    special = models.ForeignKey(SpecialModel, related_name="user_list", on_delete=models.CASCADE, verbose_name="专题")
 
     class Meta:
         db_table = "rr_special_manager"
@@ -99,8 +99,29 @@ class ArticleImageModel(BaseModel):
     """文章图片"""
     group = models.CharField(max_length=15, null=True, blank=True, verbose_name="组名")
     image = models.ImageField(null=True, blank=True, verbose_name="图片地址")
+    user = models.IntegerField(null=True, blank=True, verbose_name="上传图片的用户")
 
     class Meta:
         db_table = "rr_article_image"
         verbose_name = "文章图片"
+        verbose_name_plural = verbose_name
+
+
+class ArticlePostLogModel(BaseModel):
+    """文章的投稿记录"""
+    POST_STATUS = (
+        (0, "未审核"),
+        (1, "审核通过"),
+        (2, "审核未通过")
+    )
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING, verbose_name="投稿人")
+    special = models.ForeignKey(SpecialModel, on_delete=models.CASCADE, verbose_name="专题")
+    article = models.ForeignKey(ArticleModel, on_delete=models.CASCADE, verbose_name="文章")
+    status = models.IntegerField(choices=POST_STATUS, default=0, verbose_name="审核状态")
+    manager = models.IntegerField(default=None, null=True, blank=True, verbose_name="审核人")
+    post_time = models.DateTimeField(default=None, null=True, blank=True, verbose_name="审核时间")
+
+    class Meta:
+        db_table = "rr_article_post_log"
+        verbose_name = "文章的投稿记录"
         verbose_name_plural = verbose_name

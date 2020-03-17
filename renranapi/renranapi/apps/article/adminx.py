@@ -18,6 +18,7 @@ xadmin.site.register(ArticleCollectionModel, ArticleCollectionModelAdmin)
 
 
 class SpecialModelAdmin(object):
+    """专题模型管理类"""
     list_display = ["id", "name"]
 
 
@@ -32,6 +33,7 @@ xadmin.site.register(ArticleModel, ArticleModelAdmin)
 
 
 class SpecialArticleModelAdmin(object):
+    """专题文章模型管理类"""
     list_display = ["id", "name"]
 
 
@@ -39,6 +41,7 @@ xadmin.site.register(SpecialArticleModel, SpecialArticleModelAdmin)
 
 
 class SpecialManagerModelAdmin(object):
+    """专题管理员模型管理类"""
     list_display = ["id", "name"]
 
 
