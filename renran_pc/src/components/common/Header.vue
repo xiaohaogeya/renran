@@ -15,7 +15,7 @@
             <ul class="nav navbar-nav">
               <li class="tab active">
                 <a href="/">
-                  <i class="iconfont el-icon-loading menu-icon"></i>
+                  <i class="iconfont menu-icon"></i>
                   <span class="menu-text">首页</span>
                 </a>
               </li>
@@ -40,12 +40,6 @@
                     </a>
                   </li>
                 </ul>
-              </li>
-              <li class="tab">
-                <a href="/">
-                  <i class="iconfont ic-navigation-discover menu-icon"></i>
-                  <span class="menu-text">消息</span>
-                </a>
               </li>
               <li class="search">
                 <form target="_blank" action="/search" accept-charset="UTF-8" method="get">

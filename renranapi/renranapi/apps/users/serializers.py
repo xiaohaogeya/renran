@@ -5,6 +5,7 @@ from rest_framework_jwt.settings import api_settings
 from django_redis import get_redis_connection
 import re
 
+
 class UserCreateModelSerializer(serializers.ModelSerializer):
     # 接收字段
     sms_code = serializers.CharField(write_only=True, max_length=4, min_length=4, label="短信验证码")
@@ -29,7 +30,7 @@ class UserCreateModelSerializer(serializers.ModelSerializer):
         """校验数据"""
         # 验证手机格式是否正确
         mobile = attrs.get("mobile")
-        if not re.match("^1[3-9]\d{9}$", mobile):
+        if not re.match(r"^1[3-9]\d{9}$", mobile):
             raise serializers.ValidationError("手机格式有误", "mobile")
 
         # 验证手机号码是否被注册
@@ -48,7 +49,6 @@ class UserCreateModelSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         """保存用户信息"""
-        print(validated_data)
         try:
             user = User.objects.create_user(
                 username=validated_data.get("mobile"),

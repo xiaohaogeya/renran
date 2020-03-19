@@ -56,7 +56,7 @@
                       <li class="_3nZXj _2_WAp _3df2u _2po2r cRfUr" title="" @click.stop="move_article(article.id)"><span class=""><i class="fa fa-folder-open _22XWG"></i>移动文章
                         <div class="_3x4X_">
                           <ul class="_2KzJx oGKRI _3DXDE _2w9pn">
-                            <li class="_2po2r cRfUr" :title="collection.name" v-for="collection in collection_list" v-if="collection.id!=article.collection" @click.stop="move_article(collection.id)"><span class="">{{collection.name}}</span></li>
+                            <li class="_2po2r cRfUr" :title="collection.name" v-for="collection in collection_list" v-if="collection.id!==article.collection" @click.stop="move_article(collection.id)"><span class="">{{collection.name}}</span></li>
                           </ul>
                         </div>
                       </span>
@@ -68,8 +68,8 @@
                   </span>
                 </div>
                 <span class="NariC">{{article.name}}</span>
-                <span class="hLzJv" v-show="current_article==key">{{article.content}}</span>
-                <span class="_29C-V" v-show="current_article==key">字数:{{article.content?article.content.length:0}}</span>
+                <span class="hLzJv" v-show="current_article===key">{{article.content}}</span>
+                <span class="_29C-V" v-show="current_article===key">字数:{{article.content?article.content.length:0}}</span>
               </li>
             </ul>
             <div class="_2cVn3" @click.stop="add_article(1)"><i class="fa fa-plus"></i><span> 在下方新建文章</span></div>

@@ -15,7 +15,6 @@ import json
 import logging
 import ssl
 
-
 ssl._create_default_https_context = ssl._create_unverified_context
 loger = logging.getLogger("django")
 
@@ -42,7 +41,7 @@ class CaptchaAPIView(APIView):
             "randstr": Randstr
         })
 
-    def txrequest(self, appkey, params, m = "GET"):
+    def txrequest(self, appkey, params, m="GET"):
         url = "https://ssl.captcha.qq.com/ticket/verify"
         if m == "GET":
             f = urlopen("%s?%s" % (url, params))
@@ -61,9 +60,10 @@ class CaptchaAPIView(APIView):
                 loger.error(f"验证接口异常!%s:%s" % (res["response"], res["err_msg"]))
                 return False
 
+
 class CheckMobileAPIView(APIView):
     def get(self, request, mobile):
-        user = get_user_by_data(mobile = mobile)
+        user = get_user_by_data(mobile=mobile)
         if user is None:
             return Response({
                 "err_msg": "ok",
@@ -73,7 +73,7 @@ class CheckMobileAPIView(APIView):
             return Response({
                 "err_msg": "当前手机号已被注册",
                 "err_status": 0
-            },status=status.HTTP_400_BAD_REQUEST)
+            }, status=status.HTTP_400_BAD_REQUEST)
 
 
 class UserAPIView(CreateAPIView):
@@ -81,13 +81,14 @@ class UserAPIView(CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserCreateModelSerializer
 
+
 class SMSCodeAPIView(APIView):
     """短信验证码"""
+
     def get(self, request, mobile):
         # 1.验证数据
         redis = get_redis_connection("sms_code")
         result = redis.get("interval_%s" % mobile)
-        print(mobile)
         if result:
             return Response({
                 "message": "短信发送中,请留意您的手机,请勿频繁操作",
@@ -115,8 +116,3 @@ class SMSCodeAPIView(APIView):
 
         # 5.返回操作结果
         return Response({"message": "短信已经发送,请留意您的手机"})
-
-
-
-
-

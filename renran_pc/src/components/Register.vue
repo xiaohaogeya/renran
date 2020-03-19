@@ -103,7 +103,6 @@
                     this.$settings.save_user(sessionStorage, response.data);
                     this.$settings.jump_page(this, response.data.nickname);
                 }).catch(error=>{
-                    console.log(error);
                     this.$message.error("用户注册失败!");
                 })
             },
@@ -128,7 +127,6 @@
                                 captcha.destroy();
                             }
                         }).catch(error=>{
-                            console.log("发生错误", error);
                             alert("发送错误");
                         })
                     }
@@ -155,8 +153,7 @@
                             clearInterval(t);
                         }else {
                             this.sms_code_text = `${timer}秒后重新点击`;
-                        };
-                        console.log(this.sms_code_text)
+                        }
                     },1000)
                 }).catch(error=>{
                     this.$message(error.response.data.message);
