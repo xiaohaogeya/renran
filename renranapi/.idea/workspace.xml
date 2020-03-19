@@ -2,31 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13cf5324-2cbd-4e11-a0cf-821492e8f572" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/Register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/Write.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/Write.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/common/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/common/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/renran.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/renran.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/article/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/article/migrations/0002_auto_20200313_2048.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/article/migrations/0003_articlemodel_render.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/article/migrations/0004_auto_20200317_1203.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/article/migrations/0005_auto_20200317_1220.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/article/migrations/0006_auto_20200317_2213.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/home/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/home/migrations/0002_remove_banner_icon.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/home/migrations/0003_auto_20200317_1220.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/oauth/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/oauth/migrations/0002_auto_20200317_1220.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/payments/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/users/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/users/migrations/0002_user_money.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/users/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/users/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/settings/dev.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/home/management/commands/tablestore.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/home/management/commands/tablestore.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,18 +87,6 @@
       <recent name="$PROJECT_DIR$/renranapi/utils" />
       <recent name="$PROJECT_DIR$/mycelery/sms" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.manage">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -221,6 +187,7 @@
       <workItem from="1584585052207" duration="9572000" />
       <workItem from="1584621372725" duration="2597000" />
       <workItem from="1584624520443" duration="2415000" />
+      <workItem from="1584627961168" duration="2871000" />
     </task>
     <servers />
   </component>
@@ -241,10 +208,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="161" y="194" key="#Notifications" timestamp="1584621923532">
+    <state x="161" y="194" key="#Notifications" timestamp="1584629929438">
       <screen x="0" y="23" width="1792" height="1056" />
     </state>
-    <state x="161" y="194" key="#Notifications/0.23.1792.1056@0.23.1792.1056" timestamp="1584621923532" />
+    <state x="161" y="194" key="#Notifications/0.23.1792.1056@0.23.1792.1056" timestamp="1584629929438" />
     <state x="193" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583758851684">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
