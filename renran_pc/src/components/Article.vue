@@ -1,5 +1,5 @@
 <template>
-  <div class="_21bLU4 _3kbg6I">
+  <div class="_21bLU4 _3kbg6I" @click.stop="is_show_reward_window=false">
    <Header></Header>
    <div class="_3VRLsv" role="main">
     <div class="_gp-ck">
@@ -127,7 +127,7 @@
        <div class="_191KSt">
         &quot;小礼物走一走，来简书关注我&quot;
        </div>
-       <button type="button" class="_1OyPqC _3Mi9q9 _2WY0RL _1YbC5u"><span>赞赏支持</span></button>
+       <button type="button" class="_1OyPqC _3Mi9q9 _2WY0RL _1YbC5u" @click.stop="is_show_reward_window=true"><span>赞赏支持</span></button>
        <span class="_3zdmIj">还没有人赞赏，支持一下</span>
       </div>
       <div class="d0hShY">
@@ -218,6 +218,27 @@
      </div>
     </aside>
    </div>
+    <div class="_23ISFX-body" v-if="is_show_reward_window" @click.stop="is_show_reward_window=true">
+   <div class="_3uZ5OL">
+    <div class="_2PLkjk">
+     <img class="_2R1-48" src="https://upload.jianshu.io/users/upload_avatars/9602437/8fb37921-2e4f-42a7-8568-63f187c5721b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/100/h/100/format/webp" alt="" />
+     <div class="_2h5tnQ">
+      给作者送糖
+     </div>
+    </div>
+    <div class="_1-bCJJ">
+     <div class="LMa6S_" :class="reward_info.money==num?'_1vONvL':''" @click="reward_info.money=num" v-for="num in reward_list"><span>{{num}}</span></div>
+    </div>
+    <textarea class="_1yN79W" placeholder="给Ta留言..."></textarea>
+    <div class="_1_B577">
+     选择支付方式
+    </div>
+    <div class="_1-bCJJ">
+     <div class="LMa6S_ _3PA8BN" :class="reward_info.pay_type==type?'_1vONvL':''" @click="reward_info.pay_type=type" v-for="type in pay_type_list"><span>{{type}}</span></div>
+    </div>
+    <button type="button" class="_3A-4KL _1OyPqC _3Mi9q9 _1YbC5u" @click="payhandler"><span>确认支付</span><span> ￥</span>{{reward_info.money}}</button>
+   </div>
+  </div>
    <Footer></Footer>
   </div>
 </template>
@@ -235,16 +256,29 @@
           return {
             token: "",
             article_id: 0,
+            is_show_reward_window: false,
             article: {
               user: {},
               collection: {}
-            }
+            },
+            reward_list: [2, 5, 10, 20, 50, 100],
+            pay_type_list: ["支付宝", "余额支付"],
+            reward_info:{
+              money: 2,
+              content: "",
+              pay_type: 0,
+            },
           }
       },
-      created() {
+      created(){
           this.token = this.$settings.check_user_login(this);
           this.article_id = this.$router.params.id;
           this.get_article();
+      },
+      filters:{
+          timeformat(time){
+            return time.split(".")[0].replace("T", " ")
+          }
       },
       methods:{
           get_article(){
@@ -257,6 +291,19 @@
               this.$router.go(-1);
             })
           },
+        payhandler(){
+          // 支付处理
+          this.reward_info.article_id = this.article_id;
+          this.$axios.post(`${this.$settings.Host}/payments/alipay/`,this.reward_info,{
+            headers:{
+              Authorization: "jwt" + this.token
+            }
+          }).then(response=>{
+            location.href = response.data;
+          }).catch(error=>{
+            this.$message.error("发起打赏请求失败")
+          })
+        },
       }
     }
 </script>

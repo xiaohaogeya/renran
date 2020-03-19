@@ -31,4 +31,5 @@ urlpatterns = [
     path('', include("home.urls")),
     path("oauth/", include("oauth.urls")),
     path("article/", include("article.urls")),
+    path("payments/", include("payments.urls")),
 ]

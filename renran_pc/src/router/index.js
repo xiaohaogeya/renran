@@ -7,6 +7,7 @@ import QQCallBack from "../components/QQCallBack";
 import Write from "../components/Write";
 import PostArticle from "../components/PostArticle";
 import Article from "../components/Article";
+import Wallet from "../components/Wallet";
 Vue.use(Router);
 
 export default new Router({
@@ -52,6 +53,11 @@ export default new Router({
       name: "Article",
       path: "/article/:id",
       component: Article,
+    },
+    {
+      name: "Wallet",
+      path: "/wallet",
+      component: Wallet,
     },
 
   ]

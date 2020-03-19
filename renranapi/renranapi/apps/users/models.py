@@ -9,6 +9,8 @@ class User(AbstractUser):
     qq_number = models.CharField(max_length=11, null=True, unique=True, help_text="QQ账号", verbose_name="QQ账号")
     avatar = models.ImageField(upload_to="avatar", null=True, default=None, verbose_name="头像")
     nickname = models.CharField(max_length=100, null=True, default=None, verbose_name="用户昵称")
+    money = models.DecimalField(max_digits=8, decimal_places=2, default=0, verbose_name="用户余额")
+
     class Meta:
         db_table = "rr_users"
         verbose_name = "用户信息"
