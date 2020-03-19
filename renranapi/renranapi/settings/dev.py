@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'oauth',
     'article',
     'payments',
+    'store',
 ]
 
 MIDDLEWARE = [
@@ -304,3 +305,9 @@ ALIAPY_CONFIG = {
     "return_url": "http://www.moluo.net:8080/wallet", # 同步回调地址
     "notify_url": "http://api.renran.cn:8000/payments/alipay/result/", # 异步结果通知
 }
+
+# tablestore
+OTS_ID = "LTAI4FoDWGkE35pb7yRvvQvo"
+OTS_SECRET = "8UVdyQfVyKnFdbsjuWBOcLCiaezGjP"
+OTS_INSTANCE = "xiaohaorenran"
+OTS_ENDPOINT = "https://xiaohaorenran.cn-hangzhou.ots.aliyuncs.com"

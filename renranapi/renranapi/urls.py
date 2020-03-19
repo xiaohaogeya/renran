@@ -32,4 +32,5 @@ urlpatterns = [
     path("oauth/", include("oauth.urls")),
     path("article/", include("article.urls")),
     path("payments/", include("payments.urls")),
+    path("ots/", include("store.urls")),
 ]
