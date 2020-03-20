@@ -149,9 +149,6 @@
             }
         },
         watch:{
-            editorContent(){
-                console.log(this.editorContent);
-            },
           editorTitle(){
             this.save_article();
           },
@@ -192,25 +189,27 @@
         },
         methods:{
           // 绑定@imgAdd event
-          imgAdd(pos, $file){
+           // 绑定@imgAdd event
+          imgAdd(filename, $fileobj){
               // 添加文件
-            //第一步：将图片上传到服务器
-            var formdata = new FormData();
-            formdata.append("image", $file);
-            this.img_file[pos] = $file;
-            this.$axios.post(`${this.$settings.Host}/article/image/`,formdata,{
-              "Content-Type":"multipart/form-data"
-            }).then((res)=>{
-              let _res = res.data;
-              // 第二步,将返回的url替换到文本原位置!
-              this.$refs.md.$img2Url(pos, _res.image);
-            }).catch(error=>{
-              this.$message.error("上传失败,请联系管理员")
-            })
+              // 第一步.将图片上传到服务器.
+              var formdata = new FormData();
+              formdata.append('image', $fileobj);
+              this.img_file[filename] = $fileobj;
+              this.$axios.post(`${this.$settings.Host}/article/image/`,formdata,{
+                  headers:{
+                      'Content-Type': 'multipart/form-data',
+                      "Authorization": "jwt " + this.token,
+                  }
+              }).then(response=>{
+                  // 将返回的url替换到文本原位置![...](0) -> ![...](url)
+                  this.$refs.md.$img2Url(filename, response.data.image);
+              });
           },
           imgDel(pos) {
               // 删除文件
             delete this.img_file[pos];
+             this.$refs.toolbar_left.$imgDelByFilename(pos);
           },
           get_collection(){
               // 获取当前登陆用户的文集
@@ -219,7 +218,6 @@
                       Authorization: "jwt " + this.token,
                   }
               }).then(response=>{
-                console.log(response.data);
                   this.collection_list = response.data;
                   // 获取当前文集下的所有文章
                   this.get_article_list();
@@ -249,6 +247,7 @@
                   // 把服务端中添加返回的文集信息,保存到collection_list中
                   this.collection_list.unshift(response.data);
                   this.current_collection = 1;
+                  // this.current_collection = 0;
               }).catch(error=>{
                   this.$message.error(error.response.data);
               })
@@ -373,7 +372,7 @@
                 is_public: is_public
               },{
                 headers:{
-                  Authorization: "jwt" + this.token,
+                   Authorization: "jwt " + this.token, 
                 }
               }).then(response=>{
                 this.article_list[this.current_article].is_public = is_public;
@@ -438,22 +437,27 @@
             this.editorContent = value;
             this.save_article();
           },
-          save_article(){
-            // 保存文章
-            let article_id = this.article_list[this.current_article].id;
-            this.$axios.put(`${this.$settings.Host}/article/save/${article_id}/`,{
-              name: this.editorTitle,
-              content: this.editorContent,
-              render: this.editorContentRender
-            },{
-              headers:{
-                Authorization: "jwt" + this.token
-              }
-            }).then(response=>{
-              this.$message.success("保存成功")
-            }).catch(error=>{
-              this.$message.error("保存失败")
-            })
+         save_article_ajax(){
+              // 保存文章的请求代码
+              let article_id = this.article_list[this.current_article].id;
+              this.$axios.put(`${this.$settings.Host}/article/save/${article_id}/`,{
+                  name: this.editorTitle,
+                  content: this.editorContent,
+                  render: this.editorContentRender,
+              },{
+                  headers:{
+                      Authorization: "jwt " + this.token,
+                  }
+              }).then(response=>{
+                  // this.$message.success("保存成功!");
+              }).catch(error=>{
+                  this.$message.error("保存失败!");
+              });
+          },
+            save_article(){
+              // 保存文章
+              clearTimeout(this.timer);
+              this.timer = setTimeout(this.save_article_ajax,2000);
           },
         }
     }
