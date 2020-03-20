@@ -11,7 +11,8 @@
         <div style="margin-left: 8px;">
          <div class="_3U4Smb">
           <span class="FxYr8x"><a class="_1OhGeD" href="">{{article.user.nickname}}</a></span>
-          <button data-locale="zh-CN" type="button" class="_3kba3h _1OyPqC _3Mi9q9 _34692-"><span>关注</span></button>
+          <button data-locale="zh-CN" type="button" class="_3kba3h _1OyPqC _3Mi9q9 _34692-" v-if="article.focus===2" @mouseover="user_focus_text='取消关注'" @mouseout="user_focus_text='已关注'" @click="concal_focus"><span>{{user_focus_text}}</span></button>
+          <button data-locale="zh-CN" type="button" class="_3kba3h _1OyPqC _3Mi9q9 _34692-" v-if="article.focus ===1 || article.focus === 0" @click="confirm_focus"><span>关注</span></button>
          </div>
          <div class="s-dsoj">
           <time :datetime="article.updated_time">{{article.updated_time|timeformat}}</time>
@@ -127,8 +128,9 @@
        <div class="_191KSt">
         &quot;小礼物走一走，来简书关注我&quot;
        </div>
-       <button type="button" class="_1OyPqC _3Mi9q9 _2WY0RL _1YbC5u" @click.stop="is_show_reward_window=true"><span>赞赏支持</span></button>
-       <span class="_3zdmIj">还没有人赞赏，支持一下</span>
+       <button type="button" class="_1OyPqC _3Mi9q9 _2WY0RL _1YbC5u" @click.stop="reward"><span>赞赏支持</span></button>
+       <span class="_3zdmIj" v-if="article.reward_count > 0">已经有{{article.reward_count}}人赞赏，支持一下</span>
+        <span class="_3zdmIj" v-else>还没有人赞赏，支持一下</span>
       </div>
       <div class="d0hShY">
        <a class="_1OhGeD" href="/u/a70487cda447" target="_blank" rel="noopener noreferrer"><img class="_27NmgV" src="https://upload.jianshu.io/users/upload_avatars/18529254/.png?imageMogr2/auto-orient/strip|imageView2/1/w/100/h/100/format/webp" alt="  " /></a>
@@ -264,10 +266,11 @@
             reward_list: [2, 5, 10, 20, 50, 100],
             pay_type_list: ["支付宝", "余额支付"],
             reward_info:{
-              money: 2,
-              content: "",
-              pay_type: 0,
+                money: 2,
+                content: "",
+                pay_type: 0,
             },
+            user_focus_text: "已关注",
           }
       },
       created(){
@@ -303,6 +306,45 @@
           }).catch(error=>{
             this.$message.error("发起打赏请求失败")
           })
+        },
+        reward(){
+            if(this.token){
+              this.is_show_reward_window =true;
+            }
+        },
+        concal_focus(){
+          // 取消关注
+          this.$axios.post(`${this.$settings.Host}/article/focus/`,{
+            author_id: this.article.user.id,
+            focus: 0
+          },{
+            headers:{
+              Authorization: "jwt" + this.token
+            }
+          }).then(response=>{
+            this.article.focus = 1;
+          }).catch(error=>{
+            this.$message.error("取消关注失败!")
+          })
+        },
+        confirm_focus(){
+          // 关注
+          if(this.token){
+            // 已经登录的情况
+            this.$axios.post(`${this.$settings.Host}/article/focus/`,{
+              author_id: this.article.user.id,
+              focus: 1
+            },{
+              headers:{
+                 Authorization: "jwt" + this.token
+              }
+            }).then(response=>{
+              this.article.focus = 2;
+              this.user_focus_text = "已关注";
+            }).catch(error=>{
+              this.$message.error("关注失败!")
+            })
+          }
         },
       }
     }

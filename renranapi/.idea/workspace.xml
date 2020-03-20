@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13cf5324-2cbd-4e11-a0cf-821492e8f572" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../renran_pc/src/components/Article.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../renran_pc/src/components/Article.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renranapi/apps/home/management/commands/tablestore.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/home/management/commands/tablestore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/article/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/renranapi/apps/article/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/renranapi/apps/article/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +189,9 @@
       <workItem from="1584585052207" duration="9572000" />
       <workItem from="1584621372725" duration="2597000" />
       <workItem from="1584624520443" duration="2415000" />
-      <workItem from="1584627961168" duration="2871000" />
+      <workItem from="1584627961168" duration="2956000" />
+      <workItem from="1584700934104" duration="933000" />
+      <workItem from="1584702585061" duration="6656000" />
     </task>
     <servers />
   </component>

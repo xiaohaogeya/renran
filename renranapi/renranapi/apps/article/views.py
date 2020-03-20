@@ -14,6 +14,8 @@ from rest_framework.viewsets import GenericViewSet
 from rest_framework import status
 from rest_framework.views import APIView
 from datetime import datetime
+from users.models import User
+from renranapi.utils.tablestore import TableStore
 
 
 class ImageAPIView(CreateAPIView):
@@ -244,6 +246,42 @@ class ArticleInfoAPIView(RetrieveAPIView):
     serializer_class = ArticleInfoModelSerializer
     queryset = ArticleModel.objects.filter(is_publish=True)
 
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+        # 访问者已经登录
+        focus = 0   # 当前访问者没有登录，默认没有关注
+        # 访问者已经登录
+        user = request.user
+
+        if isinstance(user, User):
+            # 判断访问者是否曾经关注过作者
+            author = instance.user
+            # 如果访问者和文章作者是同一个人，则不存在关注
+            if author.id == user.id:
+                focus = -1
+
+            # 从关系库中获取当前访问者与作者之间的关注关系
+            ts = TableStore()
+            data = ts.get_one(
+                "user_relation_table",
+                [
+                    ("user_id", author.id),
+                    ("follow_user_id", user.id)
+                ]
+            )
+
+            if data:
+                # 已经登录了并且关注了
+                focus = 2
+            else:
+                # 已经登录了，没有关注
+                focus = 1
+
+        ret = dict(serializer.data)
+        ret["focus"] = focus
+        return Response(ret)
+
 
 class SpecialSixListAPIView(APIView):
     """获取最近6个投稿记录的专题的名称和图片"""
@@ -280,7 +318,51 @@ class SpecialTenListAPIView(APIView):
             return Response("操作失败")
 
 
+class UserFocusAPIView(APIView):
+    """关注和取消关注"""
+    permission_classes = [IsAuthenticated]
 
+    def post(self, request):
+        # 关注着[粉丝]
+        user = request.user
+
+        # 作者
+        author_id = request.data.get("author_id")
+
+        try:
+            User.objects.get(pk=author_id)
+        except User.DoesNotExist:
+            return Response("对不起,您关注的用户不存在")
+
+        # 获取关注状态【0表示取消关注，1表示关注】
+        focus = request.data.get("focus")
+        ts = TableStore()
+        if focus:
+            """关注"""
+            ret = ts.add_one(
+                "user_relation_table",
+                [
+                    ("user_id", author_id),
+                    ("follow_user_id", user.id)
+                ],
+                [
+                    ("focus_time", datetime.now().timestamp())
+                ]
+            )
+        else:
+            """取消关注"""
+            ret = ts.del_one(
+                "user_relation_table",
+                [
+                    ("user_id", author_id),
+                    ("follow_user_id", user.id)
+                ]
+            )
+
+            if ret:
+                return Response("操作成功")
+            else:
+                return Response("操作失败")
 
 
 
