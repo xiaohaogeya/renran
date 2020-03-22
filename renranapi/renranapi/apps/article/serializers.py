@@ -116,7 +116,7 @@ class ArticleInfoModelSerializer(serializers.ModelSerializer):
         model = ArticleModel
         fields = [
             "name", "render", "content", "user", "collection", "updated_time",
-            "read_count", "like_count", "collect_count", "comment_count", "reward_count"
+            "read_count", "link_count", "collect_count", "comment_count", "reward_count", "is_publish"
         ]
 
 

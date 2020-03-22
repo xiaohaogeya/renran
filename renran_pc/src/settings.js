@@ -9,7 +9,7 @@ export default {
       var Storage = localStorage;
     }else{
       var Storage = sessionStorage;
-    }
+    };
 
     Storage.removeItem("user_token");
     Storage.removeItem("user_name");

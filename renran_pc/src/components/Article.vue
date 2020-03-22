@@ -7,7 +7,7 @@
       <h1 class="_1RuRku">{{article.name}}</h1>
       <div class="rEsl9f">
        <div class="_2mYfmT">
-        <router-link class="_1OhGeD"><img class="_13D2Eh" :src="article.user.avatar" alt="" /></router-link>
+        <router-link class="_1OhGeD" to=""><img class="_13D2Eh" :src="article.user.avatar" alt="" /></router-link>
         <div style="margin-left: 8px;">
          <div class="_3U4Smb">
           <span class="FxYr8x"><a class="_1OhGeD" href="">{{article.user.nickname}}</a></span>
@@ -16,7 +16,7 @@
          </div>
          <div class="s-dsoj">
           <time :datetime="article.updated_time">{{article.updated_time|timeformat}}</time>
-          <span>字数 {{article.content.length}}</span>
+          <span>字数 {{article.content && article.content.length}}</span>
           <span>阅读 {{article.read_count}}</span>
          </div>
         </div>
@@ -229,14 +229,14 @@
      </div>
     </div>
     <div class="_1-bCJJ">
-     <div class="LMa6S_" :class="reward_info.money==num?'_1vONvL':''" @click="reward_info.money=num" v-for="num in reward_list"><span>{{num}}</span></div>
+     <div class="LMa6S_" :class="reward_info.money===num?'_1vONvL':''" @click="reward_info.money=num" v-for="num in reward_list"><span>{{num}}</span></div>
     </div>
     <textarea class="_1yN79W" placeholder="给Ta留言..."></textarea>
     <div class="_1_B577">
      选择支付方式
     </div>
     <div class="_1-bCJJ">
-     <div class="LMa6S_ _3PA8BN" :class="reward_info.pay_type==type?'_1vONvL':''" @click="reward_info.pay_type=type" v-for="type in pay_type_list"><span>{{type}}</span></div>
+     <div class="LMa6S_ _3PA8BN" :class="reward_info.pay_type===type?'_1vONvL':''" @click="reward_info.pay_type=type" v-for="type in pay_type_list"><span>{{type}}</span></div>
     </div>
     <button type="button" class="_3A-4KL _1OyPqC _3Mi9q9 _1YbC5u" @click="payhandler"><span>确认支付</span><span> ￥</span>{{reward_info.money}}</button>
    </div>
@@ -275,12 +275,15 @@
       },
       created(){
           this.token = this.$settings.check_user_login(this);
-          this.article_id = this.$router.params.id;
+          this.article_id = this.$route.params.id;
           this.get_article();
       },
       filters:{
           timeformat(time){
-            return time.split(".")[0].replace("T", " ")
+              if(time){
+                   return time.split(".")[0].replace("T", " ")
+              }
+
           }
       },
       methods:{
@@ -299,7 +302,7 @@
           this.reward_info.article_id = this.article_id;
           this.$axios.post(`${this.$settings.Host}/payments/alipay/`,this.reward_info,{
             headers:{
-              Authorization: "jwt" + this.token
+              Authorization: "jwt " + this.token
             }
           }).then(response=>{
             location.href = response.data;
@@ -319,7 +322,7 @@
             focus: 0
           },{
             headers:{
-              Authorization: "jwt" + this.token
+              Authorization: "jwt " + this.token
             }
           }).then(response=>{
             this.article.focus = 1;
@@ -336,7 +339,7 @@
               focus: 1
             },{
               headers:{
-                 Authorization: "jwt" + this.token
+                 Authorization: "jwt " + this.token
               }
             }).then(response=>{
               this.article.focus = 2;

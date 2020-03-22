@@ -92,6 +92,7 @@ class ArticlePublicStatusAPIView(APIView):
             return Response("对不起,当前文章不存在!", status=status.HTTP_400_BAD_REQUEST)
 
         is_public = request.data.get("is_public")
+        print(is_public)
         article.is_publish = not not is_public
         article.pub_date = None
         article.save()
@@ -278,16 +279,17 @@ class ArticleInfoAPIView(RetrieveAPIView):
                 # 已经登录了，没有关注
                 focus = 1
 
-        ret = dict(serializer.data)
-        ret["focus"] = focus
-        return Response(ret)
+        print(serializer.data)
+        # ret = dict(serializer.data)
+        # ret["focus"] = focus
+        return Response(serializer.data)
 
 
 class SpecialSixListAPIView(APIView):
     """获取最近6个投稿记录的专题的名称和图片"""
     def get(self, request):
         try:
-            special_list = SpecialModel.objects.all().order_by("-id").limit(6)
+            special_list = SpecialModel.objects.all().order_by("-id")
             data = []
             for special in special_list:
                 data.append({
@@ -304,7 +306,7 @@ class SpecialTenListAPIView(APIView):
     """专题表中人数最多的，文章最多的10哥专题"""
     def get(self, request):
         try:
-            special_list = SpecialModel.objects.all().order_by("article_count", "follow_count").limit(10)
+            special_list = SpecialModel.objects.all().order_by("article_count", "follow_count")
             data = []
             for special in special_list:
                 data.append({

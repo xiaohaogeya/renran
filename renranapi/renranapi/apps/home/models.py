@@ -32,7 +32,7 @@ class Nav(BaseModel):
     pid = models.ForeignKey("Nav", related_name="son", null=True, blank=True, on_delete=models.DO_NOTHING,
                             verbose_name="父亲导航")
     option = models.SmallIntegerField(choices=POSITION, default=1, verbose_name="导航位置")
-    icon = models.CharField(verbose_name="icon图标", default="el-icon-info", max_length=100, null=True, blank=True)
+
 
 
     class Meta:
@@ -50,6 +50,5 @@ class Nav(BaseModel):
                 "name": nav.name,
                 "link": nav.link,
                 "is_http": nav.is_http,
-                "icon": nav.icon,
             })
         return data

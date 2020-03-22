@@ -4,11 +4,9 @@
     <div class="main">
       <span v-for="nav,key in nav_list" :key="key">
         <router-link target="_blank" :to="nav.link" v-if="nav.is_http">
-          {{nav.name}}
+          {{ nav.name }}
         </router-link>
-        <a target="_blank" :herf="nav.link" v-else>
-          {{nav.name}}
-        </a>
+        <a :href="nav.link" v-else  target="_blank">{{nav.name}}</a>
         <em> . </em>
       </span>
       <div class="icp">©2016-2019 广州荏苒信息科技有限公司 / 荏苒 / 粤ICP备16018329号-5 /</div>

@@ -13,8 +13,8 @@
         </div>
       </div>
       <ul class="_3MbJ4 _3t059">
-        <li class="_3DM7w" :class="current_collection==key?'_31PCv':''" :title="collection.name" v-for="collection,key in collection_list" :key="key">
-          <div class="_3P4JX _2VLy-" v-if="current_collection==key" @click.stop="show_collection_menu">
+        <li class="_3DM7w" :class="current_collection===key?'_31PCv':''" :title="collection.name" v-for="collection, key in collection_list" :key="key">
+          <div class="_3P4JX _2VLy-" v-if="current_collection===key" @click.stop="show_collection_menu">
             <i class="fa fa-gear"></i>
             <span>
               <ul class="_2V8zt _3FcHm _2w9pn" :class="is_show_collection_menu?'NvfK4':''">
@@ -42,13 +42,13 @@
           <div>
             <div class="_1GsW5" @click.stop="add_article(0)"><i class="fa fa-plus-circle"></i><span> 新建文章</span></div>
             <ul class="_2TxA-">
-              <li class="_25Ilv" @click.stop="current_article=key" :class="current_article==key?'_33nt7':''" :title="article.name" v-for="article,key in article_list" :key="key">
+              <li class="_25Ilv" @click.stop="current_article=key" :class="current_article===key?'_33nt7':''" :title="article.name" v-for="article,key in article_list" :key="key">
                 <i class="_13kgp _2m93u"></i>
-                <div class="_3P4JX poOXI" v-if="current_article==key" @click.stop="show_article_menu">
+                <div class="_3P4JX poOXI" v-if="current_article===key" @click.stop="show_article_menu">
                   <i class="fa fa-gear"></i>
                   <span>
                     <ul class="_2V8zt _3FcHm _2w9pn" :class="is_show_article_menu?'NvfK4':''">
-                      <li class="_2po2r cRfUr" title="" v-if="!article.is_public" ><span class="" @click.stop="public_article(true)"><i class="fa fa-share _22XWG"></i>直接发布</span></li>
+                      <li class="_2po2r cRfUr" title="" v-if="!article.is_public" @click.stop="public_article(true)"><span class=""><i class="fa fa-share _22XWG"></i>直接发布</span></li>
                       <li class="_2po2r cRfUr" title="" v-else @click.stop="public_article(false)"><span class=""><i class="fa fa-lock _22XWG"></i>设为私密</span></li>
                       <li class="_2po2r cRfUr" title=""><span class="" @click.stop="interval_public(article)"><i class="fa fa-clock-o _22XWG"></i>定时发布</span></li>
                       <li class="_2po2r cRfUr" title=""><span class="_20tIi"><i class="iconfont ic-paid _22XWG"></i>发布为付费文章</span></li>
@@ -372,7 +372,7 @@
                 is_public: is_public
               },{
                 headers:{
-                   Authorization: "jwt " + this.token, 
+                   Authorization: "jwt " + this.token,
                 }
               }).then(response=>{
                 this.article_list[this.current_article].is_public = is_public;
@@ -394,11 +394,11 @@
             // 文章发布状态切换
             let article_id = this.article_list[this.current_article].id;
             this.$axios.put(`${this.$settings.Host}/article/move/${article_id}/`,{
-              collection_id:collection_id,
+              collection_id: collection_id,
             },{
-              headers:{
-                Authorization: "jwt" + this.token,
-              }
+                  headers:{
+                      Authorization: "jwt " + this.token,
+                  }
             }).then(response=>{
               this.article_list.splice(this.current_article, 1);
               this.is_show_article_menu = false;
@@ -407,14 +407,14 @@
               this.$message.error("操作失败!请联系客服工作人员!")
             })
           },
-          interval_public(article){
+          interval_public(){
             // 定时发布文章
             let article_id = this.article_list[this.current_article].id;
             this.$axios.put(`${this.$settings.Host}/article/interval/${article_id}/`,{
               pub_date: this.pub_date,
             },{
               headers:{
-                Authorization: "jwt" + this.token
+                Authorization: "jwt " + this.token
               }
             }).then(response=>{
               this.article_list[this.current_article].is_public = true;
